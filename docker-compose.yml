@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  nemesisnet-brand-guide:
+    image: nemesisguy/nemesisnet-brand-guide:v1.0.0
+    container_name: nemesisnet-brand-guide
+    restart: unless-stopped
+    ports:
+      - "9113:80"
