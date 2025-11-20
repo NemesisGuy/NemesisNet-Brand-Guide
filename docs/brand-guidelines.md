@@ -21,8 +21,9 @@ This document supplements `src/index.html` with reference information when integ
 All NemesisNet-branded surfaces must include the Nemesis footer snippet provided in `src/index.html` (`#footer-guide`). This enforces attribution and legal copy.
 
 ## Asset Management
-- Place raster/vector assets inside `public/assets/`.
-- Use PNG/SVG for UI, ICO for favicons. Keep transparent backgrounds to support glassmorphism surfaces.
+- Place raster/vector assets inside `public/assets/`. Optimized variants live under `public/assets/optimized/` for multiple DPIs.
+- Provided logo outputs: `@128`, `@256`, `@384` PNG plus WebP. Reference via `srcset` (`assets/optimized/Nemesis_Logo_Icon@256.png 256w, ...`) to let browsers choose the right density.
+- Use PNG/WebP for UI, ICO for favicons. Keep transparent backgrounds to support glassmorphism surfaces.
 
 ## Deployment Notes
 - The Docker image uses nginx with security headers (see `nginx.conf`).

@@ -36,6 +36,7 @@ A production-aligned HTML brand system for NemesisNet. This repo mirrors the liv
 
 - Keep `src/index.html` as the source of truth. All CSS tokens, JS logic, and accessibility notes live there.
 - Place new assets in `public/assets/` and reference them with relative paths.
+- Use the optimized outputs in `public/assets/optimized/` (PNG @128/@256/@384 + WebP) when embedding logos; wire them via `srcset` for HiDPI support.
 - If you modify Docker setup or nginx config, update `README.docker.md`.
 - Use meaningful commit messages (`feat:`, `fix:`, `chore:`) and run `docker build` before pushing to ensure deployability.
 
