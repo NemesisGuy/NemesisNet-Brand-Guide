@@ -1,6 +1,6 @@
 # Docker: Build & Run (NemesisNet Brand Guide)
 
-This repository contains a static HTML brand guide and an `assets/` folder.
+This repository contains a static HTML brand guide (under `src/`) and an `assets/` folder (under `public/`).
 The included `Dockerfile` uses nginx (alpine) to serve the site as a static site.
 
 ## Build (PowerShell)
@@ -20,5 +20,5 @@ docker run --rm -p 8080:80 nemesisnet-brand-guide:latest
 Then open http://localhost:8080 in your browser.
 
 ## Notes
-- The Dockerfile copies `nemesis_net_brand_guide_html_version.html` to `/usr/share/nginx/html/index.html` so nginx serves it as the site root.
-- If you need a custom nginx config (CORS, caching, etc.) we can add an `nginx.conf` and copy it into `/etc/nginx/conf.d/`.
+- The Dockerfile copies `src/index.html` to `/usr/share/nginx/html/index.html` and `public/assets/` to `/usr/share/nginx/html/assets/`.
+- If you need a custom nginx config (CORS, caching, etc.) edit `nginx.conf` and rebuild.

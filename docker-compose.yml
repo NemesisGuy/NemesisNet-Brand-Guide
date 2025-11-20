@@ -7,3 +7,6 @@ services:
     restart: unless-stopped
     ports:
       - "9113:80"
+    volumes:
+      - ./src/index.html:/usr/share/nginx/html/index.html:ro
+      - ./public/assets:/usr/share/nginx/html/assets:ro

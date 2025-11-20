@@ -8,8 +8,8 @@ RUN rm -f /etc/nginx/conf.d/default.conf
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy HTML and assets
-COPY index.html /usr/share/nginx/html/index.html
-COPY assets/ /usr/share/nginx/html/assets/
+COPY src/index.html /usr/share/nginx/html/index.html
+COPY public/assets/ /usr/share/nginx/html/assets/
 
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]

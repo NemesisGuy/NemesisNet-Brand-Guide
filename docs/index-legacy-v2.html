@@ -1,0 +1,1532 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NemesisNet — Brand Guide (HTML)</title>
+  <meta name="description" content="NemesisNet Brand Guide — the production-ready system for resilient digital experiences, brand tokens, UI kits, accessibility, and governance." />
+  <meta name="keywords" content="NemesisNet, brand guide, design system, UI tokens, South Africa, accessibility, digital brand, design ops, governance" />
+  <meta name="author" content="NemesisNet" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://nemesisnet.co.za/brand-guide" />
+  <meta name="theme-color" content="#0a0e27" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f4f4f4" media="(prefers-color-scheme: light)" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta property="og:locale" content="en_ZA" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nemesisnet.co.za/brand-guide" />
+  <meta property="og:site_name" content="NemesisNet" />
+  <meta property="og:title" content="NemesisNet — Brand Guide" />
+  <meta property="og:description" content="Production brand system for NemesisNet: tokens, palettes, accessibility, and implementation guidance." />
+  <meta property="og:image" content="https://nemesisnet.co.za/assets/Nemesis_Logo_Icon.png" />
+  <meta property="og:image:alt" content="NemesisNet logomark" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="NemesisNet — Brand Guide" />
+  <meta name="twitter:description" content="Production-ready NemesisNet brand system with tokens, patterns, and governance." />
+  <meta name="twitter:image" content="https://nemesisnet.co.za/assets/Nemesis_Logo_Icon.png" />
+  <meta name="twitter:image:alt" content="NemesisNet logomark" />
+  <link rel="icon" type="image/png" sizes="192x192" href="https://nemesisnet.co.za/assets/Nemesis_Logo_Icon.png" />
+  <link rel="icon" type="image/x-icon" href="https://nemesisnet.co.za/assets/Nemesis_Logo_Icon.ico" />
+  <link rel="shortcut icon" href="https://nemesisnet.co.za/assets/Nemesis_Logo_Icon.ico" />
+  <link rel="apple-touch-icon" href="https://nemesisnet.co.za/assets/Nemesis_Logo_Icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "NemesisNet",
+        "url": "https://nemesisnet.co.za",
+        "logo": "https://nemesisnet.co.za/assets/Nemesis_Logo_Icon.png",
+        "sameAs": ["https://nemesisnet.co.za"]
+      },
+      {
+        "@type": "WebPage",
+        "name": "NemesisNet Brand Guide",
+        "url": "https://nemesisnet.co.za/brand-guide",
+        "description": "Production brand system for NemesisNet with tokens, palette, accessibility and governance guidance.",
+        "inLanguage": "en-ZA",
+        "datePublished": "2025-11-11",
+        "dateModified": "2025-11-20",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "NemesisNet",
+          "url": "https://nemesisnet.co.za"
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root{
+      --nemesis-blue:#1E88E5;
+      --nemesis-blue-bright:#2979FF;
+      --nemesis-blue-deep:#0f4c81;
+      --aurora-base:#00C2A8;
+      --aurora-flare:#33D6B7;
+      --aurora-ember:#008B6A;
+      --aurora-glow:rgba(0,194,168,0.12);
+      --ignite-base:#FF6F3C;
+      --ignite-flare:#FF8A50;
+      --ignite-ember:#E65100;
+      --ignite-glow:rgba(255,138,80,0.18);
+      --ignite-glow-strong:rgba(255,138,80,0.28);
+      --nemesis-black:#0a0e27;
+      --nemesis-white:#F4F4F4;
+      --text-color:var(--nemesis-white);
+      --text-muted:rgba(244,244,244,0.65);
+      --glass-bg:rgba(255,255,255,0.04);
+      --glass-border:rgba(255,255,255,0.08);
+      --accent-color:var(--nemesis-blue);
+      --accent-hover:var(--nemesis-blue-bright);
+      --accent-glow:rgba(41,121,255,0.14);
+      --radius-base:18px;
+      --space-xs:6px;
+      --space-sm:12px;
+      --space-md:20px;
+      --space-lg:32px;
+      --space-xl:48px;
+      --content-width:1080px;
+  --nav-width:1240px;
+  --nav-height:86px;
+      --surface-gradient:linear-gradient(180deg,rgba(14,22,48,0.78) 0%,rgba(6,11,27,0.9) 100%);
+      --page-background:linear-gradient(140deg,#060b1b 0%,#101f42 46%,#072c4e 100%);
+      --hero-overlay:linear-gradient(180deg,rgba(5,9,25,0.92) 0%,rgba(9,16,40,0.88) 50%,rgba(7,13,30,0.9) 100%);
+  --nav-surface:var(--glass-bg);
+  --nav-border:var(--glass-border);
+  --nav-shadow:0 16px 42px rgba(5,9,24,0.32);
+  --nav-link-bg:transparent;
+  --nav-link-border:transparent;
+  --nav-link-color:var(--text-color);
+  --nav-link-hover-bg:var(--glass-bg);
+  --nav-link-hover-border:var(--glass-border);
+  --nav-link-hover-color:var(--accent-color);
+  --nav-link-hover-shadow:0 12px 32px rgba(41,121,255,0.14);
+      --btn-surface:rgba(255,255,255,0.06);
+      --btn-border:rgba(255,255,255,0.12);
+      --chip-surface:rgba(255,255,255,0.05);
+      --chip-border:rgba(255,255,255,0.16);
+      --section-shadow:0 24px 48px rgba(4,7,18,0.5);
+      --page-glow:radial-gradient(circle at 20% 20%,rgba(41,121,255,0.28) 0%,transparent 42%),radial-gradient(circle at 80% 10%,rgba(0,194,168,0.22) 0%,transparent 45%),radial-gradient(circle at 60% 80%,rgba(41,121,255,0.18) 0%,transparent 55%);
+      --code-bg:#07102a;
+      --code-text:#cfe9ff;
+      --code-border:rgba(41,121,255,0.16);
+      background-color:var(--nemesis-black);
+      color:var(--text-color);
+    }
+    [data-theme="light"]{
+      --text-color:var(--nemesis-black);
+      --text-muted:rgba(26,26,26,0.64);
+      --glass-bg:rgba(255,255,255,0.92);
+      --glass-border:rgba(41,121,255,0.12);
+      --accent-glow:rgba(41,121,255,0.08);
+      --surface-gradient:linear-gradient(180deg,rgba(248,251,255,0.96) 0%,rgba(232,240,255,0.9) 100%);
+      --page-background:linear-gradient(135deg,var(--nemesis-white) 0%,#f0f6ff 52%,#eaf6ff 100%);
+      --hero-overlay:linear-gradient(180deg,rgba(255,255,255,0.95) 0%,rgba(236,243,255,0.9) 64%,rgba(218,230,255,0.88) 100%);
+  --nav-surface:linear-gradient(180deg,rgba(255,255,255,0.84) 0%,rgba(245,248,255,0.8) 100%);
+  --nav-border:rgba(10,14,39,0.04);
+  --nav-shadow:0 8px 26px rgba(15,35,65,0.14);
+  --nav-link-bg:transparent;
+  --nav-link-border:transparent;
+  --nav-link-color:var(--text-color);
+  --nav-link-hover-bg:rgba(41,121,255,0.06);
+  --nav-link-hover-border:rgba(41,121,255,0.16);
+  --nav-link-hover-color:var(--accent-color);
+  --nav-link-hover-shadow:0 8px 22px rgba(41,121,255,0.08);
+      --btn-surface:rgba(0,0,0,0.04);
+      --btn-border:rgba(0,0,0,0.08);
+      --chip-surface:rgba(11,22,45,0.08);
+      --chip-border:rgba(15,34,63,0.12);
+      --section-shadow:0 18px 42px rgba(15,35,65,0.18);
+      --page-glow:radial-gradient(circle at 15% 20%,rgba(41,121,255,0.22) 0%,transparent 46%),radial-gradient(circle at 85% 10%,rgba(0,194,168,0.18) 0%,transparent 52%),radial-gradient(circle at 60% 80%,rgba(41,121,255,0.12) 0%,transparent 62%);
+      --code-bg:rgba(244,248,255,0.96);
+      --code-text:#132742;
+      --code-border:rgba(41,121,255,0.14);
+      background-color:var(--nemesis-white);
+      color:var(--text-color);
+    }
+    html[data-style="aurora"]{
+      --page-background:radial-gradient(circle at 18% 20%,rgba(124,77,255,0.28) 0%,transparent 48%),radial-gradient(circle at 72% 16%,rgba(0,229,255,0.22) 0%,transparent 52%),linear-gradient(140deg,#050c25 0%,#0d1733 55%,#071c3a 100%);
+      --page-glow:radial-gradient(circle at 20% 25%,rgba(124,77,255,0.35) 0%,transparent 52%),radial-gradient(circle at 75% 15%,rgba(0,229,255,0.45) 0%,transparent 55%),radial-gradient(circle at 60% 80%,rgba(0,229,255,0.18) 0%,transparent 68%);
+      --text-color:#f6f8ff;
+      --text-muted:rgba(246,248,255,0.72);
+      --accent-color:#7c4dff;
+      --accent-hover:#b388ff;
+      --accent-glow:rgba(124,77,255,0.36);
+      --secondary-accent:#00e5ff;
+      --secondary-glow:rgba(0,229,255,0.25);
+      --glass-bg:rgba(255,255,255,0.08);
+      --glass-border:rgba(124,77,255,0.3);
+      --chip-surface:rgba(124,77,255,0.12);
+      --chip-border:rgba(124,77,255,0.35);
+      --btn-surface:rgba(124,77,255,0.18);
+      --btn-border:rgba(124,77,255,0.36);
+      --section-shadow:0 26px 52px rgba(7,12,32,0.65);
+      --code-bg:#0f1330;
+      --code-text:#f3edff;
+      --code-border:rgba(124,77,255,0.32);
+      --nav-surface:linear-gradient(180deg,rgba(14,20,42,0.94) 0%,rgba(9,14,30,0.92) 100%);
+      --nav-border:rgba(124,77,255,0.26);
+      --nav-shadow:0 14px 38px rgba(5,9,25,0.68);
+      --nav-link-color:#f6f8ff;
+      --nav-link-hover-bg:rgba(124,77,255,0.18);
+      --nav-link-hover-border:rgba(124,77,255,0.45);
+      --nav-link-hover-color:#ffffff;
+    }
+    html[data-style="nemesis"]{
+      --page-background:var(--nemesis-dark-bg, radial-gradient(circle at 30% 20%,rgba(255,0,80,0.06),transparent 40%),radial-gradient(circle at 70% 80%,rgba(0,255,255,0.06),transparent 40%),linear-gradient(135deg,#050712 0%,#0a0f24 52%,#060a18 100%));
+      --hero-overlay:linear-gradient(180deg,rgba(2,4,11,0.95) 0%,rgba(4,9,20,0.9) 58%,rgba(2,5,12,0.96) 100%);
+      --page-glow:radial-gradient(circle at 22% 26%,rgba(255,0,80,0.18) 0%,transparent 55%),radial-gradient(circle at 78% 12%,rgba(0,255,255,0.18) 0%,transparent 55%),radial-gradient(circle at 60% 82%,rgba(0,255,255,0.16) 0%,transparent 65%);
+      --text-color:#e6f7ff;
+      --text-muted:#88a9ff;
+      --accent-color:#00ffff;
+      --accent-hover:#6bf4ff;
+      --accent-glow:rgba(0,255,255,0.35);
+      --secondary-accent:#ff0050;
+      --secondary-glow:rgba(255,0,80,0.25);
+      --glass-bg:rgba(255,255,255,0.06);
+      --glass-border:rgba(0,255,255,0.22);
+      --chip-surface:rgba(0,255,255,0.08);
+      --chip-border:rgba(255,0,80,0.28);
+      --btn-surface:rgba(0,255,255,0.16);
+      --btn-border:rgba(0,255,255,0.35);
+      --section-shadow:0 30px 60px rgba(0,0,0,0.74);
+      --code-bg:#050a17;
+      --code-text:#b8fbff;
+      --code-border:rgba(0,255,255,0.28);
+      --nav-surface:linear-gradient(180deg,rgba(3,8,18,0.94) 0%,rgba(4,9,20,0.92) 100%);
+      --nav-border:rgba(0,255,255,0.22);
+      --nav-shadow:0 18px 48px rgba(0,0,0,0.72);
+      --nav-link-color:#e6f7ff;
+      --nav-link-hover-bg:rgba(0,255,255,0.16);
+      --nav-link-hover-border:rgba(0,255,255,0.35);
+      --nav-link-hover-color:#00ffff;
+    }
+    html[data-style="aurora"][data-theme="light"],
+    html[data-theme="light"][data-style="aurora"]{
+      --page-background:linear-gradient(145deg,#f6f2ff 0%,#ecf7ff 42%,#e8fbff 100%);
+      --hero-overlay:linear-gradient(180deg,rgba(255,255,255,0.95) 0%,rgba(243,244,255,0.92) 55%,rgba(235,246,255,0.9) 100%);
+      --text-color:#0c1024;
+      --text-muted:rgba(14,22,46,0.68);
+      --glass-bg:rgba(255,255,255,0.92);
+      --glass-border:rgba(124,77,255,0.2);
+      --accent-color:#6a3afb;
+      --accent-hover:#8851ff;
+      --accent-glow:rgba(106,58,251,0.18);
+      --secondary-accent:#00c6ff;
+      --secondary-glow:rgba(0,198,255,0.25);
+      --code-bg:rgba(246,243,255,0.94);
+      --code-text:#0f1230;
+      --code-border:rgba(106,58,251,0.22);
+      --nav-surface:linear-gradient(180deg,rgba(255,255,255,0.9) 0%,rgba(244,246,255,0.88) 100%);
+      --nav-border:rgba(106,58,251,0.18);
+      --nav-link-color:#0c1024;
+      --nav-link-hover-bg:rgba(106,58,251,0.12);
+      --nav-link-hover-border:rgba(106,58,251,0.26);
+      --nav-link-hover-color:#1a1044;
+    }
+    html[data-style="nemesis"][data-theme="light"],
+    html[data-theme="light"][data-style="nemesis"]{
+      --page-background:linear-gradient(135deg,#fefbff 0%,#f1fbff 45%,#f5feff 100%);
+      --hero-overlay:linear-gradient(180deg,rgba(255,255,255,0.98) 0%,rgba(244,250,255,0.94) 60%,rgba(240,255,255,0.92) 100%);
+      --page-glow:radial-gradient(circle at 22% 24%,rgba(0,180,255,0.18) 0%,transparent 50%),radial-gradient(circle at 70% 18%,rgba(255,0,80,0.12) 0%,transparent 55%);
+      --text-color:#051327;
+      --text-muted:rgba(5,19,39,0.66);
+      --glass-bg:rgba(255,255,255,0.94);
+      --glass-border:rgba(0,255,255,0.18);
+      --accent-color:#00ffff;
+      --accent-hover:#01d4ff;
+      --accent-glow:rgba(0,255,255,0.18);
+      --secondary-accent:#ff0050;
+      --secondary-glow:rgba(255,0,80,0.16);
+      --chip-surface:rgba(0,255,255,0.08);
+      --chip-border:rgba(0,255,255,0.2);
+      --btn-surface:rgba(0,255,255,0.12);
+      --btn-border:rgba(255,0,80,0.22);
+      --code-bg:rgba(5,19,39,0.05);
+      --code-text:#051327;
+      --code-border:rgba(0,255,255,0.18);
+      --nav-surface:linear-gradient(180deg,rgba(255,255,255,0.96) 0%,rgba(242,250,255,0.94) 100%);
+      --nav-border:rgba(0,255,255,0.2);
+      --nav-link-color:#051327;
+      --nav-link-hover-bg:rgba(0,255,255,0.12);
+      --nav-link-hover-border:rgba(0,255,255,0.22);
+      --nav-link-hover-color:#021c2d;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:inherit;}
+    html{scroll-behavior:smooth;scroll-padding-top:var(--nav-height);}
+    body{
+      min-height:100vh;
+      background:var(--page-background);
+      color:var(--text-color);
+      line-height:1.7;
+      padding-top:var(--nav-height);
+      display:flex;
+      flex-direction:column;
+    }
+    .sr-only{
+      position:absolute;
+      width:1px;
+      height:1px;
+      padding:0;
+      margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      white-space:nowrap;
+      border:0;
+    }
+    .skip-link{
+      position:fixed;
+      top:-100px;
+      left:12px;
+      z-index:1001;
+      padding:10px 18px;
+      border-radius:12px;
+      background:var(--accent-color);
+      color:#031226;
+      font-weight:600;
+      text-decoration:none;
+      transition:top 0.2s ease;
+      box-shadow:0 10px 30px var(--accent-glow);
+    }
+    .skip-link:focus{top:12px;outline:2px solid var(--aurora-base);outline-offset:3px;}
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:-1;
+      background:var(--page-glow);
+      pointer-events:none;
+    }
+    header.guide-hero{
+      position:relative;
+      padding:48px 24px 140px;
+      overflow:hidden;
+      flex-shrink:0;
+    }
+    .guide-hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:var(--hero-overlay);
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+      border-bottom:1px solid var(--nav-border);
+      z-index:0;
+    }
+    .guide-nav{
+      position:fixed;
+      top:0;
+      left:0;
+      right:0;
+      z-index:1000;
+      padding:0;
+      background:var(--nav-surface);
+      border-bottom:1px solid var(--nav-border);
+      box-shadow:var(--nav-shadow);
+      backdrop-filter:blur(18px) saturate(120%);
+      -webkit-backdrop-filter:blur(18px) saturate(120%);
+      transition:all 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+    [data-theme="light"] .guide-nav{
+      background:var(--nav-surface);
+      border-bottom:1px solid var(--nav-border);
+      box-shadow:var(--nav-shadow);
+    }
+    .guide-nav-container{
+      max-width:var(--nav-width);
+      width:100%;
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:12px 32px;
+      flex-wrap:nowrap;
+    }
+    .guide-logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      color:var(--text-color);
+      font-weight:700;
+      letter-spacing:0.02em;
+      transition:transform 0.28s ease,color 0.28s ease;
+  white-space:nowrap;
+    }
+  .guide-logo img{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.08);padding:7px;box-shadow:0 12px 30px rgba(0,0,0,0.34),0 0 0 1px rgba(255,255,255,0.06);transition:all 0.3s ease;}
+  [data-theme="light"] .guide-logo img{background:rgba(255,255,255,0.98);box-shadow:0 8px 22px rgba(10,14,39,0.08);}
+    .guide-logo span{font-weight:700;letter-spacing:0.02em;}
+    .guide-logo:hover{transform:translateY(-2px);color:var(--accent-color);}
+    .guide-logo:hover img{box-shadow:0 18px 44px rgba(41,121,255,0.18),0 0 0 1px rgba(255,255,255,0.12);}    
+    .guide-nav-links{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      flex:1 1 auto;
+      min-width:0;
+  margin-left:auto;
+    }
+    .guide-nav-links a{
+      padding:8px 14px;
+      border-radius:10px;
+      border:1px solid var(--nav-link-border);
+      background:var(--nav-link-bg);
+      color:var(--nav-link-color);
+      font-weight:500;
+      text-decoration:none;
+      transition:all 0.28s cubic-bezier(0.4,0,0.2,1);
+      flex:0 0 auto;
+    }
+    .guide-nav-links a:hover,
+    .guide-nav-links a:focus-visible{
+      background:var(--nav-link-hover-bg);
+      color:var(--nav-link-hover-color);
+      border-color:var(--nav-link-hover-border);
+      box-shadow:var(--nav-link-hover-shadow);
+      outline:none;
+      transform:translateY(-2px);
+    }
+    .guide-nav-links a:focus-visible{outline:2px solid var(--aurora-base);outline-offset:2px;}
+    .guide-nav-toggle{
+      display:none;
+      width:42px;
+      height:42px;
+      border-radius:12px;
+      border:1px solid var(--nav-link-border);
+      background:transparent;
+      color:var(--nav-link-color);
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      transition:all 0.28s cubic-bezier(0.4,0,0.2,1);
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+  margin-left:16px;
+  flex:0 0 auto;
+    }
+    .guide-nav-toggle i{pointer-events:none;font-size:1.15rem;}
+    .guide-nav-toggle:hover,
+    .guide-nav-toggle:focus-visible{
+      background:var(--nav-link-hover-bg);
+      border-color:var(--nav-link-hover-border);
+      color:var(--nav-link-hover-color);
+      transform:translateY(-2px);
+      outline:none;
+      box-shadow:var(--nav-link-hover-shadow);
+    }
+    .guide-nav-overlay{
+      position:fixed;
+      inset:0;
+      background:rgba(2,6,18,0.65);
+      backdrop-filter:blur(4px);
+      -webkit-backdrop-filter:blur(4px);
+      opacity:0;
+      pointer-events:none;
+      transition:opacity 0.18s ease;
+      z-index:998;
+    }
+    .guide-nav-overlay.is-visible{opacity:1;pointer-events:auto;}
+    .theme-toggle{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:40px;
+      height:40px;
+      border-radius:12px;
+      border:1px solid var(--nav-link-border);
+      background:transparent;
+      color:var(--nav-link-color);
+      cursor:pointer;
+      transition:all 0.3s cubic-bezier(0.4,0,0.2,1);
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+      flex:0 0 auto;
+    }
+    .theme-toggle i{pointer-events:none;font-size:1.05rem;transition:transform 0.3s ease;}
+    .theme-toggle:hover,
+    .theme-toggle:focus-visible{
+      background:var(--nav-link-hover-bg);
+      border-color:var(--nav-link-hover-border);
+      color:var(--nav-link-hover-color);
+      box-shadow:var(--nav-link-hover-shadow);
+      transform:translateY(-2px);
+      outline:none;
+    }
+    .theme-toggle.is-light{
+      background:var(--accent-color);
+      border-color:var(--accent-color);
+      color:#031226;
+      box-shadow:0 12px 32px var(--accent-glow);
+    }
+    .theme-toggle.is-light i{transform:rotate(-30deg);}
+    .theme-toggle.is-light:hover,
+    .theme-toggle.is-light:focus-visible{
+      background:var(--accent-hover);
+      border-color:var(--accent-hover);
+      color:#02101f;
+    }
+    .guide-hero-content{
+      position:relative;
+      z-index:2;
+      max-width:760px;
+  margin:70px auto 0;
+      text-align:center;
+      color:var(--text-color);
+    }
+    .guide-eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:6px 18px;
+      margin-bottom:18px;
+      border-radius:999px;
+      text-transform:uppercase;
+      letter-spacing:0.14em;
+      font-size:0.72rem;
+      border:1px solid var(--chip-border);
+      background:var(--chip-surface);
+      color:var(--text-muted);
+    }
+    .guide-hero-content h1{
+      font-size:3.1rem;
+      margin-bottom:16px;
+      letter-spacing:-0.02em;
+      background:linear-gradient(130deg,#f9fbff 0%,var(--accent-hover) 100%);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+    }
+    [data-theme="light"] .guide-hero-content h1{
+      background:linear-gradient(135deg,#1a237e 0%,var(--accent-hover) 100%);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+    }
+    .lead{
+      font-size:1.08rem;
+      line-height:1.85;
+      color:var(--text-muted);
+      margin:0 auto;
+      max-width:640px;
+    }
+    .guide-cta{
+      margin-top:28px;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:12px;
+    }
+    .guide-cta.guide-cta--left{justify-content:flex-start;}
+    .component-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:20px;}
+    .component-card{padding:20px;border-radius:18px;border:1px solid var(--glass-border);background:var(--glass-bg);box-shadow:0 20px 40px rgba(4,9,24,0.4);display:flex;flex-direction:column;gap:16px;}
+    .component-card h3{margin:0;font-size:1rem;color:var(--accent-color);}
+    .pill-row{display:flex;flex-wrap:wrap;gap:10px;}
+    .pill{padding:6px 14px;border-radius:999px;border:1px solid var(--glass-border);background:var(--glass-bg);font-size:0.82rem;font-weight:600;color:var(--text-color);}
+    .pill--accent{background:var(--accent-color);border-color:var(--accent-color);color:#041021;box-shadow:0 12px 26px var(--accent-glow);}
+    .pill--outline{border-style:dashed;color:var(--accent-color);}
+    .guide-card-sample{padding:16px;border-radius:16px;border:1px solid var(--glass-border);background:var(--glass-bg);box-shadow:0 22px 44px rgba(4,7,18,0.45);display:flex;flex-direction:column;gap:10px;}
+    .guide-card-sample h4{margin:0;color:var(--accent-color);}
+    .guide-card-links{display:flex;flex-wrap:wrap;gap:10px;}
+    .guide-card-links a{padding:8px 18px;border-radius:12px;border:1px solid var(--glass-border);text-decoration:none;color:var(--text-color);background:var(--glass-bg);transition:all 0.2s ease;}
+    .guide-card-links a:hover{background:var(--accent-color);color:#041021;border-color:var(--accent-color);}
+    .style-toggle-group{
+      margin-top:26px;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:12px;
+    }
+    .style-toggle{
+      min-width:190px;
+      padding:14px 18px;
+      border-radius:18px;
+      border:1px solid var(--glass-border);
+      background:var(--glass-bg);
+      color:var(--text-color);
+      cursor:pointer;
+      display:flex;
+      flex-direction:column;
+      gap:4px;
+      text-align:left;
+      transition:all 0.28s cubic-bezier(0.4,0,0.2,1);
+      box-shadow:0 8px 24px rgba(3,8,24,0.26);
+    }
+    .style-toggle span{font-weight:600;font-size:0.92rem;}
+    .style-toggle small{font-size:0.76rem;color:var(--text-muted);}
+    .style-toggle[aria-pressed="true"]{
+      background:var(--accent-color);
+      border-color:var(--accent-color);
+      color:#041021;
+      box-shadow:0 18px 44px var(--accent-glow);
+      transform:translateY(-2px);
+    }
+    .style-toggle[aria-pressed="true"] small{color:rgba(4,16,33,0.72);}
+    .style-toggle:focus-visible{outline:2px solid var(--aurora-base);outline-offset:3px;}
+    .resource-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:12px 26px;
+      border-radius:14px;
+      font-weight:600;
+      text-decoration:none;
+      cursor:pointer;
+      transition:all 0.25s cubic-bezier(0.4,0,0.2,1);
+      box-shadow:none;
+      border:1px solid rgba(41,121,255,0.18);
+      background:rgba(41,121,255,0.12);
+      color:var(--text-color);
+    }
+    .btn:hover,
+    .btn:focus-visible{
+      background:var(--accent-hover);
+      border-color:var(--accent-hover);
+      color:#041021;
+      box-shadow:0 16px 40px var(--accent-glow);
+      transform:translateY(-2px);
+      outline:none;
+    }
+    .btn:focus-visible{outline:2px solid var(--aurora-base);outline-offset:3px;}
+    [data-theme="light"] .btn{
+      background:rgba(41,121,255,0.16);
+      border-color:rgba(41,121,255,0.28);
+      color:#06172d;
+      box-shadow:0 10px 28px rgba(41,121,255,0.12);
+    }
+    .btn--primary{
+      background:rgba(41,121,255,0.2);
+      border-color:rgba(41,121,255,0.35);
+      color:#f4f8ff;
+      box-shadow:0 18px 42px rgba(41,121,255,0.28);
+    }
+    .btn--primary:hover,
+    .btn--primary:focus-visible{
+      background:var(--accent-hover);
+      border-color:var(--accent-hover);
+      color:#041021;
+    }
+    [data-theme="light"] .btn--primary{
+      background:rgba(41,121,255,0.22);
+      border-color:rgba(41,121,255,0.36);
+      color:#051328;
+      box-shadow:0 18px 42px rgba(41,121,255,0.2);
+    }
+    .btn--aurora{
+      background:rgba(0,194,168,0.22);
+      border-color:rgba(0,194,168,0.32);
+      color:#eafff9;
+      box-shadow:0 18px 42px rgba(0,194,168,0.26);
+    }
+    .btn--aurora:hover,
+    .btn--aurora:focus-visible{
+      background:linear-gradient(110deg,var(--aurora-flare) 0%,var(--nemesis-blue-bright) 100%);
+      border-color:transparent;
+      color:#041021;
+      box-shadow:0 20px 50px rgba(0,194,168,0.32);
+    }
+    [data-theme="light"] .btn--aurora{
+      background:rgba(0,194,168,0.26);
+      border-color:rgba(0,194,168,0.34);
+      color:#05332a;
+      box-shadow:0 18px 40px rgba(0,194,168,0.18);
+    }
+    .btn--ghost{
+      background:rgba(41,121,255,0.12);
+      border:1px solid rgba(41,121,255,0.24);
+      color:var(--accent-color);
+      box-shadow:0 12px 32px rgba(41,121,255,0.18);
+    }
+    .btn--ghost:hover,
+    .btn--ghost:focus-visible{
+      background:var(--accent-hover);
+      border-color:var(--accent-hover);
+      color:#041021;
+      box-shadow:0 18px 46px rgba(41,121,255,0.26);
+    }
+    [data-theme="light"] .btn--ghost{
+      background:rgba(41,121,255,0.18);
+      border-color:rgba(41,121,255,0.32);
+      color:#041021;
+      box-shadow:0 14px 34px rgba(41,121,255,0.18);
+    }
+    main.guide-content{
+      max-width:var(--content-width);
+  margin:-88px auto 0;
+      padding:0 32px 80px;
+      display:flex;
+      flex-direction:column;
+      gap:28px;
+      position:relative;
+      z-index:2;
+      flex:1 0 auto;
+    }
+    .guide-section{
+      padding:32px;
+      border-radius:var(--radius-base);
+      background:var(--surface-gradient);
+      border:1px solid var(--glass-border);
+      box-shadow:var(--section-shadow);
+    }
+    .guide-section h2{
+      margin-top:0;
+      margin-bottom:12px;
+      font-size:1.95rem;
+      letter-spacing:-0.01em;
+    }
+    .guide-section h3{margin-top:20px;font-size:1.3rem;}
+    .note{color:var(--text-muted);font-size:0.94rem;}
+    .section-list{margin:14px 0 0 18px;display:grid;gap:8px;color:var(--text-muted);}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px;}
+  .swatch{border-radius:14px;padding:18px;color:var(--nemesis-white);display:flex;flex-direction:column;gap:8px;min-height:120px;height:auto;box-shadow:inset 0 -8px 24px rgba(0,0,0,0.25);background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);word-break:break-word;}
+    .swatch .hex{font-family:"JetBrains Mono","Fira Code",monospace;font-weight:700;letter-spacing:0.04em;}
+    .swatch.light{color:var(--nemesis-black);background:rgba(255,255,255,0.92);border:1px solid rgba(14,22,48,0.08);}
+    .logo-preview{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-top:16px;}
+  .logo-preview img{width:96px;height:96px;border-radius:50%;background:rgba(255,255,255,0.92);padding:14px;object-fit:contain;box-shadow:0 12px 32px rgba(0,0,0,0.34),0 0 0 1px rgba(255,255,255,0.18);}
+  [data-theme="light"] .logo-preview img{background:rgba(255,255,255,0.98);box-shadow:0 10px 28px rgba(15,35,65,0.12),0 0 0 1px rgba(41,121,255,0.16);}
+  pre{background:var(--code-bg);padding:14px;border-radius:12px;color:var(--code-text);font-size:0.9rem;overflow:auto;margin-top:16px;border:1px solid var(--code-border);line-height:1.6;}
+  pre code{color:inherit;font-family:"JetBrains Mono","Fira Code",monospace;display:block;}
+    .typo-sample{background:rgba(255,255,255,0.04);padding:16px;border-radius:12px;margin-top:16px;border:1px solid rgba(255,255,255,0.08);}    
+    table{width:100%;border-collapse:collapse;margin-top:16px;color:var(--text-color);}
+    table th,table td{padding:10px 8px;text-align:left;border-bottom:1px dashed rgba(255,255,255,0.08);}    
+    table th{font-weight:600;color:var(--text-muted);}
+    .btn-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px;}
+    .btn-row .btn{flex:0 0 auto;}
+  .background-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:20px;}
+  .background-card{position:relative;padding:24px;border-radius:16px;border:1px solid var(--glass-border);color:var(--text-color);box-shadow:0 18px 40px rgba(4,7,18,0.28);min-height:170px;display:flex;flex-direction:column;gap:12px;backdrop-filter:blur(6px) saturate(120%);overflow:hidden;background-size:cover;background-position:center;}
+  .background-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,14,39,0.22) 0%,rgba(10,14,39,0.05) 100%);mix-blend-mode:soft-light;pointer-events:none;opacity:0.4;}
+  [data-theme="light"] .background-card{box-shadow:0 14px 32px rgba(15,35,65,0.14);}
+  [data-theme="light"] .background-card::after{background:linear-gradient(180deg,rgba(255,255,255,0.28) 0%,rgba(255,255,255,0.08) 100%);opacity:0.6;}
+  .background-card strong{font-size:1.05rem;letter-spacing:-0.01em;position:relative;z-index:1;}
+  .background-card p{position:relative;z-index:1;color:var(--text-muted);font-size:0.92rem;line-height:1.6;}
+  .background-card code{position:relative;z-index:1;align-self:flex-start;padding:4px 12px;border-radius:999px;font-size:0.75rem;background:rgba(7,16,42,0.55);color:#f9fbff;border:1px solid rgba(255,255,255,0.12);}
+  [data-theme="light"] .background-card code{background:rgba(15,35,65,0.12);color:#09132b;border-color:rgba(41,121,255,0.14);}
+    .footer-preview{margin-top:16px;padding:0;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:18px;box-shadow:0 18px 36px rgba(4,7,18,0.4);}
+    .site-footer{
+      padding:28px 20px;
+      text-align:center;
+      border-radius:18px;
+      background:var(--glass-bg);
+      border:1px solid var(--glass-border);
+      box-shadow:0 18px 36px rgba(4,7,18,0.42);
+      color:var(--text-muted);
+    }
+    .site-footer--page{
+      width:100%;
+      margin-top:auto;
+      border-radius:0;
+      border-left:0;
+      border-right:0;
+      background:var(--nav-surface);
+      border-color:var(--nav-border);
+      box-shadow:var(--nav-shadow);
+      padding:32px 0;
+    }
+    .site-footer .footer-inner{display:flex;flex-direction:column;gap:10px;}
+    .site-footer--page .footer-inner{max-width:var(--nav-width);margin:0 auto;padding:0 32px;}
+    .site-footer .footer-line{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;font-size:0.9rem;}
+    .site-footer .footer-divider{opacity:0.5;}
+    .site-footer a{text-decoration:none;color:var(--accent-color);font-weight:600;display:inline-flex;align-items:center;gap:6px;}
+    .site-footer a:hover{color:var(--nemesis-white);}
+    .footer-note{font-size:0.8rem;color:var(--text-muted);margin-top:10px;}
+    .guide-nav.open .guide-nav-links{display:flex;}
+    @media (max-width:1024px){
+      .guide-nav-container{flex-wrap:wrap;gap:12px;padding:12px 20px;justify-content:space-between;}
+      .guide-nav-toggle{display:inline-flex;margin-left:auto;}
+      .guide-nav-links{width:100%;justify-content:flex-start;display:none;flex-direction:column;gap:10px;background:var(--nav-surface);border:1px solid var(--nav-border);border-radius:14px;padding:12px 16px;box-shadow:0 16px 36px rgba(4,7,18,0.24);}
+      .guide-nav.open .guide-nav-links{display:flex;}
+      main.guide-content{padding:0 24px 60px;}
+    }
+    @media (max-width:720px){
+      header.guide-hero{padding:32px 16px 120px;}
+      .guide-hero-content h1{font-size:2.4rem;}
+      .guide-nav-container{padding:12px 16px;}
+      .guide-nav-links{gap:8px;}
+      .guide-nav-links a,
+      .guide-nav-links .theme-toggle{width:100%;text-align:left;}
+      main.guide-content{margin:-74px auto 0;padding:0 18px 40px;}
+      .guide-section{padding:24px;}
+    }
+    @media (max-width:520px){
+      .btn{width:100%;}
+      .guide-cta{justify-content:stretch;}
+      .guide-nav-links{gap:6px;}
+      .guide-nav-links .theme-toggle{width:100%;}
+      .style-toggle{width:100%;}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#introduction">Skip to main content</a>
+  <div id="guide-status" class="sr-only" role="status" aria-live="polite"></div>
+  <nav class="guide-nav" aria-label="NemesisNet brand navigation">
+    <div class="guide-nav-container">
+      <a class="guide-logo" href="https://nemesisnet.co.za" target="_blank" rel="noopener">
+        <img src="assets/Nemesis_Logo_Icon.png" alt="NemesisNet logo">
+        <span>NemesisNet Brand Guide</span>
+      </a>
+      <div class="guide-nav-links" id="guide-nav-links">
+        <a href="#tokens">Tokens</a>
+        <a href="#colors">Palette</a>
+  <a href="#backgrounds">Backgrounds</a>
+        <a href="#digital">Components</a>
+        <a href="#imagery">Guidelines</a>
+        <a href="#quick-start">Resources</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" id="guide-theme-toggle" type="button" aria-pressed="false" aria-label="Switch to light mode" title="Switch to light mode">
+          <i class="fas fa-sun" id="guide-theme-icon" aria-hidden="true"></i>
+        </button>
+      </div>
+      <button class="guide-nav-toggle" id="guide-nav-toggle" type="button" aria-label="Open navigation" aria-controls="guide-nav-links" aria-expanded="false">
+        <i class="fas fa-bars" id="guide-nav-toggle-icon" aria-hidden="true"></i>
+      </button>
+    </div>
+  </nav>
+  <div class="guide-nav-overlay" id="guide-nav-overlay" aria-hidden="true"></div>
+  <header class="guide-hero">
+    <div class="guide-hero-content">
+      <span class="guide-eyebrow">Brand system</span>
+      <h1>NemesisNet Brand Playbook</h1>
+      <p class="lead">This HTML guide mirrors the production brand container. Use it to deliver NemesisNet visuals, tone, and accessibility standards consistently across every touchpoint.</p>
+      <div class="guide-cta">
+        <a class="btn btn--primary" href="#tokens">Explore tokens</a>
+        <a class="btn btn--aurora" href="brand-tokens.css" download>Download CSS bundle</a>
+        <button class="btn btn--ghost" type="button" id="downloadGuideBtn">Download HTML snapshot</button>
+  <a class="btn btn--ghost" href="https://nemesisnet.co.za" target="_blank" rel="noopener">Back to main site</a>
+      </div>
+      <div class="style-toggle-group" role="group" aria-label="Alternate NemesisNet styles">
+        <button class="style-toggle" type="button" data-style-mode="base" aria-pressed="true">
+          <span>Base Stack</span>
+          <small>Nemesis Blue + Aurora teal</small>
+        </button>
+        <button class="style-toggle" type="button" data-style-mode="nemesis" aria-pressed="false">
+          <span>Nemesis Mode</span>
+          <small>Cyan + magenta distortion overlay</small>
+        </button>
+        <button class="style-toggle" type="button" data-style-mode="aurora" aria-pressed="false">
+          <span>Aurora Mode</span>
+          <small>Violet + aqua light burst</small>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="guide-content">
+    <section id="introduction" class="guide-section">
+      <h2>Purpose &amp; Scope</h2>
+      <p class="note">This document replaces the production brand guide container. It is the single source of truth for designers, engineers, vendors, and collaborators building NemesisNet experiences. Use the style toggles above to preview the Aurora and Nemesis overlays exactly as they appear on nemesisnet.co.za.</p>
+      <ul class="section-list">
+        <li>Audience: product design, frontend engineering, marketing, vendor partners.</li>
+        <li>Coverage: color, typography, layout, motion cues, accessibility, voice.</li>
+        <li>Governance: submit updates via the NemesisNet brand ops board before shipping.</li>
+      </ul>
+    </section>
+
+    <section id="tokens" class="guide-section">
+      <h2>Core Tokens</h2>
+      <p class="note">Tokens align 1:1 with the main site (<code>index.html</code>). Keep names stable to maintain parity across applications, documentation, and embedded components.</p>
+      <div class="guide-cta guide-cta--left" style="margin-top:18px;">
+        <a class="btn btn--ghost" href="brand-tokens.css">View brand-tokens.css</a>
+        <a class="btn btn--aurora" href="brand-tokens.css" download>Download tokens</a>
+      </div>
+      <pre id="tokensBlock">:root {
+  --nemesis-blue: #1E88E5;           /* primary blue */
+  --nemesis-blue-bright: #2979FF;   /* hover / emphasis */
+  --aurora-base: #00C2A8;           /* secondary teal (Aurora) */
+  --aurora-flare: #33D6B7;          /* lighter teal */
+  --accent-color: var(--nemesis-blue);
+  --accent-hover: var(--nemesis-blue-bright);
+  --accent-glow: rgba(41,121,255,0.14);
+  --nemesis-black: #0a0e27;
+  --nemesis-white: #F4F4F4;
+  --text-color: var(--nemesis-white);
+  --text-muted: rgba(244,244,244,0.65);
+  --glass-bg: rgba(255,255,255,0.03);
+  --glass-border: rgba(255,255,255,0.06);
+  --ui-radius: 12px;                /* base corner radius */
+  --space-xs: 6px;
+  --space-sm: 12px;
+  --space-md: 20px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+}</pre>
+      <div class="guide-cta guide-cta--left" style="margin-top:12px;">
+        <button class="btn btn--ghost" type="button" data-copy-target="tokensBlock" data-copy-label="Tokens copied">Copy token block</button>
+        <button class="btn btn--aurora" type="button" data-download-json="palette">Download palette JSON</button>
+      </div>
+    </section>
+
+    <section id="colors" class="guide-section">
+      <h2>Palette</h2>
+      <p class="note">NemesisNet relies on a deep blue core, grounded neutrals, and the Aurora teal accent. Maintain contrast ratios ≥ 4.5:1 for body copy.</p>
+      <div class="grid">
+        <div class="swatch" style="background:var(--nemesis-blue);">
+          <div><strong>Nemesis Blue</strong></div>
+          <div class="hex">#1E88E5</div>
+          <small>Primary accent — CTAs, links, highlights.</small>
+        </div>
+        <div class="swatch" style="background:var(--nemesis-blue-bright);">
+          <div><strong>Nemesis Bright</strong></div>
+          <div class="hex">#2979FF</div>
+          <small>Hover and emphasis state.</small>
+        </div>
+        <div class="swatch light" style="background:var(--aurora-base);">
+          <div><strong>Aurora Teal</strong></div>
+          <div class="hex">#00C2A8</div>
+          <small>Secondary accent for supporting CTAs.</small>
+        </div>
+        <div class="swatch" style="background:var(--nemesis-black);">
+          <div><strong>Nemesis Black</strong></div>
+          <div class="hex">#0a0e27</div>
+          <small>Primary dark surface.</small>
+        </div>
+        <div class="swatch light" style="background:var(--nemesis-white);">
+          <div><strong>Nemesis White</strong></div>
+          <div class="hex">#F4F4F4</div>
+          <small>Light surface for cards and forms.</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="backgrounds" class="guide-section">
+      <h2>Backgrounds &amp; Gradients</h2>
+      <p class="note">These surfaces create the NemesisNet depth effect. Pair gradients with glass overlays to keep content legible across both themes.</p>
+      <div class="background-grid">
+        <div class="background-card" style="background:var(--page-background);">
+          <strong>Primary Canvas</strong>
+          <p>Default site background. Apply to the page wrapper for deep-space blues and Aurora accents.</p>
+          <code>background: var(--page-background);</code>
+        </div>
+        <div class="background-card" style="background:var(--hero-overlay);">
+          <strong>Hero Overlay</strong>
+          <p>Use as an overlay over media to keep hero headings punchy while preserving depth.</p>
+          <code>background: var(--hero-overlay);</code>
+        </div>
+        <div class="background-card" style="background:var(--surface-gradient);">
+          <strong>Glass Surface</strong>
+          <p>Card gradient for feature panels and brand tiles. Layer with backdrop blur for the polished glassmorphism treatment.</p>
+          <code>background: var(--surface-gradient);</code>
+        </div>
+      </div>
+    </section>
+
+    <section id="layout" class="guide-section">
+      <h2>Spacing &amp; Layout</h2>
+      <p class="note">Use the spacing scale for predictable rhythm. The main layout grid uses <code>max-width: 1280px</code> with a single-column stack below 900px.</p>
+      <table>
+        <thead><tr><th>Token</th><th>Value</th><th>Usage</th></tr></thead>
+        <tbody>
+          <tr><td>--space-xs</td><td>6px</td><td>Tight gaps, badges.</td></tr>
+          <tr><td>--space-sm</td><td>12px</td><td>Input spacing, micro-padding.</td></tr>
+          <tr><td>--space-md</td><td>20px</td><td>Card interior padding.</td></tr>
+          <tr><td>--space-lg</td><td>32px</td><td>Section padding, desktop gutters.</td></tr>
+          <tr><td>--space-xl</td><td>48px</td><td>Hero spacing and large gutters.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="typography" class="guide-section">
+      <h2>Typography</h2>
+      <p class="note">Primary typeface: Inter. Use system fallbacks if webfonts are unavailable. Maintain optical margin alignment for big headlines.</p>
+      <div class="typo-sample">
+        <div style="font-weight:800;font-size:28px">Heading — Inter 800 (28px)</div>
+        <div style="font-weight:600;font-size:18px;margin-top:8px">Subheading — Inter 600 (18px)</div>
+        <div style="font-weight:400;font-size:14px;margin-top:8px;color:var(--text-muted)">Body — Inter 400 (14px) with 1.6 line-height.</div>
+      </div>
+    </section>
+
+    <section id="logo-system" class="guide-section">
+      <h2>Logo Clearspace &amp; Minimum Sizes</h2>
+      <p class="note">Maintain at least 16px clearspace around the mark. Minimum width: 48px for favicons, 96px for UI placements.</p>
+      <p class="note">Never recolor, rotate, or distort the logomark. Always use provided assets.</p>
+    </section>
+
+    <section id="logo" class="guide-section">
+      <h2>Logo Assets</h2>
+      <p class="note">Primary logo assets live in <code>assets/</code>. Use PNG/SVG for UI and the ICO for favicons.</p>
+      <div class="logo-preview">
+        <img src="assets/Nemesis_Logo_Icon.png" alt="NemesisNet logo" loading="lazy">
+        <div>
+          <strong>NemesisNet</strong>
+          <p class="note">Keep a minimum 16px clearspace and avoid placing the logo on complex backgrounds.</p>
+          <p class="note">Files: <code>assets/Nemesis_Logo_Icon.png</code>, <code>assets/Nemesis_Logo_Icon.ico</code></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="digital" class="guide-section">
+      <h2>Digital &amp; UI</h2>
+      <p class="note">Buttons mirror the main site: glass base, gradient hero, and Aurora secondary. Ghost buttons support tertiary actions.</p>
+      <div class="btn-row">
+        <button type="button" class="btn btn--primary">Primary CTA</button>
+        <button type="button" class="btn btn--aurora">Aurora CTA</button>
+        <button type="button" class="btn btn--ghost">Ghost / Secondary</button>
+      </div>
+      <h3>Copyable CSS (example)</h3>
+      <pre>.btn-primary {
+  background: linear-gradient(90deg, var(--nemesis-blue) 0%, var(--aurora-base) 100%);
+  color: #0a0e27;
+  border-radius: 12px;
+  padding: 12px 26px;
+  font-weight: 600;
+  box-shadow: 0 12px 32px rgba(41,121,255,0.32);
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  color: var(--text-color);
+}</pre>
+    </section>
+
+    <section id="base-components" class="guide-section">
+      <h2>Base NemesisNet Components</h2>
+      <p class="note">These samples are lifted from <code>nemesisnet.co.za</code> hero, chips, and project grid. Use them when reproducing the primary site experience.</p>
+      <div class="component-grid">
+        <div class="component-card">
+          <div>
+            <h3>Hero Links</h3>
+            <p class="note">Matches the homepage hero actions. Inherit <code>.hero-links</code> spacing on responsive layouts.</p>
+          </div>
+          <div class="guide-cta guide-cta--left" style="margin-top:0;">
+            <a class="btn btn--primary" href="#projects"><i class="fas fa-briefcase" aria-hidden="true"></i> Our Work</a>
+            <a class="btn btn--aurora" href="#about"><i class="fas fa-user" aria-hidden="true"></i> About Us</a>
+            <a class="btn btn--ghost" href="mailto:hello@nemesisnet.co.za"><i class="fas fa-envelope" aria-hidden="true"></i> Contact</a>
+          </div>
+        </div>
+        <div class="component-card">
+          <div>
+            <h3>Pills &amp; Tags</h3>
+            <p class="note">Used for skill tags and highlight callouts. Keep casing Title Case.</p>
+          </div>
+          <div class="pill-row" role="list">
+            <span class="pill pill--accent" role="listitem">AI Systems</span>
+            <span class="pill" role="listitem">Spring Boot</span>
+            <span class="pill pill--outline" role="listitem">Vue.js</span>
+            <span class="pill" role="listitem">Docker</span>
+            <span class="pill" role="listitem">DevOps</span>
+          </div>
+        </div>
+        <div class="component-card">
+          <div>
+            <h3>Project Card</h3>
+            <p class="note">Glassmorphic cards with CTA stack. Follow the 12px radius and gradients.</p>
+          </div>
+          <div class="guide-card-sample">
+            <h4>VibeType</h4>
+            <p class="note">AI-driven voice assistant with Kokoro + Whisper orchestration.</p>
+            <div class="guide-card-links">
+              <a href="https://github.com/NemesisGuy/Vibe-Type" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Source</a>
+              <a href="https://nemesisnet.co.za" target="_blank" rel="noopener"><i class="fas fa-globe" aria-hidden="true"></i> Live Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="accessibility" class="guide-section">
+      <h2>Components &amp; Accessibility</h2>
+      <p class="note">Contrast ratios, focus states, and keyboard support match production. Audit releases against WCAG 2.1 AA.</p>
+      <h3>Accessibility checklist</h3>
+      <ul class="section-list">
+        <li>Contrast: text vs background ≥ 4.5:1 for body text.</li>
+        <li>Focus styles: ensure visible focus rings on all interactive elements.</li>
+        <li>Keyboard: every component must be operable via keyboard.</li>
+        <li>Alt text: provide descriptive alternative text for imagery and logos.</li>
+      </ul>
+      <table>
+        <thead><tr><th>Component</th><th>Usage</th></tr></thead>
+        <tbody>
+          <tr><td>Buttons</td><td>Primary (blue) for main CTAs, Aurora for alternate CTAs, Ghost for secondary actions.</td></tr>
+          <tr><td>Cards</td><td>Use <code>background: var(--glass-bg)</code> with <code>border-radius: 20px</code> and soft glow shadows.</td></tr>
+          <tr><td>Avatar / Mark</td><td>High contrast surfaces, 16px clearspace, transparent PNG or SVG.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="imagery" class="guide-section">
+      <h2>Imagery &amp; Photography</h2>
+      <p class="note">Favor candid shots with natural lighting and strong contrast. Avoid heavy filters or color casts that fight the brand palette.</p>
+      <ul class="section-list">
+        <li>Do: shallow depth-of-field, balanced composition, authentic collaboration moments.</li>
+        <li>Don't: oversaturate, crop the logo into photos, or rely on generic stock.</li>
+      </ul>
+    </section>
+
+    <section id="iconography" class="guide-section">
+      <h2>Iconography &amp; Illustration</h2>
+      <p class="note">Stick to geometric shapes with consistent stroke weight. Use 16/24/32px grids and rounded corners that echo UI radii.</p>
+    </section>
+
+    <section id="voice" class="guide-section">
+      <h2>Voice &amp; Tone</h2>
+      <p class="note">NemesisNet voice is confident, concise, and empathetic. Highlight measurable outcomes, avoid hype, and speak like a senior engineer guiding a partner.</p>
+    </section>
+
+    <section id="applications" class="guide-section">
+      <h2>Applications</h2>
+      <p class="note">Showcase the system across business cards, slide decks, marketing landing pages, dashboards, and swag. Provide editable templates in Figma or the preferred tool.</p>
+    </section>
+
+    <section id="quick-start" class="guide-section">
+      <h2>Quick Start</h2>
+      <p class="note">Bootstrap new surfaces with these base tokens:</p>
+      <pre>:root {
+  --nemesis-blue: #1E88E5;
+  --nemesis-blue-bright: #2979FF;
+  --aurora-base: #00C2A8;
+  --aurora-flare: #33D6B7;
+  --nemesis-black: #0a0e27;
+  --nemesis-white: #F4F4F4;
+  --accent-color: var(--nemesis-blue);
+  --glass-bg: rgba(255,255,255,0.03);
+  --glass-border: rgba(255,255,255,0.06);
+  --ui-radius: 12px;
+}</pre>
+      <p class="note">Vector assets reside in <code>assets/</code>. Use PNG/SVG for high resolution contexts and ICO for favicons.</p>
+    </section>
+
+    <section id="button-examples" class="guide-section">
+      <h2>Light / Dark Button Examples</h2>
+      <p class="note">Preview button contrast on light and dark surfaces. Toggle the switch to confirm focus and accessibility behavior.</p>
+      <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px">
+        <label style="display:inline-flex;align-items:center;gap:8px;cursor:pointer">
+          <input id="brand-theme-toggle" type="checkbox" aria-label="Toggle demo theme"> Show light theme
+        </label>
+      </div>
+      <div id="button-demo" style="padding:18px;border-radius:12px;background:var(--glass-bg);border:1px solid var(--glass-border);">
+        <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+          <button class="btn btn--primary" type="button">Primary CTA</button>
+          <button class="btn btn--aurora" type="button">Aurora CTA</button>
+          <button class="btn btn--ghost" type="button">Ghost</button>
+        </div>
+        <div style="margin-top:12px;color:var(--text-muted);font-size:0.9rem">Focus rings must remain visible when tabbing (press Tab). Buttons rely on the shared token stack.</div>
+      </div>
+    </section>
+
+    <section id="legal" class="guide-section">
+      <h2>Legal &amp; Trademark Use</h2>
+      <p class="note">Retain trademark notices and partner usage rules. Obtain NemesisNet brand approval before modifying or co-branding assets.</p>
+    </section>
+
+    <section id="footer-guide" class="guide-section">
+      <h2>Nemesis Footer</h2>
+      <p class="note">Reuse this footer pattern for all NemesisNet-owned properties. It mirrors the production footer with dynamic year and attribution.</p>
+      <div class="footer-preview" aria-label="NemesisNet footer example">
+        <footer class="site-footer">
+          <div class="footer-inner">
+            <div class="footer-line">
+              <span>@ <span id="footer-month-preview"></span> <span id="footer-year-preview"></span></span>
+              <span class="footer-divider">|</span>
+              <span>Built by <a href="https://github.com/NemesisGuy" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> NemesisGuy</a></span>
+              <span class="footer-divider">|</span>
+              <span>Powered by <a href="https://nemesisnet.co.za" target="_blank" rel="noopener">NemesisNet.co.za</a></span>
+              <span class="footer-divider">|</span>
+              <span>All rights reserved.</span>
+            </div>
+            <p class="footer-note">Place the footer inside a glass card when the page background becomes busy.</p>
+          </div>
+        </footer>
+      </div>
+      <div class="guide-cta guide-cta--left" style="margin-top:16px;">
+        <button class="btn btn--ghost" type="button" data-copy-target="footerSnippet" data-copy-label="Footer snippet copied">Copy footer snippet</button>
+      </div>
+      <pre id="footerSnippet">&lt;footer class="site-footer"&gt;
+  &lt;div class="footer-inner"&gt;
+    &lt;div class="footer-line"&gt;
+      &lt;span&gt;@ &lt;span id="footer-month"&gt;&lt;/span&gt; &lt;span id="footer-year"&gt;&lt;/span&gt;&lt;/span&gt;
+      &lt;span class="footer-divider"&gt;|&lt;/span&gt;
+      &lt;span&gt;Built by &lt;a href="https://github.com/NemesisGuy" target="_blank" rel="noopener"&gt;&lt;i class="fab fa-github" aria-hidden="true"&gt;&lt;/i&gt; NemesisGuy&lt;/a&gt;&lt;/span&gt;
+      &lt;span class="footer-divider"&gt;|&lt;/span&gt;
+      &lt;span&gt;Powered by &lt;a href="https://nemesisnet.co.za" target="_blank" rel="noopener"&gt;NemesisNet.co.za&lt;/a&gt;&lt;/span&gt;
+      &lt;span class="footer-divider"&gt;|&lt;/span&gt;
+      &lt;span&gt;All rights reserved.&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</pre>
+      <pre aria-label="Footer JavaScript example" style="margin-top:16px;">&lt;script&gt;
+  const now = new Date();
+  const monthName = now.toLocaleString('default',{ month:'long' });
+  document.getElementById('footer-month').textContent = monthName;
+  document.getElementById('footer-year').textContent = now.getFullYear();
+&lt;/script&gt;</pre>
+      <p class="note" style="margin-top:12px;">Drop the script once per page (after the footer) so every property automatically shows the current month + year.</p>
+    </section>
+
+    <section id="contact" class="guide-section">
+      <h2>Contact / Brand Team</h2>
+      <p class="note">Asset requests &amp; approvals: <a href="mailto:hello@nemesisnet.co.za">hello@nemesisnet.co.za</a>. Escalations route through the brand operations channel.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer--page" aria-label="NemesisNet footer">
+    <div class="footer-inner">
+      <div class="footer-line">
+        <span>@ <span id="footer-month"></span> <span id="footer-year"></span></span>
+        <span class="footer-divider">|</span>
+        <span>Built by <a href="https://github.com/NemesisGuy" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> NemesisGuy</a></span>
+        <span class="footer-divider">|</span>
+        <span>Powered by <a href="https://nemesisnet.co.za" target="_blank" rel="noopener">NemesisNet.co.za</a></span>
+        <span class="footer-divider">|</span>
+        <span>All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+  const checkbox = document.getElementById('brand-theme-toggle');
+  const themeToggle = document.getElementById('guide-theme-toggle');
+  const themeToggleIcon = document.getElementById('guide-theme-icon');
+  const navShell = document.querySelector('.guide-nav');
+  const navMenuToggle = document.getElementById('guide-nav-toggle');
+  const navMenuToggleIcon = document.getElementById('guide-nav-toggle-icon');
+  const navMenu = document.getElementById('guide-nav-links');
+  const navOverlay = document.getElementById('guide-nav-overlay');
+  const demo = document.getElementById('button-demo');
+  const statusRegion = document.getElementById('guide-status');
+  const downloadGuideBtn = document.getElementById('downloadGuideBtn');
+  const copyButtons = document.querySelectorAll('[data-copy-target]');
+  const paletteButtons = document.querySelectorAll('[data-download-json]');
+  const styleButtons = document.querySelectorAll('[data-style-mode]');
+  const STYLE_STORAGE_KEY = 'nemesis-guide-style';
+  const footerYearPreview = document.getElementById('footer-year-preview');
+  const footerMonthPreview = document.getElementById('footer-month-preview');
+  const footerYear = document.getElementById('footer-year');
+  const footerMonth = document.getElementById('footer-month');
+  let statusClearTimer = null;
+
+      // setLight keeps the nav toggle, demo controls, and document theme in sync.
+      function setLight(light){
+        // Adjust tokens so both the nav control and demo card reflect the current theme.
+        if(demo){
+          if(light){
+            demo.style.background = 'rgba(255,255,255,0.96)';
+            demo.style.color = 'var(--nemesis-black)';
+          } else {
+            demo.style.background = 'var(--glass-bg)';
+            demo.style.color = 'var(--text-color)';
+          }
+        }
+
+        if(light){
+          document.documentElement.setAttribute('data-theme','light');
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+        }
+
+        if(checkbox){
+          checkbox.checked = light;
+        }
+
+        if(themeToggle){
+          themeToggle.classList.toggle('is-light', light);
+          themeToggle.setAttribute('aria-pressed', String(light));
+          themeToggle.setAttribute('aria-label', light ? 'Switch to dark mode' : 'Switch to light mode');
+          themeToggle.setAttribute('title', light ? 'Switch to dark mode' : 'Switch to light mode');
+        }
+
+        if(themeToggleIcon){
+          themeToggleIcon.classList.toggle('fa-sun', !light);
+          themeToggleIcon.classList.toggle('fa-moon', light);
+        }
+      }
+
+      if(checkbox){
+        checkbox.addEventListener('change', (event)=> setLight(event.target.checked));
+      }
+
+      if(themeToggle){
+        themeToggle.addEventListener('click', ()=>{
+          const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+          setLight(!isLight);
+        });
+      }
+
+      // announceStatus surfaces non-blocking updates for assistive tech.
+      function announceStatus(message){
+        if(!statusRegion){
+          return;
+        }
+        statusRegion.textContent = message;
+        if(statusClearTimer){
+          clearTimeout(statusClearTimer);
+        }
+        statusClearTimer = setTimeout(()=>{
+          statusRegion.textContent = '';
+        },4000);
+      }
+
+      // copyTextContent copies a target element's text with clipboard and fallback support.
+      function copyTextContent(element){
+        if(!element){
+          return Promise.reject(new Error('Missing target'));
+        }
+        const payload = element.innerText || element.textContent || '';
+        if(!payload){
+          return Promise.reject(new Error('Empty target content'));
+        }
+        if(navigator.clipboard && window.isSecureContext){
+          return navigator.clipboard.writeText(payload);
+        }
+        return new Promise((resolve,reject)=>{
+          const textarea = document.createElement('textarea');
+          textarea.value = payload;
+          textarea.setAttribute('readonly','');
+          textarea.style.position = 'absolute';
+          textarea.style.left = '-9999px';
+          document.body.appendChild(textarea);
+          textarea.select();
+          try{
+            const successful = document.execCommand('copy');
+            successful ? resolve() : reject(new Error('Copy command blocked'));
+          } catch(err){
+            reject(err);
+          } finally {
+            textarea.remove();
+          }
+        });
+      }
+
+      // downloadBlob serializes provided content and triggers a download.
+      function downloadBlob(filename,data,mimeType){
+        const blob = new Blob([data],{type:mimeType});
+        const url = URL.createObjectURL(blob);
+        const anchor = document.createElement('a');
+        anchor.href = url;
+        anchor.download = filename;
+        document.body.appendChild(anchor);
+        anchor.click();
+        anchor.remove();
+        URL.revokeObjectURL(url);
+      }
+
+      // buildPaletteJson exports the base palette plus Aurora / Nemesis overlays.
+      function buildPaletteJson(){
+        const palette = {
+          base:{
+            nemesisBlue:'#1E88E5',
+            nemesisBlueBright:'#2979FF',
+            nemesisBlueDeep:'#0f4c81',
+            auroraBase:'#00C2A8',
+            auroraFlare:'#33D6B7',
+            auroraEmber:'#008B6A',
+            nemesisBlack:'#0a0e27',
+            nemesisWhite:'#F4F4F4',
+            textMuted:'rgba(244,244,244,0.65)',
+            auroraGlow:'rgba(0,194,168,0.12)'
+          },
+          aurora:{
+            accent:'#7c4dff',
+            accentHover:'#b388ff',
+            accentGlow:'rgba(124,77,255,0.36)',
+            secondaryAccent:'#00e5ff',
+            secondaryGlow:'rgba(0,229,255,0.25)',
+            text:'#f6f8ff',
+            textMuted:'rgba(246,248,255,0.72)',
+            glassBg:'rgba(255,255,255,0.08)',
+            glassBorder:'rgba(124,77,255,0.3)'
+          },
+          nemesis:{
+            accent:'#00ffff',
+            accentHover:'#33f4ff',
+            accentGlow:'rgba(0,255,255,0.35)',
+            secondaryAccent:'#ff0050',
+            secondaryGlow:'rgba(255,0,80,0.25)',
+            text:'#e6f7ff',
+            textMuted:'#88a9ff',
+            glassBg:'rgba(255,255,255,0.05)',
+            glassBorder:'rgba(0,255,255,0.18)'
+          }
+        };
+        return JSON.stringify(palette,null,2);
+      }
+
+      // setGuideStyle applies Aurora/Nemesis overlays from nemesisnet.co.za.
+      function setGuideStyle(mode,options={}){
+        const normalized = (mode === 'nemesis' || mode === 'aurora') ? mode : 'base';
+        const root = document.documentElement;
+        const persist = options.persist !== false;
+        const silent = options.silent === true;
+        if(normalized === 'base'){
+          root.removeAttribute('data-style');
+        } else {
+          root.setAttribute('data-style', normalized);
+        }
+
+        if(styleButtons.length){
+          styleButtons.forEach((button)=>{
+            const isActive = button.getAttribute('data-style-mode') === normalized;
+            button.setAttribute('aria-pressed', String(isActive));
+          });
+        }
+
+        if(persist){
+          try{
+            localStorage.setItem(STYLE_STORAGE_KEY, normalized);
+          } catch(err){
+            // noop — storage failures are non-blocking
+          }
+        }
+
+        if(!silent){
+          const pretty = normalized === 'base' ? 'Base stack' : `${normalized.charAt(0).toUpperCase()}${normalized.slice(1)} mode`;
+          announceStatus(`${pretty} applied`);
+        }
+
+        return normalized;
+      }
+
+      // closeNavMenu collapses the mobile drawer and overlay.
+      function closeNavMenu(){
+        if(navShell && navShell.classList.contains('open')){
+          navShell.classList.remove('open');
+        }
+        if(navMenuToggle){
+          navMenuToggle.setAttribute('aria-expanded','false');
+        }
+        if(navMenuToggleIcon){
+          navMenuToggleIcon.classList.add('fa-bars');
+          navMenuToggleIcon.classList.remove('fa-times');
+        }
+        if(navOverlay){
+          navOverlay.classList.remove('is-visible');
+        }
+      }
+
+      // openNavMenu expands the mobile drawer and overlay.
+      function openNavMenu(){
+        if(navShell){
+          navShell.classList.add('open');
+        }
+        if(navMenuToggle){
+          navMenuToggle.setAttribute('aria-expanded','true');
+        }
+        if(navMenuToggleIcon){
+          navMenuToggleIcon.classList.remove('fa-bars');
+          navMenuToggleIcon.classList.add('fa-times');
+        }
+        if(navOverlay){
+          navOverlay.classList.add('is-visible');
+        }
+      }
+
+      if(navMenuToggle && navShell){
+        navMenuToggle.addEventListener('click', ()=>{
+          const isOpen = navShell.classList.contains('open');
+          if(isOpen){
+            closeNavMenu();
+          } else {
+            openNavMenu();
+          }
+        });
+      }
+
+      if(navOverlay){
+        navOverlay.addEventListener('click', closeNavMenu);
+      }
+
+      if(navMenu && navShell){
+        navMenu.querySelectorAll('a').forEach((link)=>{
+          link.addEventListener('click', closeNavMenu);
+        });
+      }
+
+      window.addEventListener('resize', ()=>{
+        if(window.innerWidth > 1024){
+          closeNavMenu();
+        }
+      });
+
+      window.addEventListener('keydown', (event)=>{
+        if(event.key === 'Escape'){
+          closeNavMenu();
+        }
+      });
+
+      copyButtons.forEach((button)=>{
+        button.addEventListener('click', ()=>{
+          const targetId = button.getAttribute('data-copy-target');
+          const target = document.getElementById(targetId);
+          copyTextContent(target)
+            .then(()=>{
+              announceStatus(button.getAttribute('data-copy-label') || 'Copied to clipboard');
+            })
+            .catch(()=>{
+              announceStatus('Copy failed. Select and copy manually.');
+            });
+        });
+      });
+
+      paletteButtons.forEach((button)=>{
+        button.addEventListener('click', ()=>{
+          const jsonType = button.getAttribute('data-download-json');
+          if(jsonType === 'palette'){
+            const payload = buildPaletteJson();
+            downloadBlob('nemesisnet-palette.json', payload, 'application/json');
+            announceStatus('Palette JSON downloaded');
+          }
+        });
+      });
+
+      styleButtons.forEach((button)=>{
+        button.addEventListener('click', ()=>{
+          const nextStyle = button.getAttribute('data-style-mode');
+          setGuideStyle(nextStyle);
+        });
+      });
+
+      if(downloadGuideBtn){
+        downloadGuideBtn.addEventListener('click', ()=>{
+          const html = '<!doctype html>\n' + document.documentElement.outerHTML;
+          downloadBlob('nemesisnet-brand-guide.html', html, 'text/html');
+          announceStatus('HTML snapshot downloaded');
+        });
+      }
+
+      // hydrateFooterDates ensures both preview + live footer show current month/year.
+      function hydrateFooterDates(){
+        const now = new Date();
+        const monthName = now.toLocaleString('default',{month:'long'});
+        [footerYearPreview, footerYear].forEach((node)=>{
+          if(node){
+            node.textContent = now.getFullYear();
+          }
+        });
+        [footerMonthPreview, footerMonth].forEach((node)=>{
+          if(node){
+            node.textContent = monthName;
+          }
+        });
+      }
+
+      hydrateFooterDates();
+
+      setLight(false);
+
+      let savedStyle = 'base';
+      try{
+        savedStyle = localStorage.getItem(STYLE_STORAGE_KEY) || 'base';
+      } catch(err){
+        savedStyle = 'base';
+      }
+      setGuideStyle(savedStyle, {persist:false, silent:true});
+    })();
+  </script>
+</body>
+</html>
