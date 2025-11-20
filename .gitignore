@@ -1,0 +1,12 @@
+# Local editor settings
+.vscode/
+
+# Temporary reference clones
+nemesisnet-reference/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Node artifacts (future tooling)
+node_modules/

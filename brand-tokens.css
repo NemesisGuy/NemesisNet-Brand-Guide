@@ -1,0 +1,66 @@
+/* brand-tokens.css — copy into your project's global stylesheet
+   Generated: 2025-11-11
+*/
+:root {
+  --nemesis-blue: #1E88E5;
+  --nemesis-blue-bright: #2979FF;
+  --nemesis-blue-deep: #0f4c81;
+
+  --aurora-base: #00C2A8;
+  --aurora-flare: #33D6B7;
+  --aurora-ember: #008B6A;
+  --aurora-glow: rgba(0,194,168,0.12);
+
+  --accent-color: var(--nemesis-blue);
+  --accent-hover: var(--nemesis-blue-bright);
+  --accent-glow: rgba(41,121,255,0.14);
+
+  --nemesis-black: #0a0e27;
+  --nemesis-white: #F4F4F4;
+  --text-color: var(--nemesis-white);
+  --text-muted: rgba(244,244,244,0.65);
+
+  --glass-bg: rgba(255,255,255,0.03);
+  --glass-border: rgba(255,255,255,0.06);
+
+  --ui-radius: 12px;
+  --space-xs: 6px;
+  --space-sm: 12px;
+  --space-md: 20px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+}
+
+/* Example utility classes */
+.btn-primary{
+  background: linear-gradient(90deg, var(--nemesis-blue) 0%, var(--aurora-base) 100%);
+  color: #0a0e27;
+  border-radius: var(--ui-radius);
+  padding: 10px 14px;
+  font-weight: 700;
+}
+
+.card-surface{
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: var(--space-md);
+}
+
+/* Light theme overrides (optional) */
+[data-theme="light"] {
+  --text-color: var(--nemesis-black);
+  --text-muted: rgba(26,26,26,0.6);
+  --glass-bg: rgba(255,255,255,0.96);
+  --glass-border: rgba(10,14,39,0.06);
+}
+
+/* SCSS snippet (if you use SASS) */
+/*
+$nemesis-blue: #1E88E5;
+$aurora-base: #00C2A8;
+
+.btn-primary {
+  background: linear-gradient(90deg, $nemesis-blue 0%, $aurora-base 100%);
+}
+*/
