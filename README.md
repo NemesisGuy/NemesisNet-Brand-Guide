@@ -40,6 +40,10 @@ A production-aligned HTML brand system for NemesisNet. This repo mirrors the liv
 - If you modify Docker setup or nginx config, update `README.docker.md`.
 - Use meaningful commit messages (`feat:`, `fix:`, `chore:`) and run `docker build` before pushing to ensure deployability.
 
+## Related Projects
+
+- **[NemesisNet VSCode Themes](https://github.com/NemesisGuy/NemesisNet-VSCode-Themes)** - Official VSCode theme with 6 variants (Base, Nemesis, Aurora in dark/light) built from this brand guide's color tokens
+
 ## Additional Docs
 
 See `docs/` for legacy snapshots and historical references. Add more documents (e.g., `docs/brand-guidelines.md`) as policies evolve.
