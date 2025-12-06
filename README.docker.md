@@ -10,6 +10,13 @@ The included `Dockerfile` uses nginx (alpine) to serve the site as a static site
 docker build -t nemesisnet-brand-guide:latest .
 ```
 
+### Build (WSL, no cache, Docker Hub tag)
+
+```bash
+# From repository root
+wsl docker build --no-cache -t nemesisguy/nemesisnet-brand-guide:latest .
+```
+
 ## Run (PowerShell)
 
 ```powershell
@@ -18,6 +25,12 @@ docker run --rm -p 8080:80 nemesisnet-brand-guide:latest
 ```
 
 Then open http://localhost:8080 in your browser.
+
+## Push to Docker Hub
+
+```bash
+wsl docker push nemesisguy/nemesisnet-brand-guide:latest
+```
 
 ## Notes
 - The Dockerfile copies `src/index.html` to `/usr/share/nginx/html/index.html` and `public/assets/` to `/usr/share/nginx/html/assets/`.
