@@ -1,0 +1,8 @@
+{
+    "mcpServers": {
+        "VibeType-MCP": {
+            "url": "http://127.0.0.1:9032",
+            "type": "http"
+        }
+    }
+}

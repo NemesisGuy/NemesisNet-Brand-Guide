@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Menu Test</title>
+    <link rel="stylesheet" href="src/brand-tokens.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="site-branding">
+                <div class="site-title"><a href="#">NemesisNet</a></div>
+            </div>
+
+            <nav id="site-navigation" class="main-navigation">
+                <ul id="primary-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-moon" id="theme-toggle-icon"></i>
+                </button>
+
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
+                    <span class="menu-toggle-icon"></span>
+                    <span class="menu-toggle-icon"></span>
+                    <span class="menu-toggle-icon"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="site-content">
+        <div class="container">
+            <h1>Burger Menu Test</h1>
+            <p>Resize your browser window to under 1024px width to see the burger menu appear.</p>
+            <p>Current window width: <span id="width-display"></span>px</p>
+        </div>
+    </main>
+
+    <script>
+        // Display window width
+        function updateWidth() {
+            document.getElementById('width-display').textContent = window.innerWidth;
+        }
+        updateWidth();
+        window.addEventListener('resize', updateWidth);
+
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeToggleIcon = document.getElementById('theme-toggle-icon');
+
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+                if (isLight) {
+                    document.documentElement.removeAttribute('data-theme');
+                    themeToggle.classList.remove('is-light');
+                    themeToggleIcon.classList.remove('fa-sun');
+                    themeToggleIcon.classList.add('fa-moon');
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                    themeToggle.classList.add('is-light');
+                    themeToggleIcon.classList.remove('fa-moon');
+                    themeToggleIcon.classList.add('fa-sun');
+                }
+            });
+        }
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const siteNavigation = document.getElementById('site-navigation');
+
+        if (menuToggle && siteNavigation) {
+            menuToggle.addEventListener('click', function () {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                menuToggle.setAttribute('aria-expanded', !isExpanded);
+                menuToggle.classList.toggle('is-active');
+                siteNavigation.classList.toggle('is-open');
+                console.log('Menu toggled! Is open:', !isExpanded);
+            });
+        }
+    </script>
+</body>
+
+</html>

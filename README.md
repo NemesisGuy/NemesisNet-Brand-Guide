@@ -26,6 +26,20 @@ A production-aligned HTML brand system for NemesisNet. This repo mirrors the liv
 2. Use a static server (e.g., `npx serve src`, `python -m http.server`) to preview `src/index.html` so local fonts + storage work.
 3. Toggle Base / Nemesis / Aurora themes and light/dark mode to validate tokens visually.
 
+## Frontend Stack Notes
+
+- **Broader NemesisNet stack:** NemesisNet properties are also known to use Bootstrap and Font Awesome where they fit project requirements.
+- **Font Awesome:** Included via CDN in `src/index.html` for iconography (`fa-*` classes).
+- **Bootstrap framework:** Not used as a dependency in this project. The UI is custom CSS driven by `src/brand-tokens.css` and `css/style.css`.
+- **"Bootstrap" wording in docs:** In sections like "Bootstrap new surfaces," it means "initialize with base tokens," not "use Bootstrap CSS framework."
+
+## SEO, Responsive, and Lighthouse
+
+- **SEO basics are in place:** title, description, canonical, Open Graph, Twitter cards, robots, and JSON-LD metadata are included in `src/index.html`.
+- **Responsive behavior is implemented:** viewport meta tag, adaptive nav, and mobile breakpoints are already defined in `css/style.css`.
+- **Lighthouse should score well** when deployed with compression/caching and optimized assets, but score depends on runtime factors (hosting, network, third-party CDNs, and image weight).
+- **Recommended release check:** run Lighthouse on mobile + desktop after each major content/design update and fix any regressions before shipping.
+
 ## Building & Deployment
 
 - **Docker (local quick build):** `docker build -t nemesisnet-brand-guide:latest .`

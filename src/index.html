@@ -450,7 +450,7 @@
             <a class="btn btn--primary" href="#projects"><i class="fas fa-briefcase" aria-hidden="true"></i> Our
               Work</a>
             <a class="btn btn--aurora" href="#about"><i class="fas fa-user" aria-hidden="true"></i> About Us</a>
-            <a class="btn btn--ghost" href="mailto:hello@nemesisnet.co.za"><i class="fas fa-envelope"
+            <a class="btn btn--ghost" href="mailto:admin@nemesisnet.co.za"><i class="fas fa-envelope"
                 aria-hidden="true"></i> Contact</a>
           </div>
         </div>
@@ -649,8 +649,8 @@
 
     <section id="contact" class="guide-section">
       <h2>Contact / Brand Team</h2>
-      <p class="note">Asset requests &amp; approvals: <a
-          href="mailto:hello@nemesisnet.co.za">hello@nemesisnet.co.za</a>. Escalations route through the brand
+        <p class="note">Asset requests &amp; approvals: <a
+          href="mailto:admin@nemesisnet.co.za">admin@nemesisnet.co.za</a>. Escalations route through the brand
         operations channel.</p>
     </section>
   </main>
@@ -687,11 +687,14 @@
       const paletteButtons = document.querySelectorAll('[data-download-json]');
       const styleButtons = document.querySelectorAll('[data-style-mode]');
       const STYLE_STORAGE_KEY = 'nemesis-guide-style';
+      const THEME_STORAGE_KEY = 'nemesis-guide-theme';
+      const systemThemeQuery = window.matchMedia('(prefers-color-scheme: light)');
       const footerYearPreview = document.getElementById('footer-year-preview');
       const footerMonthPreview = document.getElementById('footer-month-preview');
       const footerYear = document.getElementById('footer-year');
       const footerMonth = document.getElementById('footer-month');
       let statusClearTimer = null;
+      let hasExplicitThemePreference = false;
 
       // lockBodyScroll toggles page scroll when the mobile nav drawer is open.
       function lockBodyScroll(locked) {
@@ -703,7 +706,8 @@
       }
 
       // setLight keeps the nav toggle, demo controls, and document theme in sync.
-      function setLight(light) {
+      function setLight(light, options = {}) {
+        const { persist = true } = options;
         // Adjust tokens so both the nav control and demo card reflect the current theme.
         if (demo) {
           demo.style.background = 'var(--glass-bg)';
@@ -731,6 +735,15 @@
           themeToggleIcon.classList.toggle('fa-sun', !light);
           themeToggleIcon.classList.toggle('fa-moon', light);
         }
+
+        if (persist) {
+          hasExplicitThemePreference = true;
+          try {
+            localStorage.setItem(THEME_STORAGE_KEY, light ? 'light' : 'dark');
+          } catch (err) {
+            // Ignore storage failures (private mode / blocked storage).
+          }
+        }
       }
 
       if (checkbox) {
@@ -741,6 +754,14 @@
         themeToggle.addEventListener('click', () => {
           const isLight = document.documentElement.getAttribute('data-theme') === 'light';
           setLight(!isLight);
+        });
+      }
+
+      if (systemThemeQuery && typeof systemThemeQuery.addEventListener === 'function') {
+        systemThemeQuery.addEventListener('change', (event) => {
+          if (!hasExplicitThemePreference) {
+            setLight(event.matches, { persist: false });
+          }
         });
       }
 
@@ -1006,7 +1027,21 @@
 
       hydrateFooterDates();
 
-      setLight(false);
+      let initialLight = systemThemeQuery.matches;
+      try {
+        const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+        if (savedTheme === 'light') {
+          initialLight = true;
+          hasExplicitThemePreference = true;
+        } else if (savedTheme === 'dark') {
+          initialLight = false;
+          hasExplicitThemePreference = true;
+        }
+      } catch (err) {
+        initialLight = systemThemeQuery.matches;
+      }
+
+      setLight(initialLight, { persist: false });
 
       let savedStyle = 'base';
       try {

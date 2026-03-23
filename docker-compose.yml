@@ -2,11 +2,8 @@ version: "3.9"
 
 services:
   nemesisnet-brand-guide:
-    image: nemesisguy/nemesisnet-brand-guide:v1.0.0
+    image: nemesisguy/nemesisnet-brand-guide:latest
     container_name: nemesisnet-brand-guide
     restart: unless-stopped
     ports:
       - "9113:80"
-    volumes:
-      - ./src/index.html:/usr/share/nginx/html/index.html:ro
-      - ./public/assets:/usr/share/nginx/html/assets:ro

@@ -29,4 +29,4 @@ All NemesisNet-branded surfaces must include the Nemesis footer snippet provided
 - The Docker image uses nginx with security headers (see `nginx.conf`).
 - Cache rules: HTML is `no-store`; CSS/JS cached 7 days; images cached 30 days.
 
-For questions, contact the brand team via `hello@nemesisnet.co.za`.
+For questions, contact the brand team via `admin@nemesisnet.co.za`.
