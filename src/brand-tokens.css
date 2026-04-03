@@ -18,7 +18,7 @@
   --nemesis-black: #0a0e27;
   --nemesis-white: #F4F4F4;
   --text-color: var(--nemesis-white);
-  --text-muted: rgba(244,244,244,0.65);
+  --text-muted: rgba(244,244,244,0.82);
 
   --glass-bg: rgba(255,255,255,0.03);
   --glass-border: rgba(255,255,255,0.06);
@@ -50,7 +50,7 @@
 /* Light theme overrides (optional) */
 [data-theme="light"] {
   --text-color: var(--nemesis-black);
-  --text-muted: rgba(26,26,26,0.6);
+  --text-muted: rgba(26,26,26,0.78);
   --glass-bg: rgba(255,255,255,0.96);
   --glass-border: rgba(10,14,39,0.06);
 }

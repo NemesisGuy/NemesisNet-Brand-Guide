@@ -10,6 +10,7 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 # Copy HTML and assets
 COPY src/index.html /usr/share/nginx/html/index.html
 COPY src/brand-tokens.css /usr/share/nginx/html/brand-tokens.css
+COPY robots.txt /usr/share/nginx/html/robots.txt
 COPY css/ /usr/share/nginx/html/css/
 COPY public/assets/ /usr/share/nginx/html/assets/
 
