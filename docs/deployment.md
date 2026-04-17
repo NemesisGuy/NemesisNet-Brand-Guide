@@ -26,7 +26,7 @@ if ($LASTEXITCODE -ne 0) { git switch -c staging }
 git add src/index.html src/sitemap.xml docs/deployment.md README.md README.docker.md
 
 # Commit
-git commit -m "chore: add deployment docs and Lighthouse audit"
+git commit -m "docs: add deployment docs and Lighthouse audit"
 
 # Push staging branch
 git push -u origin staging
