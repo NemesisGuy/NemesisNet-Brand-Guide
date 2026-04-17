@@ -10,3 +10,13 @@ __pycache__/
 
 # Node artifacts (future tooling)
 node_modules/
+
+# Lighthouse reports
+lighthouse-results.json
+*.html.lock
+
+# Build artifacts
+dist/
+
+# WordPress theme ZIP
+NemesisNet-Theme.zip
