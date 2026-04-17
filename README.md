@@ -42,11 +42,12 @@ A production-aligned HTML brand system for NemesisNet. This repo mirrors the liv
 
 ## Building & Deployment
 
-- **Docker (local quick build):** `docker build -t nemesisnet-brand-guide:latest .`
-- **Run locally:** `docker run --rm -p 8080:80 nemesisnet-brand-guide:latest`
-- **WSL no-cache build + push (Docker Hub):**
-   - `wsl docker build --no-cache -t nemesisguy/nemesisnet-brand-guide:latest .`
-   - `wsl docker push nemesisguy/nemesisnet-brand-guide:latest`
+See `docs/deployment.md` for detailed Docker build and run commands.
+
+Quick reference:
+- **Build (WSL):** `wsl docker build -t nemesisnet-brand-guide:latest .`
+- **Run (WSL):** `wsl docker run -d -p 8080:80 --name nemesis-guide nemesisnet-brand-guide:latest`
+- **Push to Docker Hub:** `wsl docker build --no-cache -t nemesisguy/nemesisnet-brand-guide:latest . && wsl docker push nemesisguy/nemesisnet-brand-guide:latest`
 - The container uses `nginx.conf` to add security headers and caching policies.
 
 ## Mobile & Responsive Notes
@@ -91,4 +92,8 @@ The theme will only add tracking if you've configured both fields. No tracking h
 
 ## Additional Docs
 
-See `docs/` for legacy snapshots and historical references. Add more documents (e.g., `docs/brand-guidelines.md`) as policies evolve.
+- `docs/deployment.md` - Docker build, run, and Lighthouse commands
+- `docs/brand-guidelines.md` - Brand token usage guidelines
+- `docs/index-legacy.html` and `docs/index-legacy-v2.html` - Legacy snapshots
+
+See `docs/` for more historical references.
