@@ -72,28 +72,6 @@ Quick reference:
 ## Related Projects
 
 - **[NemesisNet VSCode Themes](https://github.com/NemesisGuy/NemesisNet-VSCode-Themes)** - Official VSCode theme with 6 variants (Base, Nemesis, Aurora in dark/light) built from this brand guide's color tokens
-- **NemesisNet WordPress Theme** - A custom WordPress theme located in `NemesisNet-Theme/` that implements this brand guide's design system with glassmorphism effects, dark/light mode toggle, and responsive mobile menu
-
-## WordPress Theme Setup
-
-The NemesisNet WordPress theme is included in this repository at `NemesisNet-Theme/`.
-
-### Installation
-
-1. Compress the `NemesisNet-Theme` folder into a ZIP file (or use the provided `NemesisNet-Theme.zip`)
-2. In WordPress admin, go to **Appearance → Themes → Add New → Upload Theme**
-3. Upload the ZIP file and activate the theme
-
-### Adding Analytics (Umami)
-
-The theme includes built-in support for Umami analytics. **Your analytics are NOT included by default** - you need to configure your own:
-
-1. Go to **Appearance → Customize → Analytics Settings**
-2. Enter your **Umami Website ID** (the UUID from your Umami dashboard)
-3. Enter your **Umami Script URL** (e.g., `https://analytics.yourdomain.com/script.js`)
-4. Click **Publish** to save
-
-The theme will only add tracking if you've configured both fields. No tracking happens by default, ensuring user privacy.
 
 ## Additional Docs
 
