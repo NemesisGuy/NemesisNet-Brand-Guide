@@ -8,16 +8,21 @@ A production-aligned HTML brand system for NemesisNet. This repo mirrors the liv
 └─ NemesisNet-Brand-Guide
    ├─ src/                # Source HTML + tokens
    │  ├─ index.html
-   │  └─ brand-tokens.css
+   │  ├─ brand-tokens.css
+   │  └─ sitemap.xml
    ├─ public/
-   │  └─ assets/          # Logos, imagery, supporting static files
-   ├─ docs/
-   │  ├─ index-legacy.html
-   │  └─ index-legacy-v2.html
-   ├─ Dockerfile          # nginx-based static image
-   ├─ nginx.conf          # custom headers + caching
-   ├─ docker-compose.yml  # optional local orchestration
-   └─ README.docker.md    # container-specific instructions
+   │  └─ assets/          # Logos, imagery
+   ├─ css/               # Stylesheets
+   ├─ docs/              # Documentation
+   │  ├─ deployment.md
+   │  ├─ legacy/         # Historical snapshots
+   │  ├─ brand-guidelines.md
+   │  └─ burger-menu.md
+   ├─ tests/             # Test files
+   ├─ .github/workflows/ # CI/CD
+   ├─ Dockerfile         # nginx-based static image
+   ├─ nginx.conf        # custom headers + caching
+   └─ README.docker.md
 ```
 
 ## Local Development
@@ -94,6 +99,8 @@ The theme will only add tracking if you've configured both fields. No tracking h
 
 - `docs/deployment.md` - Docker build, run, and Lighthouse commands
 - `docs/brand-guidelines.md` - Brand token usage guidelines
-- `docs/index-legacy.html` and `docs/index-legacy-v2.html` - Legacy snapshots
+- `docs/legacy/` - Historical snapshots
 
-See `docs/` for more historical references.
+## CI/CD
+
+- GitHub Actions workflows in `.github/workflows/` auto-build and push on push to `master` and `staging` branches.
