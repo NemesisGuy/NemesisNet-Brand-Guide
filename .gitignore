@@ -20,3 +20,6 @@ dist/
 
 # WordPress theme ZIP
 NemesisNet-Theme.zip
+
+# Lighthouse CI
+.lighthouseci/

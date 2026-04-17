@@ -1,0 +1,19 @@
+{
+  "ci": {
+    "collect": {
+      "numberOfRuns": 1,
+      "staticDistDir": "./dist"
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    },
+    "assert": {
+      "assertions": {
+        "categories:performance": [">= 90"],
+        "categories:accessibility": [">= 90"],
+        "categories:best-practices": [">= 90"],
+        "categories:seo": [">= 90"]
+      }
+    }
+  }
+}
