@@ -1,6 +1,6 @@
 # Design System: NemesisNet Brand Guide
 
-**Designed by NemesisGuy**
+**Designed by NemesisGuy** — [NemesisNet](https://nemesisnet.co.za)
 
 ---
 
