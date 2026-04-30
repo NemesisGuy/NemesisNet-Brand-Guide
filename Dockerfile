@@ -9,6 +9,8 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy HTML and assets
 COPY src/index.html /usr/share/nginx/html/index.html
+COPY src/DESIGN.md /usr/share/nginx/html/DESIGN.md
+COPY src/DESIGN-portable.md /usr/share/nginx/html/DESIGN-portable.md
 COPY src/brand-tokens.css /usr/share/nginx/html/brand-tokens.css
 COPY src/sitemap.xml /usr/share/nginx/html/sitemap.xml
 COPY robots.txt /usr/share/nginx/html/robots.txt
