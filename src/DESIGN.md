@@ -1,5 +1,9 @@
 # Design System: NemesisNet Brand Guide
 
+**Designed by NemesisGuy**
+
+---
+
 **Project ID:** nemesisnet-brand-guide
 
 ## 1. Visual Theme & Atmosphere

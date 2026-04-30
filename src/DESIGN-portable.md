@@ -1,5 +1,9 @@
 # Design System: NemesisNet (Default)
 
+**Designed by NemesisGuy**
+
+---
+
 A modern, clean brand guide with glassmorphism effects and professional aesthetics.
 
 ## 1. Visual Theme & Atmosphere
