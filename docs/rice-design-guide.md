@@ -5,6 +5,26 @@
 
 ---
 
+## Phase 3 — Refinement Hardening (2026-05-08)
+
+### CSS Enforcement
+- [x] Depth system classes (background/surface/elevated/floating)
+- [x] Card alignment enforcement — flex column + button pinned bottom
+- [x] Strict spacing rhythm — token-based margin classes
+- [x] Glass consistency enforcement
+- [x] Button radius standardisation (all 14px)
+- [x] Mobile first-class: overflow prevention, full-width buttons, typography scale, card consistency
+
+### DESIGN.md
+- Added Section 12: Refinement Spec (v1.0 Hardening)
+- Hard rules table (no ad-hoc, tokens-only, component primitives)
+- Depth system spec
+- Spacing rhythm spec
+- Mobile first-class spec
+- Content density rule
+
+---
+
 ## Phase 2 — Iconography (2026-05-08)
 
 ### DESIGN.md
@@ -15,7 +35,6 @@
 ### Site Implementation
 - Added Lucide CDN (`unpkg.com/lucide@latest`)
 - Replaced bare iconography section with 6-card Lucide showcase
-- Infrastructure-grade icon demo: CPU, Shield, Monitor, Cloud, Database, Terminal
 
 ---
 
@@ -24,28 +43,11 @@
 ### DESIGN.md Rewrite
 - Rewrote as Stitch-style DESIGN.md (Google standard)
 - Merged visual specs with rice philosophy rules
-- Added component enforcement section
-- Added motion system rules (180ms cubic-bezier)
-- Added glassmorphism hierarchy levels
-- Added page archetypes
-- Added implementation checklist
+- Added component enforcement, motion system, glass hierarchy, page archetypes, checklist
 
 ### CSS Changes
 - [x] Unified transition to `180ms cubic-bezier(0.16, 1, 0.3, 1)`
 - [x] Added glass hierarchy classes (subtle/default/elevated/overlay)
-- [x] Reduced hover lift to max 2px (was 3px+)
+- [x] Reduced hover lift to max 2px
 - [x] Mobile glass blur reduction
-- [x] Added staggered reveal delays (60ms)
 - [x] Touch targets enforced at min 44px
-
-### HTML Changes
-- [x] Added rice philosophy section to brand guide
-- [x] Updated download buttons for DESIGN.md
-
----
-
-## Notes
-
-- Follow the checklist in DESIGN.md before shipping any change
-- Every future design decision must pass: "Does this feel like a serious infrastructure platform?"
-- Before introducing any icon: verify it passes the infrastructure test

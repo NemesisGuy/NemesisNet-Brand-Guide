@@ -406,6 +406,48 @@ Before shipping any change:
 
 ---
 
+## 12. Refinement Spec (v1.0 Hardening)
+
+### Critical Objective
+
+The system must become fully component-driven, token-enforced, and reusable across all NemesisNet products (marketing, services, SaaS, AI tooling). It should feel like Stripe / Linear / Vercel — not a visual theme.
+
+### Hard Rules
+
+| Number | Rule |
+|--------|------|
+| 1 | **No ad-hoc styling** — no page-specific overrides, no one-off button styles, no custom card layouts |
+| 2 | **Everything uses tokens** — spacing, colours, radii, shadows all from design tokens |
+| 3 | **Component primitives only** — PrimaryButton, SecondaryButton, GhostButton, BaseCard, ServiceCard, ProjectCard, PageHeader, SectionWrapper, Container |
+| 4 | **Homepage exception** — hero sections ONLY on homepage. Sub-pages use PageHeader |
+| 5 | **Card enforcement** — flex-column structure, button pinned bottom via `margin-top: auto` |
+
+### Depth System
+
+| Level | Class | z-index | Use |
+|-------|-------|---------|-----|
+| 0 | `depth-background` | 0 | Page background, gradients |
+| 1 | `depth-surface` | 1 | Sections, containers |
+| 2 | `depth-elevated` | 2 | Cards, interactive surfaces |
+| 3 | `depth-floating` | 10 | Modals, overlays, tooltips |
+
+### Spacing Rhythm
+
+All spacing uses token classes: `.section-mt-{xs,sm,md,lg,xl}` / `.section-mb-{xs,sm,md,lg,xl}`. No arbitrary `margin` or `padding` values outside the token scale.
+
+### Mobile First-Class
+
+- No overflow issues, no broken card stacking, no oversized padding
+- Buttons full-width with 360px max-width cap
+- Typography scales down predictably: h1: 2rem, h2: 1.5rem, h3: 1.15rem
+- Cards all single-column, consistent padding
+
+### Content Density
+
+Reduce repeated explanations. Prefer structured bullets over paragraphs. Less text = higher authority.
+
+---
+
 ## Usage Example
 
 ```html

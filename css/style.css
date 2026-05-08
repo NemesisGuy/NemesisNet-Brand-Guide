@@ -2177,3 +2177,105 @@ html[data-style="aurora"][data-theme="light"] .style-toggle[aria-pressed="true"]
     outline: 2px solid var(--aurora-base, #00C2A8);
     outline-offset: 3px;
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   Refinement Pass — v1.0 Hardening
+   Depth system, card enforcement, spacing rhythm, mobile class
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Depth system ── */
+.depth-background {
+    z-index: 0;
+    position: relative;
+}
+
+.depth-surface {
+    z-index: 1;
+    position: relative;
+}
+
+.depth-elevated {
+    z-index: 2;
+    position: relative;
+}
+
+.depth-floating {
+    z-index: 10;
+    position: relative;
+}
+
+/* ── Card alignment enforcement: flex column + button pinned bottom ── */
+.component-card,
+.guide-card-sample,
+[class*="card"] {
+    display: flex;
+    flex-direction: column;
+}
+
+.component-card > .btn:last-child,
+.guide-card-sample > .btn:last-child,
+.component-card > a.btn:last-child,
+.guide-card-sample > a.btn:last-child,
+.component-card > button.btn:last-child,
+.guide-card-sample > button.btn:last-child {
+    margin-top: auto;
+}
+
+/* ── Strict spacing rhythm ── */
+.section-mt-xs { margin-top: var(--space-xs, 6px); }
+.section-mt-sm { margin-top: var(--space-sm, 12px); }
+.section-mt-md { margin-top: var(--space-md, 20px); }
+.section-mt-lg { margin-top: var(--space-lg, 32px); }
+.section-mt-xl { margin-top: var(--space-xl, 48px); }
+
+.section-mb-xs { margin-bottom: var(--space-xs, 6px); }
+.section-mb-sm { margin-bottom: var(--space-sm, 12px); }
+.section-mb-md { margin-bottom: var(--space-md, 20px); }
+.section-mb-lg { margin-bottom: var(--space-lg, 32px); }
+.section-mb-xl { margin-bottom: var(--space-xl, 48px); }
+
+/* ── Consistent glass enforcement ── */
+*[class*="glass"] {
+    -webkit-backdrop-filter: var(--backdrop-blur, blur(12px));
+    backdrop-filter: var(--backdrop-blur, blur(12px));
+    border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.06));
+}
+
+/* ── No ad-hoc button overrides — standard radius enforcement ── */
+.btn,
+[class*="btn--"] {
+    border-radius: 14px !important;
+}
+
+/* ── Mobile first-class (no downgrade feeling) ── */
+@media (max-width: 640px) {
+    /* Prevent horizontal overflow */
+    body {
+        overflow-x: hidden;
+    }
+    pre, code, .swatch, .token-table {
+        max-width: 100%;
+        word-break: break-word;
+    }
+
+    /* Buttons full-width but not stretched-looking */
+    .guide-cta .btn,
+    .cta-section .btn {
+        width: 100%;
+        max-width: 360px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    /* Typography scale mobile */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.15rem; }
+
+    /* Card consistency on mobile */
+    .component-card,
+    .guide-card-sample {
+        padding: 16px;
+        min-height: auto;
+    }
+}
