@@ -2247,6 +2247,14 @@ html[data-style="aurora"][data-theme="light"] .style-toggle[aria-pressed="true"]
     border-radius: 14px !important;
 }
 
+/* ── Demo buttons: flex-wrap with gap for mobile ── */
+.demo-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm, 12px);
+    align-items: center;
+}
+
 /* ── Mobile first-class (no downgrade feeling) ── */
 @media (max-width: 640px) {
     /* Prevent horizontal overflow */
@@ -2260,7 +2268,8 @@ html[data-style="aurora"][data-theme="light"] .style-toggle[aria-pressed="true"]
 
     /* Buttons full-width but not stretched-looking */
     .guide-cta .btn,
-    .cta-section .btn {
+    .cta-section .btn,
+    .demo-buttons .btn {
         width: 100%;
         max-width: 360px;
         text-align: center;
