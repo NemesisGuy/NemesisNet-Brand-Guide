@@ -361,7 +361,7 @@ body.nav-open {
     color: #031226;
     font-weight: 600;
     text-decoration: none;
-    transition: top 0.2s ease;
+    transition: top 180ms cubic-bezier(0.16, 1, 0.3, 1);
     box-shadow: 0 10px 30px var(--accent-glow);
 }
 
@@ -410,7 +410,7 @@ header.guide-hero {
     box-shadow: var(--nav-shadow);
     backdrop-filter: blur(18px) saturate(120%);
     -webkit-backdrop-filter: blur(18px) saturate(120%);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 [data-theme="light"] .guide-nav {
@@ -440,7 +440,7 @@ header.guide-hero {
     color: var(--text-color);
     font-weight: 700;
     letter-spacing: 0.02em;
-    transition: transform 0.28s ease, color 0.28s ease;
+    transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), color 180ms cubic-bezier(0.16, 1, 0.3, 1);
     white-space: nowrap;
     height: 100%;
 }
@@ -452,7 +452,7 @@ header.guide-hero {
     background: rgba(255, 255, 255, 0.08);
     padding: 4px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.34), 0 0 0 1px rgba(255, 255, 255, 0.06);
-    transition: all 0.3s ease;
+    transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 [data-theme="light"] .guide-logo img {
@@ -498,7 +498,7 @@ header.guide-hero {
     font-weight: 500;
     line-height: 1;
     text-decoration: none;
-    transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
     flex: 0 0 auto;
 }
 
@@ -528,7 +528,7 @@ header.guide-hero {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     margin-left: 16px;
@@ -564,7 +564,7 @@ header.guide-hero {
     -webkit-backdrop-filter: blur(4px);
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.18s ease;
+    transition: opacity 180ms cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 998;
 }
 
@@ -584,7 +584,7 @@ header.guide-hero {
     background: transparent;
     color: var(--nav-link-color);
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     flex: 0 0 auto;
@@ -593,14 +593,14 @@ header.guide-hero {
 .theme-toggle i {
     pointer-events: none;
     font-size: 1.05rem;
-    transition: transform 0.3s ease;
+    transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .theme-toggle span {
     pointer-events: none;
     font-size: 1.05rem;
     line-height: 1;
-    transition: transform 0.3s ease;
+    transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .theme-toggle:hover,
@@ -866,7 +866,7 @@ header.guide-hero {
     text-decoration: none;
     color: var(--text-color);
     background: var(--glass-bg);
-    transition: all 0.2s ease;
+    transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .guide-card-links a:hover {
@@ -895,7 +895,7 @@ header.guide-hero {
     flex-direction: column;
     gap: 4px;
     text-align: left;
-    transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
     box-shadow: 0 8px 24px rgba(3, 8, 24, 0.26);
 }
 
@@ -1019,7 +1019,7 @@ html[data-theme="light"][data-style="nemesis"] .style-toggle[aria-pressed="true"
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
     box-shadow: none;
     border: 1px solid rgba(41, 121, 255, 0.18);
     background: rgba(41, 121, 255, 0.12);
@@ -1538,7 +1538,7 @@ table th {
         padding: calc(var(--nav-height) + 24px) 24px 48px;
         z-index: 1001;
         transform: translateX(100%);
-        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.28s ease, visibility 0.28s ease;
+        transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), opacity 180ms cubic-bezier(0.16, 1, 0.3, 1), visibility 180ms cubic-bezier(0.16, 1, 0.3, 1);
         margin: 0;
         border: none;
         border-radius: 0;
@@ -1883,7 +1883,7 @@ table th {
     color: var(--text-muted);
   font-size: 0.88rem;
   font-weight: 500;
-  transition: all 0.2s ease;
+  transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
   border-left: 2px solid transparent;
 }
 
@@ -2056,4 +2056,124 @@ html[data-theme="light"][data-style="aurora"] .style-toggle[aria-pressed="true"]
 html[data-style="aurora"][data-theme="light"] .style-toggle[aria-pressed="true"] {
     background: #6a3afb !important;
     border-color: #6a3afb !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Rice Rules — v1.0
+   Glass hierarchy, motion enforcement, mobile refinement
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Unified transition token ── */
+:root {
+    --transition-ric: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-ric-slow: 280ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Glass Hierarchy ── */
+.glass-subtle {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.glass-default {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-elevated {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 40px rgba(4, 9, 24, 0.4);
+}
+
+.glass-overlay {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 24px 48px rgba(4, 9, 24, 0.5);
+}
+
+/* ── Staggered reveal system ── */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity var(--transition-ric), transform var(--transition-ric);
+}
+
+.stagger-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── Motion enforcement: no bounce, no spin, no parallax ──
+   Enforced via code review, not forced CSS. See DESIGN.md. */
+
+
+/* ── Touch target enforcement (min 44px) ── */
+@media (max-width: 640px) {
+    .btn,
+    .guide-nav a,
+    .guide-nav button,
+    .guide-nav-links a,
+    .guide-nav-links button,
+    .style-toggle,
+    [role="tab"],
+    .back-to-top {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* Mobile glass refinement — reduce muddiness */
+    .glass-default,
+    .glass-elevated,
+    .glass-overlay,
+    .guide-nav,
+    .component-card,
+    .guide-card-sample {
+        backdrop-filter: blur(8px) !important;
+        -webkit-backdrop-filter: blur(8px) !important;
+    }
+
+    .glass-overlay {
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+    }
+
+    /* Card stacking — single column */
+    .grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Full-width buttons */
+    .guide-cta .btn {
+        width: 100%;
+    }
+
+    /* Reduce hover lift on touch devices */
+    @media (hover: none) {
+        .btn:hover,
+        .card:hover,
+        .component-card:hover {
+            transform: none !important;
+        }
+    }
+}
+
+/* ── Copy reduction: tighter lead text ── */
+.lead {
+    max-width: 680px;
+    line-height: 1.65;
+}
+
+/* ── Focus ring standard ── */
+*:focus-visible {
+    outline: 2px solid var(--aurora-base, #00C2A8);
+    outline-offset: 3px;
 }
