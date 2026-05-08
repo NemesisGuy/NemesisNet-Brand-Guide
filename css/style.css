@@ -2248,6 +2248,23 @@ html[data-style="aurora"][data-theme="light"] .style-toggle[aria-pressed="true"]
 }
 
 /* ── Demo buttons: flex-wrap with gap for mobile ── */
+.demo-card {
+    padding: var(--space-md, 20px);
+    border-radius: var(--radius-base, 20px);
+    background: var(--glass-bg, rgba(255, 255, 255, 0.03));
+    border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.06));
+}
+
+.demo-toggle-row {
+    margin-bottom: var(--space-sm, 12px);
+}
+
+.demo-note {
+    margin-top: var(--space-sm, 12px);
+    font-size: 0.82rem;
+    opacity: 0.72;
+}
+
 .demo-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -2264,9 +2281,6 @@ html[data-style="aurora"][data-theme="light"] .style-toggle[aria-pressed="true"]
         flex-direction: column;
         align-items: stretch;
         gap: 8px;
-    }
-    .demo-buttons .btn {
-        margin-bottom: 0;
     }
     .demo-buttons .btn:not(:last-child) {
         margin-bottom: 8px;
