@@ -2251,8 +2251,26 @@ html[data-style="aurora"][data-theme="light"] .style-toggle[aria-pressed="true"]
 .demo-buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-sm, 12px);
+    gap: 12px;
     align-items: center;
+}
+
+.demo-buttons .btn {
+    margin: 0;
+}
+
+@media (max-width: 640px) {
+    .demo-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+    .demo-buttons .btn {
+        margin-bottom: 0;
+    }
+    .demo-buttons .btn:not(:last-child) {
+        margin-bottom: 8px;
+    }
 }
 
 /* ── Mobile first-class (no downgrade feeling) ── */
