@@ -194,6 +194,45 @@ All future UI must use shared primitives. Pages must not drift visually.
 
 ---
 
+## Iconography System
+
+NemesisNet uses a dual-layer icon system:
+
+| Layer | System | Role |
+|-------|--------|------|
+| **Primary** | Lucide Icons | Default UI identity |
+| **Secondary** | Font Awesome | Fallback utility only |
+
+### Primary — Lucide (Mandatory Default)
+
+All UI-facing icons default to Lucide. Stroke-based, consistent, modern — matches SaaS/infrastructure aesthetic and glassmorphism system.
+
+**Use Lucide for:** navigation, buttons, actions, feature cards, service sections, project metadata, status indicators, dashboards, marketing UI.
+
+**Visual standard:** Outline style only. Consistent stroke width. No mixed styles. No filled icons unless explicitly justified.
+
+### Secondary — Font Awesome (Utility Only)
+
+Allowed only for coverage gaps. Do NOT use for primary marketing or hero sections. Never mix Lucide + FA within a single component group.
+
+### Icon Rules
+
+| Rule | Guideline |
+|------|-----------|
+| **Functional first** | Icons support meaning, not decoration |
+| **Consistency** | Same library, stroke, weight per component |
+| **Visual weight** | Icons remain subtle, support typography |
+| **Size discipline** | Standard per component, no arbitrary scaling |
+| **Motion** | Subtle opacity/color shifts only. No rotation, bounce, morph |
+
+### Enforcement Test
+
+> "Does this icon feel like it belongs in a serious infrastructure system?"
+
+If decorative, inconsistent, playful, or stylistically different — don't use it.
+
+---
+
 ## 4. Glassmorphism Hierarchy
 
 Glass creates depth hierarchy — NOT uniform transparency. Foreground surfaces must visually separate from background layers.

@@ -663,8 +663,37 @@
 
     <section id="iconography" class="guide-section">
       <h2>Iconography &amp; Illustration</h2>
-      <p class="note">Stick to geometric shapes with consistent stroke weight. Use 16/24/32px grids and rounded corners
-        that echo UI radii.</p>
+      <p class="note">
+        NemesisNet uses <strong>Lucide</strong> as the primary icon system — stroke-based, consistent, infrastructure-grade.
+        <strong>Font Awesome</strong> is secondary (fallback utility only). Never mix libraries within a single component group.
+      </p>
+      <div class="grid" style="margin-top:var(--space-md)">
+        <div class="guide-card-sample flexcol" style="align-items:center;text-align:center;gap:var(--space-sm);padding:24px 16px">
+          <i data-lucide="cpu" style="width:28px;height:28px;color:var(--accent-color)"></i>
+          <div class="pill">Infrastructure</div>
+        </div>
+        <div class="guide-card-sample flexcol" style="align-items:center;text-align:center;gap:var(--space-sm);padding:24px 16px">
+          <i data-lucide="shield-check" style="width:28px;height:28px;color:var(--accent-color)"></i>
+          <div class="pill">Security</div>
+        </div>
+        <div class="guide-card-sample flexcol" style="align-items:center;text-align:center;gap:var(--space-sm);padding:24px 16px">
+          <i data-lucide="monitor" style="width:28px;height:28px;color:var(--accent-color)"></i>
+          <div class="pill">Platforms</div>
+        </div>
+        <div class="guide-card-sample flexcol" style="align-items:center;text-align:center;gap:var(--space-sm);padding:24px 16px">
+          <i data-lucide="cloud" style="width:28px;height:28px;color:var(--accent-color)"></i>
+          <div class="pill">Cloud</div>
+        </div>
+        <div class="guide-card-sample flexcol" style="align-items:center;text-align:center;gap:var(--space-sm);padding:24px 16px">
+          <i data-lucide="database" style="width:28px;height:28px;color:var(--accent-color)"></i>
+          <div class="pill">Data</div>
+        </div>
+        <div class="guide-card-sample flexcol" style="align-items:center;text-align:center;gap:var(--space-sm);padding:24px 16px">
+          <i data-lucide="terminal" style="width:28px;height:28px;color:var(--accent-color)"></i>
+          <div class="pill">Tooling</div>
+        </div>
+      </div>
+      <p class="note section-mt-sm"><strong>Rules:</strong> Outline-only style. Consistent stroke width. Icons support function — not decoration. No rotation, bounce, or morph animations. All icons must pass: "Does this feel like a serious infrastructure system?"</p>
     </section>
 
     <section id="voice" class="guide-section">
@@ -1226,6 +1255,8 @@
     })();
   </script>
   <script defer src="https://metrics.nemesisnet.co.za/script.js" data-website-id="2745ee82-689d-4741-9201-fedad7285a52"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
 </body>
 
 </html>
