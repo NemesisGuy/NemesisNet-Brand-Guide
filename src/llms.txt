@@ -1,0 +1,30 @@
+# llms.txt — NemesisNet Brand Guide
+
+NemesisNet Brand Guide is the production design system for NemesisNet, defining visual tokens, component rules, accessibility standards, and implementation guidance.
+
+## Resources
+
+- **Design System (Full):** https://brand.nemesisnet.co.za/DESIGN.md
+- **Design System (Portable):** https://brand.nemesisnet.co.za/DESIGN-portable.md
+- **Brand Tokens (CSS):** https://brand.nemesisnet.co.za/brand-tokens.css
+- **Sitemap:** https://brand.nemesisnet.co.za/sitemap.xml
+
+## About
+
+- **Owner:** NemesisGuy (Peter Buckingham)
+- **GitHub:** https://github.com/NemesisGuy
+- **Portfolio:** https://forkmyfolio.nemesisnet.co.za/nemesis
+- **LinkedIn:** https://www.linkedin.com/in/peter-buckingham-65438757
+
+## Brand Assets
+
+- **Logo (PNG):** https://brand.nemesisnet.co.za/assets/Nemesis_Logo_Icon.png
+- **Logo (ICO):** https://brand.nemesisnet.co.za/assets/Nemesis_Logo_Icon.ico
+- **Logo (WebP):** https://brand.nemesisnet.co.za/assets/optimized/Nemesis_Logo_Icon.webp
+
+## Tech Stack
+
+- Static HTML/CSS served via nginx (alpine)
+- Docker container: `nemesisguy/nemesisnet-brand-guide`
+- No JavaScript frameworks — vanilla JS only
+- Design tokens via CSS custom properties
