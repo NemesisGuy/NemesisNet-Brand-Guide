@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Keep this URL aligned with the deployed public host.
-Sitemap: https://nemesisnet.co.za/brand-guide/sitemap.xml
+Sitemap: https://brand.nemesisnet.co.za/sitemap.xml
