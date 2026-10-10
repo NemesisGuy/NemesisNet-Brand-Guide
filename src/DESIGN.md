@@ -354,7 +354,25 @@ Use the live values for anything that must match production. Never invent a thir
 
 ### Background Effects
 
-**Page Glow (Dark Mode):**
+**Base Canvas — Dark (live `--page-background` / `--bg-gradient`):**
+```css
+radial-gradient(circle at 20% 20%, rgba(41,121,255,0.28) 0%, transparent 42%),
+radial-gradient(circle at 80% 10%, rgba(0,194,168,0.22) 0%, transparent 45%),
+radial-gradient(circle at 60% 80%, rgba(41,121,255,0.18) 0%, transparent 55%),
+#0a0e27
+```
+
+**Base Canvas — Light (live):**
+```css
+linear-gradient(135deg, #F4F4F4 0%, #f0f6ff 50%, #eaf6ff 100%)
+```
+
+**Hero wash (live `--header-bg` / `--hero-overlay`):**
+```css
+linear-gradient(135deg, rgba(41,121,255,0.04), rgba(255,111,60,0.03))
+```
+
+**Page Glow (Nemesis overlay only, NOT base):**
 ```css
 radial-gradient(circle at 22% 26%, rgba(255, 0, 80, 0.18), transparent 55%),
 radial-gradient(circle at 78% 12%, rgba(0, 255, 255, 0.18), transparent 55%)
