@@ -33,10 +33,9 @@ A production-aligned HTML brand system for NemesisNet. This repo mirrors the liv
 
 ## Frontend Stack Notes
 
-- **Broader NemesisNet stack:** NemesisNet properties are also known to use Bootstrap and Font Awesome where they fit project requirements.
-- **Font Awesome:** Included via CDN in `src/index.html` for iconography (`fa-*` classes).
-- **Bootstrap framework:** Not used as a dependency in this project. The UI is custom CSS driven by `src/brand-tokens.css` and `css/style.css`.
-- **"Bootstrap" wording in docs:** In sections like "Bootstrap new surfaces," it means "initialize with base tokens," not "use Bootstrap CSS framework."
+- **This project:** custom CSS only — `src/brand-tokens.css` + `css/style.css`. No frameworks, no icon CDN, no external requests (icons are inline SVG + unicode glyphs, matching the live site).
+- **Broader NemesisNet stack:** other NemesisNet properties may use Bootstrap/Font Awesome where they fit — not this repo.
+- **"Bootstrap" wording in docs:** in sections like "Bootstrap new surfaces," it means "initialize with base tokens," not "use Bootstrap CSS framework."
 
 ## SEO, Responsive, and Lighthouse
 

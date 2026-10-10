@@ -5,6 +5,30 @@
 
 ---
 
+## Phase 4 — Live Parity Alignment (2026-10-10)
+
+Source of truth: https://nemesisnet.co.za (verified 2026-10-10). All values below now match production 1:1.
+
+### Tokens (`src/brand-tokens.css`)
+- Added missing live tokens: `--nemesis-gray`, `--aurora-hover`, `--secondary-accent/glow`, `--bg-color/gradient`, `--card*`, `--header-bg`, `--font-stack`, `--radius-base`, motion aliases
+- Fixed `--text-muted`: dark `rgba(244,244,244,0.82)`, light `rgba(26,26,26,0.8)` (was triple-mismatched across files)
+- Fixed light glass: `rgba(255,255,255,0.9)` + `rgba(41,121,255,0.08)` border
+- Font stack: live system stack (Segoe UI…), no webfont dependency
+
+### Components
+- Buttons: `.btn-glass` (primary live pattern, 12px/12px-28px/0.3s), `.btn--primary` solid `#1E88E5` (10px radius), `.btn--dual` gradient; `.btn--aurora`/`.btn--ghost` labelled guide-only
+- Cards: padding 24px (was 20px), live shadows, 170px project images, links pinned via `margin-top: auto`
+- Pills: live `.pill-ai/saas/tools/client` names + colors (replaced invented `--accent/--outline` variants)
+- Motion: live `0.3s/0.36s cubic-bezier(0.4,0,0.2,1)` documented; guide chrome keeps 180ms `cubic-bezier(0.16,1,0.3,1)`
+- Icons: dropped `unpkg.com/lucide` CDN (violated no-external-URL rule) → dependency-free inline SVG outline + unicode glyphs, matching live
+
+### Docs
+- `src/DESIGN.md`, root `DESIGN.md`, `src/DESIGN-portable.md`: tokens, buttons, cards, pills, font, motion, iconography rewritten to live values; guide-only extras explicitly labelled
+- `AGENTS.md` hard rules 5–6 corrected (motion, icons)
+- `src/index.html`: token block, palette JSON, copyable CSS, hero/pill/card samples, typography note, `data-style` preview-only disclaimer
+
+---
+
 ## Phase 3 — Refinement Hardening (2026-05-08)
 
 ### CSS Enforcement

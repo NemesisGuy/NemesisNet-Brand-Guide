@@ -17,6 +17,7 @@ COPY src/sitemap.xml /usr/share/nginx/html/sitemap.xml
 COPY robots.txt /usr/share/nginx/html/robots.txt
 COPY css/ /usr/share/nginx/html/css/
 COPY public/assets/ /usr/share/nginx/html/assets/
+COPY public/assets/Nemesis_Logo_Icon.ico /usr/share/nginx/html/favicon.ico
 
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]

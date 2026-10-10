@@ -1,5 +1,9 @@
 # Design System: NemesisNet Brand Guide
 
+> **Live parity (verified 2026-10-10):** tokens, buttons, cards, pills, light/dark values, font stack,
+> and motion mirror https://nemesisnet.co.za 1:1. Guide-only extras (Aurora/Nemesis `data-style`
+> preview overlays, `.btn--aurora`, `.btn--ghost`) are labelled where they appear.
+
 **Project ID:** nemesisnet-brand-guide
 
 ## 1. Visual Theme & Atmosphere
@@ -25,15 +29,21 @@ Dual theme support: light and dark modes with carefully tuned contrast ratios.
 | Aurora Base | `#00C2A8` | Secondary brand, success states |
 | Aurora Flare | `#33D6B7` | Hover for Aurora elements |
 | Aurora Ember | `#008B6A` | Deep accent for Aurora |
+| Aurora Glow | `rgba(0,194,168,0.12)` | Aurora ambient glow |
+| Secondary Accent | `#2979FF` | Secondary actions |
+| Secondary Glow | `rgba(41,121,255,0.07)` | Secondary ambient glow |
 
 ### Neutral Colors
 
 | Name | Hex | Role |
 |------|-----|------|
+| Nemesis Gray | `#3b3b3b` | Borders on mid surfaces |
 | Nemesis Black | `#0a0e27` | Primary dark, text on light |
 | Nemesis White | `#F4F4F4` | Primary light, text on dark |
-| Glass Background | `rgba(255,255,255,0.03)` | Card surfaces, overlays |
-| Glass Border | `rgba(255,255,255,0.06)` | Subtle borders |
+| Background | dark: radial blues on `#0a0e27` / light: `#F4F4F4 → #f0f6ff → #eaf6ff` | Page canvas |
+| Card | `#0f0f10` (dark) / `#fff` (light) | Card base |
+| Glass Background | `rgba(255,255,255,0.03)` (dark) / `rgba(255,255,255,0.9)` (light) | Card surfaces, overlays |
+| Glass Border | `rgba(255,255,255,0.06)` (dark) / `rgba(41,121,255,0.08)` (light) | Subtle borders |
 
 ### Aurora Theme (Dark Mode)
 
@@ -54,15 +64,14 @@ Dual theme support: light and dark modes with carefully tuned contrast ratios.
 
 | Name | Hex | Role |
 |------|-----|------|
-| Text Primary | `#F4F4F4` | Body text (dark mode) |
-| Text Muted | `rgba(244,244,244,0.82)` | Secondary text |
-| Text Primary Light | `#0a0e27` | Body text (light mode) |
+| Text Primary | `#F4F4F4` (dark) / `#0a0e27` (light) | Body text |
+| Text Muted | `rgba(244,244,244,0.82)` (dark) / `rgba(26,26,26,0.8)` (light) | Secondary text |
 
 ## 3. Typography Rules
 
-**Primary Font Stack:**
+**Primary Font Stack (live, system — no webfont):**
 ```
-'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif
+'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif
 ```
 
 **Monospace Font Stack:**
@@ -87,36 +96,40 @@ Dual theme support: light and dark modes with carefully tuned contrast ratios.
 
 ## 4. Component Stylings
 
-### Buttons
+### Buttons (live patterns)
 
-**Primary Button (`.btn--primary`):**
-- Background: `rgba(41, 121, 255, 0.2)` → `var(--accent-hover)`
-- Border: 1px solid `rgba(41, 121, 255, 0.35)`
-- Border-radius: 14px
-- Padding: 12px 26px
-- Shadow: `0 18px 42px rgba(41, 121, 255, 0.28)`
-- Hover: lift 2px, increased shadow glow
+**Glass (`.btn-glass` — primary live pattern):**
+- Background: `var(--glass-bg)` with `blur(10px)`
+- Border: 1px solid `var(--glass-border)`
+- Border-radius: 12px, padding: 12px 28px, font-weight 500
+- Hover: `var(--accent-hover)` bg, `#0a0e27` text, `translateY(-2px)`
 
-**Aurora Button (`.btn--aurora`):**
-- Background: `rgba(0, 194, 168, 0.22)` → gradient
-- Border: 1px solid `rgba(0, 194, 168, 0.32)`
-- Shadow: `0 18px 42px rgba(0, 194, 168, 0.26)`
+**Primary Button (`.btn--primary` — solid):**
+- Background: `var(--nemesis-blue)`, color `#0a0e27`
+- Border: 1px solid transparent
+- Border-radius: 10px
+- Padding: 10px 14px, font-weight 700
+- Hover: `#2979FF` bg, `translateY(-2px) scale(1.01)`, `0 12px 36px rgba(41,121,255,0.28)`
 
-**Ghost Button (`.btn--ghost`):**
-- Semi-transparent background with border
-- Higher contrast on hover
+**Dual Button (`.btn--dual` — gradient):**
+- Background: `linear-gradient(90deg, var(--nemesis-blue) 0%, var(--aurora-base) 100%)`
+- Border: 0, border-radius 10px, padding 10px 14px, font-weight 700
+
+**Guide-only:** `.btn--aurora` / `.btn--ghost` (translucent) are guide chrome, not live patterns.
 
 **Interactive Behaviors:**
 - Hover: translateY(-2px), increased glow
-- Focus: 2px outline in `var(--aurora-base)`, 3px offset
+- Focus: 2px outline in `var(--accent-color)`, 2-3px offset
 
 ### Cards & Containers (`.component-card`, `.guide-card-sample`)
 
-- Background: `var(--glass-bg)` (semi-transparent)
+- Background: `var(--glass-bg)` with `blur(10px)` (dark), `#fff` (light)
 - Border: 1px solid `var(--glass-border)`
-- Border-radius: 18px (cards), 16px (samples)
-- Shadow: `0 20px 40px rgba(4, 9, 24, 0.4)`
-- Padding: 20px internal
+- Border-radius: 20px
+- Shadow: `0 8px 30px rgba(2,6,23,0.36)` (dark), `0 4px 20px rgba(0,0,0,0.08)` (light)
+- Padding: 24px internal, flex-column, actions pinned via `margin-top: auto`
+- Project images: 100% × 170px, `object-fit: cover`, radius 12px
+- Card hover: `translateY(-6px)`, border → `var(--accent-hover)`
 
 ### Inputs/Forms
 
@@ -137,13 +150,13 @@ Dual theme support: light and dark modes with carefully tuned contrast ratios.
 - Border: 1px solid transparent → `var(--nav-link-hover-border)` on hover
 - Transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1)
 
-### Pills/Chips (`.pill`)
+### Pills/Chips (live `.pill-*`)
 
 - Padding: 6px 14px
 - Border-radius: 999px (fully rounded)
 - Font-size: 0.82rem
 - Font-weight: 600
-- Border: 1px solid `var(--glass-border)`
+- Live project pills: `.pill-ai` `#818cf8`, `.pill-saas` `#4ade80`, `.pill-tools` `#facc15`, `.pill-client` `#f472b6` (20% tint bg + 30% border each)
 
 ### Style Toggles (`.style-toggle`)
 
@@ -153,10 +166,11 @@ Dual theme support: light and dark modes with carefully tuned contrast ratios.
 - Display: flex, flex-direction: column
 - Gap: 4px between title/description
 
-### Glass Effect
+### Glass Effect (live values)
 
-- Background: `rgba(255, 255, 255, 0.03)` (dark), `rgba(255, 255, 255, 0.96)` (light)
-- Border: `rgba(255, 255, 255, 0.06)` (dark), `rgba(10, 14, 39, 0.06)` (light)
+- Background: `rgba(255, 255, 255, 0.03)` (dark), `rgba(255, 255, 255, 0.9)` (light)
+- Border: `rgba(255, 255, 255, 0.06)` (dark), `rgba(41, 121, 255, 0.08)` (light)
+- Component blur: `blur(10px)` (cards, buttons); nav `blur(18px)`
 
 ## 5. Layout Principles
 
@@ -242,7 +256,7 @@ radial-gradient(circle at 78% 12%, rgba(0, 255, 255, 0.18), transparent 55%)
     <p class="lead">Modern, flexible design tokens for your next project.</p>
     <div class="guide-cta">
       <a href="#colors" class="btn btn--primary">Explore Colors</a>
-      <a href="#components" class="btn btn--aurora">View Components</a>
+      <a href="#components" class="btn btn--dual">View Components</a>
     </div>
   </div>
 </header>
@@ -263,7 +277,7 @@ radial-gradient(circle at 78% 12%, rgba(0, 255, 255, 0.18), transparent 55%)
 
 ## Best Practices
 
-1. **Theme Switching:** Use `data-theme="light"` and `data-style="aurora|nemesis"` attributes on the `<html>` element
+1. **Theme Switching:** `data-theme="light"` on `<html>` for light mode (dark is default). `data-style="aurora|nemesis"` is guide-preview-only; production uses its own display-mode flags.
 2. **Glass Effects:** Always pair `--glass-bg` with `--glass-border` for consistent depth
 3. **Accent Glows:** Use `var(--accent-glow)` for box-shadows on interactive elements
 4. **Animations:** Prefer cubic-bezier(0.4, 0, 0.2, 1) for smooth transitions

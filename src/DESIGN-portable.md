@@ -1,5 +1,9 @@
 # Design System: NemesisNet (Default)
 
+> **Live parity (verified 2026-10-10):** mirrors https://nemesisnet.co.za 1:1.
+
+**Designed by NemesisGuy** — [NemesisNet](https://nemesisnet.co.za)
+
 **Designed by NemesisGuy** — [NemesisNet](https://nemesisnet.co.za)
 
 ---
@@ -21,20 +25,23 @@ Clean, professional interface with glassmorphism effects. Balanced between moder
 - **Aurora Ember:** `#008B6A` — Deep Aurora accent
 
 ### Neutrals
+- **Nemesis Gray:** `#3b3b3b` — Borders on mid surfaces
 - **Nemesis Black:** `#0a0e27` — Dark backgrounds, light text
 - **Nemesis White:** `#F4F4F4` — Light backgrounds, dark text
-- **Glass Background:** `rgba(255,255,255,0.03)` — Cards (dark mode)
-- **Glass Border:** `rgba(255,255,255,0.06)` — Borders
+- **Glass Background:** `rgba(255,255,255,0.03)` dark / `rgba(255,255,255,0.9)` light — Cards
+- **Glass Border:** `rgba(255,255,255,0.06)` dark / `rgba(41,121,255,0.08)` light — Borders
+- **Text Muted:** `rgba(244,244,244,0.82)` dark / `rgba(26,26,26,0.8)` light
 
 ### Light Mode Overrides
 - `--text-color: #0a0e27`
-- `--text-muted: rgba(26,26,26,0.78)`
-- `--glass-bg: rgba(255,255,255,0.96)`
-- `--glass-border: rgba(10,14,39,0.06)`
+- `--text-muted: rgba(26,26,26,0.8)`
+- `--glass-bg: rgba(255,255,255,0.9)`
+- `--glass-border: rgba(41,121,255,0.08)`
+- `--card: #ffffff`, `--card-bg: rgba(26,26,26,0.04)`, `--card-border: rgba(26,26,26,0.06)`
 
 ## 3. Typography
 
-**Primary Font:** `'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`
+**Primary Font (live, system — no webfont):** `'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif`
 
 - H1: 3.1rem, -0.02em letter-spacing
 - H2: 1.95rem
@@ -46,31 +53,23 @@ Clean, professional interface with glassmorphism effects. Balanced between moder
 
 ## 4. Component Stylings
 
-### Buttons
-- Border-radius: 14px
-- Padding: 12px 26px
-- Font-weight: 600
-- Transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1)
+### Buttons (live)
+- Glass (primary pattern): radius 12px, padding 12px 28px, weight 500, hover `var(--accent-hover)` + `#0a0e27` text + lift 2px
+- Primary (solid): `var(--nemesis-blue)`, radius 10px, padding 10px 14px, weight 700
+- Dual (gradient): `var(--nemesis-blue)` → `var(--aurora-base)`, radius 10px
+- Transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); cards 0.36s
 
-**Primary:**
-- Background: `rgba(41, 121, 255, 0.2)`
-- Border: `rgba(41, 121, 255, 0.35)`
-- Hover: lift 2px, glow shadow
-
-**Aurora:**
-- Background: `rgba(0, 194, 168, 0.22)`
-- Border: `rgba(0, 194, 168, 0.32)`
-
-**Ghost:**
-- Background: `rgba(41, 121, 255, 0.18)`
-- Border: `rgba(41, 121, 255, 0.34)`
-
-### Cards
-- Border-radius: 18-20px
-- Background: `var(--glass-bg)`
+### Cards (live)
+- Border-radius: 20px
+- Background: `var(--glass-bg)` with `blur(10px)` (dark), `#fff` (light)
 - Border: 1px solid `var(--glass-border)`
-- Shadow: `0 20px 40px rgba(4, 9, 24, 0.4)`
-- Padding: 20px
+- Shadow: `0 8px 30px rgba(2,6,23,0.36)` (dark), `0 4px 20px rgba(0,0,0,0.08)` (light)
+- Padding: 24px, flex-column, actions pinned via `margin-top: auto`
+- Hover: `translateY(-6px)`, border → `var(--accent-hover)`
+
+### Pills (live)
+- `.pill-ai` `#818cf8`, `.pill-saas` `#4ade80`, `.pill-tools` `#facc15`, `.pill-client` `#f472b6`
+- Radius 999px, padding 6px 14px, 0.82rem/600
 
 ### Navigation
 - Height: 56px

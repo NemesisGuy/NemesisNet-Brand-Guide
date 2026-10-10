@@ -59,9 +59,8 @@
     content="Production-ready NemesisNet brand system with tokens, patterns, and governance." />
   <meta name="twitter:image" content="https://brand.nemesisnet.co.za/assets/Nemesis_Logo_Icon.png" />
   <meta name="twitter:image:alt" content="NemesisNet logomark" />
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/Nemesis_Logo_Icon.png" />
-  <link rel="icon" type="image/x-icon" href="/assets/Nemesis_Logo_Icon.ico" />
-  <link rel="shortcut icon" href="/assets/Nemesis_Logo_Icon.ico" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" href="/assets/Nemesis_Logo_Icon.png" />
   <link rel="apple-touch-icon" href="/assets/Nemesis_Logo_Icon.png" />
   <script type="application/ld+json">
   {
@@ -149,8 +148,8 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="/brand-tokens.css?v=20260403-1">
-  <link rel="stylesheet" href="/css/style.css?v=20260403-1">
+  <link rel="stylesheet" href="/brand-tokens.css?v=20261010-1">
+  <link rel="stylesheet" href="/css/style.css?v=20261010-1">
   <style>
     /* Smooth scrolling for anchor links */
     html {
@@ -299,7 +298,7 @@
         tone, and accessibility standards consistently across every touchpoint.</p>
       <div class="guide-cta">
         <a class="btn btn--primary" href="#tokens"><span class="inline-icon" aria-hidden="true"><svg viewBox="0 0 16 16" role="img" focusable="false" aria-hidden="true"><path d="M8 1.5a6.5 6.5 0 1 0 0 13A6.5 6.5 0 0 0 8 1.5Zm0 1.4a5.1 5.1 0 1 1 0 10.2A5.1 5.1 0 0 1 8 2.9Z"/><path d="M8 4.2v3.1l2.2 1.3-.7 1.1L6.8 7.8V4.2H8Z"/></svg></span> Explore tokens</a>
-        <a class="btn btn--aurora" href="/brand-tokens.css?v=20260403-1" download><span class="inline-icon" aria-hidden="true"><svg viewBox="0 0 16 16" role="img" focusable="false" aria-hidden="true"><path d="M7.25 1.5h1.5v6.1l2.1-2.1 1.1 1.1L8 10.55 4.04 6.6l1.1-1.1 2.11 2.1V1.5Z"/><path d="M2.5 11.2h11v1.8h-11v-1.8Z"/></svg></span> Download CSS bundle</a>
+        <a class="btn btn--aurora" href="/brand-tokens.css?v=20261010-1" download><span class="inline-icon" aria-hidden="true"><svg viewBox="0 0 16 16" role="img" focusable="false" aria-hidden="true"><path d="M7.25 1.5h1.5v6.1l2.1-2.1 1.1 1.1L8 10.55 4.04 6.6l1.1-1.1 2.11 2.1V1.5Z"/><path d="M2.5 11.2h11v1.8h-11v-1.8Z"/></svg></span> Download CSS bundle</a>
         <button class="btn btn--ghost" type="button" id="downloadGuideBtn"><span class="inline-icon" aria-hidden="true"><svg viewBox="0 0 16 16" role="img" focusable="false" aria-hidden="true"><path d="M3 1.5h6.7L13 4.8V14.5H3V1.5Zm1.4 1.4v10.2h7.2V5.4H8.3V2.9H4.4Z"/><path d="M5.4 8.1h5.2v1.2H5.4V8.1Zm0 2.2h4v1.2h-4v-1.2Z"/></svg></span> Download HTML snapshot</button>
         <a class="btn btn--ghost" href="https://nemesisnet.co.za" target="_blank" rel="noopener"><span class="inline-icon" aria-hidden="true"><svg viewBox="0 0 16 16" role="img" focusable="false" aria-hidden="true"><path d="M8 1.3 1.7 6.2l.8 1 1-.8v7.3h8.9V6.4l1 .8.8-1L8 1.3Zm-2 11.9V8.8h4.1v4.4H6Zm5.5 0h-1.4V7.6H5.9v5.6H4.5V5.1L8 2.5l3.5 2.6v8.1Z"/></svg></span> Back to main site</a>
         <a class="btn btn--ghost" href="/DESIGN.md" download><span class="inline-icon" aria-hidden="true"><svg viewBox="0 0 16 16" role="img" focusable="false" aria-hidden="true"><path d="M3 1.5h6.7L13 4.8V14.5H3V1.5Zm1.4 1.4v10.2h7.2V5.4H8.3V2.9H4.4Z"/><path d="M5.4 8.1h5.2v1.2H5.4V8.1Zm0 2.2h4v1.2h-4v-1.2Z"/></svg></span> Design system</a>
@@ -319,6 +318,9 @@
           <small>Violet + aqua light burst</small>
         </button>
       </div>
+      <p class="note section-mt-sm" style="max-width:640px;margin-left:auto;margin-right:auto">Preview overlays only — the live site ships Base (dark/light via
+        <code>data-theme="light"</code>) plus Nemesis and Aurora display modes. This guide's
+        <code>data-style</code> switcher previews the same three looks without touching production markup.</p>
     </div>
   </header>
 
@@ -355,8 +357,9 @@
     <section id="introduction" class="guide-section">
       <h2>Purpose &amp; Scope</h2>
       <p class="note">This document replaces the production brand guide container. It is the single source of truth for
-        designers, engineers, vendors, and collaborators building NemesisNet experiences. Use the theme toggles above to
-        preview the Aurora and Nemesis overlays exactly as they appear on nemesisnet.co.za.</p>
+        designers, engineers, vendors, and collaborators building NemesisNet experiences. Tokens, buttons, cards,
+        pills, and light/dark values mirror <code>nemesisnet.co.za</code> 1:1 — use the toggles above to preview
+        the Base, Aurora, and Nemesis looks.</p>
       <ul class="section-list">
         <li>Audience: product design, frontend engineering, marketing, vendor partners.</li>
         <li>Coverage: color, typography, layout, motion cues, accessibility, voice.</li>
@@ -369,30 +372,47 @@
       <p class="note">Tokens align 1:1 with the main site (<code>index.html</code>). Keep names stable to maintain
         parity across applications, documentation, and embedded components.</p>
       <div class="guide-cta guide-cta--left section-mt-md">
-        <a class="btn btn--ghost" href="/brand-tokens.css?v=20260403-1">View brand-tokens.css</a>
-        <a class="btn btn--aurora" href="/brand-tokens.css?v=20260403-1" download>Download tokens</a>
+        <a class="btn btn--ghost" href="/brand-tokens.css?v=20261010-1">View brand-tokens.css</a>
+        <a class="btn btn--aurora" href="/brand-tokens.css?v=20261010-1" download>Download tokens</a>
       </div>
       <pre id="tokensBlock">:root {
-  --nemesis-blue: #1E88E5;           /* primary blue */
+  --nemesis-blue: #1E88E5;           /* primary brand */
   --nemesis-blue-bright: #2979FF;   /* hover / emphasis */
-  --aurora-base: #00C2A8;           /* secondary teal (Aurora) */
-  --aurora-flare: #33D6B7;          /* lighter teal */
+  --nemesis-blue-deep: #0f4c81;     /* deep accents */
+  --aurora-base: #00C2A8;           /* secondary teal */
+  --aurora-flare: #33D6B7;          /* aurora hover */
+  --aurora-ember: #008B6A;          /* deep aurora */
+  --aurora-glow: rgba(0,194,168,0.12);
+  --aurora-hover: var(--aurora-flare);
+  --nemesis-gray: #3b3b3b;
+  --nemesis-black: #0a0e27;
+  --nemesis-white: #F4F4F4;
   --accent-color: var(--nemesis-blue);
   --accent-hover: var(--nemesis-blue-bright);
   --accent-glow: rgba(41,121,255,0.14);
-  --nemesis-black: #0a0e27;
-  --nemesis-white: #F4F4F4;
+  --secondary-accent: #2979FF;
+  --secondary-glow: rgba(41,121,255,0.07);
+  --bg-color: var(--nemesis-black);
+  --bg-gradient: radial-gradient(circle at 20% 20%, rgba(41,121,255,0.28) 0%, transparent 42%), radial-gradient(circle at 80% 10%, rgba(0,194,168,0.22) 0%, transparent 45%), radial-gradient(circle at 60% 80%, rgba(41,121,255,0.18) 0%, transparent 55%), #0a0e27;
   --text-color: var(--nemesis-white);
-  --text-muted: rgba(244,244,244,0.65);
+  --text-muted: rgba(244,244,244,0.82);
+  --card: #0f0f10;
+  --card-bg: rgba(255,255,255,0.03);
+  --card-border: rgba(255,255,255,0.06);
   --glass-bg: rgba(255,255,255,0.03);
   --glass-border: rgba(255,255,255,0.06);
+  --header-bg: linear-gradient(135deg, rgba(41,121,255,0.04), rgba(255,111,60,0.03));
+  --font-stack: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
   --ui-radius: 12px;                /* base corner radius */
+  --radius-base: 20px;              /* card radius */
   --space-xs: 6px;
   --space-sm: 12px;
   --space-md: 20px;
   --space-lg: 32px;
   --space-xl: 48px;
-}</pre>
+}
+/* Light mode: [data-theme="light"] — text #0a0e27, muted rgba(26,26,26,0.8),
+   glass rgba(255,255,255,0.9), border rgba(41,121,255,0.08), cards #fff. */</pre>
       <div class="guide-cta guide-cta--left section-mt-sm">
         <button class="btn btn--ghost" type="button" data-copy-target="tokensBlock" data-copy-label="Tokens copied">Copy
           token block</button>
@@ -503,12 +523,13 @@
 
     <section id="typography" class="guide-section">
       <h2>Typography</h2>
-      <p class="note">Primary typeface: Inter. Use system fallbacks if webfonts are unavailable. Maintain optical margin
-        alignment for big headlines.</p>
+      <p class="note">Primary typeface matches the live site system stack: <code>'Segoe UI', -apple-system,
+        BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif</code> — no webfont dependency. Use system
+        fallbacks in the same order. Maintain optical margin alignment for big headlines.</p>
       <div class="typo-sample">
-        <div class="typo-heading">Heading — Inter 800 (28px)</div>
-        <div class="typo-subheading">Subheading — Inter 600 (18px)</div>
-        <div class="typo-body">Body — Inter 400 (14px) with 1.6 line-height.</div>
+        <div class="typo-heading">Heading — System 800 (28px)</div>
+        <div class="typo-subheading">Subheading — System 600 (18px)</div>
+        <div class="typo-body">Body — System 400 (14px) with 1.6 line-height.</div>
       </div>
     </section>
 
@@ -538,27 +559,50 @@
 
     <section id="digital" class="guide-section">
       <h2>Digital &amp; UI</h2>
-      <p class="note">Buttons mirror the main site: glass base, gradient hero, and Aurora secondary. Ghost buttons
-        support tertiary actions.</p>
+      <p class="note">Buttons mirror the main site (<code>nemesisnet.co.za</code>): glass base with blur,
+        solid accent hover. Radius is 12px, padding 12px 28px, transition
+        <code>0.3s cubic-bezier(0.4, 0, 0.2, 1)</code>.</p>
       <div class="btn-row">
         <button type="button" class="btn btn--primary">Primary CTA</button>
-        <button type="button" class="btn btn--aurora">Aurora CTA</button>
+        <button type="button" class="btn btn--dual">Dual CTA</button>
         <button type="button" class="btn btn--ghost">Ghost / Secondary</button>
       </div>
-      <h3>Copyable CSS (example)</h3>
-      <pre>.btn-primary {
-  background: linear-gradient(90deg, var(--nemesis-blue) 0%, var(--aurora-base) 100%);
-  color: #0a0e27;
+      <h3>Copyable CSS (live pattern)</h3>
+      <pre>.btn-glass {
+  padding: 12px 28px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  color: var(--text-color);
+  border: 1px solid var(--glass-border);
   border-radius: 12px;
-  padding: 12px 26px;
-  font-weight: 600;
-  box-shadow: 0 12px 32px rgba(41,121,255,0.32);
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-ghost {
-  background: transparent;
-  border: 1px solid var(--glass-border);
-  color: var(--text-color);
+.btn-glass:hover {
+  background: var(--accent-hover);
+  color: #0a0e27;
+  border-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--accent-glow);
+}
+
+.btn--primary {
+  background: var(--nemesis-blue);
+  color: #0a0e27;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 700;
+}
+
+.btn--dual {
+  background: linear-gradient(90deg, var(--nemesis-blue) 0%, var(--aurora-base) 100%);
+  color: #0a0e27;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 700;
 }</pre>
     </section>
 
@@ -570,42 +614,42 @@
         <div class="component-card">
           <div>
             <h3>Hero Links</h3>
-            <p class="note">Matches the homepage hero actions. Inherit <code>.hero-links</code> spacing on responsive
-              layouts.</p>
+            <p class="note">Matches the homepage hero actions on <code>nemesisnet.co.za</code>: glass buttons,
+              primary action highlighted. Inherit <code>.hero-links</code> spacing on responsive layouts.</p>
           </div>
           <div class="guide-cta guide-cta--left">
-            <a class="btn btn--primary" href="#projects"><span class="inline-glyph" aria-hidden="true">◆</span> Our
+            <a class="btn btn--ghost" href="#projects"><span class="inline-glyph" aria-hidden="true">◆</span> See Our
               Work</a>
-            <a class="btn btn--aurora" href="#about"><span class="inline-glyph" aria-hidden="true">◈</span> About Us</a>
-            <a class="btn btn--ghost" href="mailto:admin@nemesisnet.co.za"><span class="inline-glyph"
-                aria-hidden="true">✉</span> Contact</a>
+            <a class="btn btn--primary" href="https://scope.nemesisnet.co.za" target="_blank" rel="noopener"><span class="inline-glyph" aria-hidden="true">◈</span> Scope Your Project</a>
           </div>
         </div>
         <div class="component-card">
           <div>
             <h3>Pills &amp; Tags</h3>
-            <p class="note">Used for skill tags and highlight callouts. Keep casing Title Case.</p>
+            <p class="note">Live project pills from <code>nemesisnet.co.za</code>. Keep casing Title Case.</p>
           </div>
           <div class="pill-row" role="list">
-            <span class="pill pill--accent" role="listitem">AI Systems</span>
-            <span class="pill" role="listitem">Spring Boot</span>
-            <span class="pill pill--outline" role="listitem">Vue.js</span>
-            <span class="pill" role="listitem">Docker</span>
-            <span class="pill" role="listitem">DevOps</span>
+            <span class="pill pill--ai" role="listitem">AI/ML</span>
+            <span class="pill pill--saas" role="listitem">SaaS Platform</span>
+            <span class="pill pill--tools" role="listitem">AI/Tooling</span>
+            <span class="pill pill--client" role="listitem">Enterprise SaaS</span>
           </div>
         </div>
         <div class="component-card">
           <div>
             <h3>Project Card</h3>
-            <p class="note">Glassmorphic cards with CTA stack. Follow the 12px radius and gradients.</p>
+            <p class="note">Live project card from <code>nemesisnet.co.za</code>: pill, 170px cover image, title,
+              description, links pinned bottom via <code>margin-top: auto</code>. Radius 20px, padding 24px.</p>
           </div>
           <div class="guide-card-sample">
-            <h4>VibeType</h4>
-            <p class="note">AI-driven voice assistant with Kokoro + Whisper orchestration.</p>
+            <span class="pill pill--client">Enterprise SaaS</span>
+            <h4>CodeCritical SaaS</h4>
+            <p class="note">Enterprise security scanning SaaS — vulnerability scanning, static analysis, and
+              architecture validation in one platform.</p>
             <div class="guide-card-links">
-                <a href="https://github.com/NemesisGuy/Vibe-Type" target="_blank" rel="noopener"><span class="inline-glyph"
-                  aria-hidden="true">⌂</span> Source</a>
-                <a href="https://nemesisnet.co.za" target="_blank" rel="noopener"><span class="inline-glyph"
+                <a href="https://nemesisnet.co.za/projects/codecritical-saas" target="_blank" rel="noopener"><span class="inline-glyph"
+                  aria-hidden="true">⌂</span> Details</a>
+                <a href="https://codecritical.nemesisnet.co.za" target="_blank" rel="noopener"><span class="inline-glyph"
                   aria-hidden="true">↗</span> Live Demo</a>
             </div>
           </div>
@@ -664,32 +708,33 @@
     <section id="iconography" class="guide-section">
       <h2>Iconography &amp; Illustration</h2>
       <p class="note">
-        NemesisNet uses <strong>Lucide</strong> as the primary icon system — stroke-based, consistent, infrastructure-grade.
-        <strong>Font Awesome</strong> is secondary (fallback utility only). Never mix libraries within a single component group.
+        NemesisNet ships <strong>dependency-free inline SVG outline icons</strong> (Lucide-style: 2px stroke,
+        round caps) plus minimal <strong>unicode glyphs</strong> (☰ ✦ ⚙ ☀) for toggles — exactly as the live
+        site does. No icon CDN, no external requests. Never mix icon styles within a single component group.
       </p>
       <div class="grid" style="margin-top:var(--space-md)">
         <div class="guide-card-sample flexcol" style="align-items:center;text-align:center;gap:var(--space-sm);padding:24px 16px">
-          <i data-lucide="cpu" style="width:28px;height:28px;color:var(--accent-color)"></i>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></svg>
           <div class="pill">Infrastructure</div>
         </div>
         <div class="guide-card-sample flexcol" style="align-items:center;text-align:center;gap:var(--space-sm);padding:24px 16px">
-          <i data-lucide="shield-check" style="width:28px;height:28px;color:var(--accent-color)"></i>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1 1 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
           <div class="pill">Security</div>
         </div>
         <div class="guide-card-sample flexcol" style="align-items:center;text-align:center;gap:var(--space-sm);padding:24px 16px">
-          <i data-lucide="monitor" style="width:28px;height:28px;color:var(--accent-color)"></i>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
           <div class="pill">Platforms</div>
         </div>
         <div class="guide-card-sample flexcol" style="align-items:center;text-align:center;gap:var(--space-sm);padding:24px 16px">
-          <i data-lucide="cloud" style="width:28px;height:28px;color:var(--accent-color)"></i>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
           <div class="pill">Cloud</div>
         </div>
         <div class="guide-card-sample flexcol" style="align-items:center;text-align:center;gap:var(--space-sm);padding:24px 16px">
-          <i data-lucide="database" style="width:28px;height:28px;color:var(--accent-color)"></i>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
           <div class="pill">Data</div>
         </div>
         <div class="guide-card-sample flexcol" style="align-items:center;text-align:center;gap:var(--space-sm);padding:24px 16px">
-          <i data-lucide="terminal" style="width:28px;height:28px;color:var(--accent-color)"></i>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 17 6-6-6-6"/><path d="M12 19h8"/></svg>
           <div class="pill">Tooling</div>
         </div>
       </div>
@@ -714,14 +759,21 @@
       <pre>:root {
   --nemesis-blue: #1E88E5;
   --nemesis-blue-bright: #2979FF;
+  --nemesis-blue-deep: #0f4c81;
   --aurora-base: #00C2A8;
   --aurora-flare: #33D6B7;
+  --aurora-ember: #008B6A;
+  --nemesis-gray: #3b3b3b;
   --nemesis-black: #0a0e27;
   --nemesis-white: #F4F4F4;
   --accent-color: var(--nemesis-blue);
+  --secondary-accent: #2979FF;
+  --text-color: var(--nemesis-white);
+  --text-muted: rgba(244,244,244,0.82);
   --glass-bg: rgba(255,255,255,0.03);
   --glass-border: rgba(255,255,255,0.06);
   --ui-radius: 12px;
+  --radius-base: 20px;
 }</pre>
       <p class="note">Vector assets reside in <code>assets/</code>. Use PNG/SVG for high resolution contexts and ICO for
         favicons.</p>
@@ -739,7 +791,7 @@
       <div id="button-demo" class="demo-card">
         <div class="demo-buttons">
           <button class="btn btn--primary" type="button">Primary CTA</button>
-          <button class="btn btn--aurora" type="button">Aurora CTA</button>
+          <button class="btn btn--dual" type="button">Dual CTA</button>
           <button class="btn btn--ghost" type="button">Ghost</button>
         </div>
         <div class="demo-note">Focus rings must remain visible when tabbing (press Tab). Buttons rely on the shared token stack.</div>
@@ -995,10 +1047,39 @@
             auroraBase: '#00C2A8',
             auroraFlare: '#33D6B7',
             auroraEmber: '#008B6A',
+            auroraGlow: 'rgba(0,194,168,0.12)',
+            auroraHover: '#33D6B7',
+            nemesisGray: '#3b3b3b',
             nemesisBlack: '#0a0e27',
             nemesisWhite: '#F4F4F4',
-            textMuted: 'rgba(244,244,244,0.65)',
-            auroraGlow: 'rgba(0,194,168,0.12)'
+            accentColor: '#1E88E5',
+            accentHover: '#2979FF',
+            accentGlow: 'rgba(41,121,255,0.14)',
+            secondaryAccent: '#2979FF',
+            secondaryGlow: 'rgba(41,121,255,0.07)',
+            bgColor: '#0a0e27',
+            bgGradient: 'radial-gradient(circle at 20% 20%, rgba(41,121,255,0.28) 0%, transparent 42%), radial-gradient(circle at 80% 10%, rgba(0,194,168,0.22) 0%, transparent 45%), radial-gradient(circle at 60% 80%, rgba(41,121,255,0.18) 0%, transparent 55%), #0a0e27',
+            textColor: '#F4F4F4',
+            textMuted: 'rgba(244,244,244,0.82)',
+            card: '#0f0f10',
+            cardBg: 'rgba(255,255,255,0.03)',
+            cardBorder: 'rgba(255,255,255,0.06)',
+            glassBg: 'rgba(255,255,255,0.03)',
+            glassBorder: 'rgba(255,255,255,0.06)',
+            headerBg: 'linear-gradient(135deg, rgba(41,121,255,0.04), rgba(255,111,60,0.03))',
+            fontStack: "'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif"
+          },
+          light: {
+            bgColor: '#F4F4F4',
+            bgGradient: 'linear-gradient(135deg, #F4F4F4 0%, #f0f6ff 50%, #eaf6ff 100%)',
+            textColor: '#0a0e27',
+            textMuted: 'rgba(26,26,26,0.8)',
+            accentGlow: 'rgba(41,121,255,0.08)',
+            card: '#ffffff',
+            cardBg: 'rgba(26,26,26,0.04)',
+            cardBorder: 'rgba(26,26,26,0.06)',
+            glassBg: 'rgba(255,255,255,0.9)',
+            glassBorder: 'rgba(41,121,255,0.08)'
           },
           aurora: {
             accent: '#7c4dff',
@@ -1255,8 +1336,6 @@
     })();
   </script>
   <script defer src="https://metrics.nemesisnet.co.za/script.js" data-website-id="2745ee82-689d-4741-9201-fedad7285a52"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>lucide.createIcons();</script>
 </body>
 
 </html>

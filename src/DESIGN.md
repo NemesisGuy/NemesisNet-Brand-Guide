@@ -4,7 +4,11 @@
 
 **Project ID:** nemesisnet-brand-guide
 
-**Last Updated:** 2026-04-17
+**Last Updated:** 2026-10-10
+
+> **Live parity:** tokens, buttons, cards, pills, light/dark values, font stack, and motion in this file
+> mirror https://nemesisnet.co.za 1:1 (verified 2026-10-10). Where this guide adds preview-only extras
+> (Aurora/Nemesis `data-style` overlays, `.btn--aurora`, `.btn--ghost`), they are labelled as guide-only.
 
 ---
 
@@ -79,15 +83,38 @@ All variants support light and dark modes with measured contrast ratios.
 | Aurora Base | `#00C2A8` | Secondary brand, success |
 | Aurora Flare | `#33D6B7` | Hover for Aurora |
 | Aurora Ember | `#008B6A` | Deep accent for Aurora |
+| Aurora Glow | `rgba(0,194,168,0.12)` | Aurora ambient glow |
+| Aurora Hover | `var(--aurora-flare)` | Aurora hover alias |
+| Secondary Accent | `#2979FF` | Secondary actions, hovers |
+| Secondary Glow | `rgba(41,121,255,0.07)` | Secondary ambient glow |
 
 #### Neutral Colors
 
 | Name | Hex | Role |
 |------|-----|------|
+| Nemesis Gray | `#3b3b3b` | Borders on mid surfaces |
 | Nemesis Black | `#0a0e27` | Primary dark, text on light |
 | Nemesis White | `#F4F4F4` | Primary light, text on dark |
-| Glass Background | `rgba(255,255,255,0.03)` | Card surfaces, overlays |
-| Glass Border | `rgba(255,255,255,0.06)` | Subtle borders |
+| Background | `var(--bg-gradient)` | Page canvas (dark: radial blues on `#0a0e27`; light: `#F4F4F4 → #f0f6ff → #eaf6ff`) |
+| Header | `linear-gradient(135deg, rgba(41,121,255,0.04), rgba(255,111,60,0.03))` | Hero/nav wash |
+| Card | `#0f0f10` (dark) / `#fff` (light) | Card base |
+| Card Bg | `rgba(255,255,255,0.03)` (dark) / `rgba(26,26,26,0.04)` (light) | Card surface |
+| Card Border | `rgba(255,255,255,0.06)` (dark) / `rgba(26,26,26,0.06)` (light) | Card edge |
+| Glass Background | `rgba(255,255,255,0.03)` (dark) / `rgba(255,255,255,0.9)` (light) | Card surfaces, overlays |
+| Glass Border | `rgba(255,255,255,0.06)` (dark) / `rgba(41,121,255,0.08)` (light) | Subtle borders |
+
+#### Text Colors
+
+| Name | Value | Role |
+|------|-------|------|
+| Text Primary | `#F4F4F4` (dark) / `#0a0e27` (light) | Body text |
+| Text Muted | `rgba(244,244,244,0.82)` (dark) / `rgba(26,26,26,0.8)` (light) | Secondary text |
+
+#### Font Stack (live, system — no webfont)
+
+```
+'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif
+```
 
 #### Aurora Theme (Dark Mode)
 
@@ -128,7 +155,7 @@ All variants support light and dark modes with measured contrast ratios.
 | Small | 0.82rem | 0 | 600 | Labels, chips |
 
 - Line-height: 1.85 (lead), 1.7 (body)
-- Font: Inter (system fallbacks)
+- Font: live system stack (`'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif`) — no webfont dependency
 - Typography should feel: operational, technical, modern, readable
 - NOT: marketing-heavy, oversized, overly dramatic
 
@@ -140,42 +167,48 @@ All variants support light and dark modes with measured contrast ratios.
 
 All future UI must use shared primitives. Pages must not drift visually.
 
-### Buttons
+### Buttons (live patterns — `nemesisnet.co.za`)
 
-**Primary (`.btn--primary`):**
-- Background: `rgba(41, 121, 255, 0.2)` → `var(--accent-hover)`
-- Border: 1px solid `rgba(41, 121, 255, 0.35)`
-- Border-radius: 14px
-- Padding: 12px 26px
-- Shadow: `0 18px 42px rgba(41, 121, 255, 0.28)`
-- Hover: lift 2px, increased shadow glow
+**Glass (`.btn-glass` — the primary live pattern, incl. hero "See Our Work" / "Scope Your Project"):**
+- Background: `var(--glass-bg)` with `blur(10px)`
+- Border: 1px solid `var(--glass-border)`
+- Border-radius: 12px
+- Padding: 12px 28px, font-weight 500, min-width 180px
+- Hover: `var(--accent-hover)` bg, `#0a0e27` text, `translateY(-2px)`, `0 8px 24px var(--accent-glow)`
+- Transition: `all 0.3s cubic-bezier(0.4, 0, 0.2, 1)`
 
-**Aurora (`.btn--aurora`):**
-- Background: `rgba(0, 194, 168, 0.22)` → gradient
-- Border: 1px solid `rgba(0, 194, 168, 0.32)`
-- Shadow: `0 18px 42px rgba(0, 194, 168, 0.26)`
+**Primary (`.btn--primary` — solid):**
+- Background: `var(--nemesis-blue)`, color `#0a0e27`
+- Border: 1px solid transparent
+- Border-radius: 10px
+- Padding: 10px 14px, font-weight 700
+- Hover: `#2979FF` bg, `translateY(-2px) scale(1.01)`, `0 12px 36px rgba(41,121,255,0.28)`
 
-**Ghost (`.btn--ghost`):**
-- Semi-transparent background with border
-- Higher contrast on hover
+**Dual (`.btn--dual` — gradient):**
+- Background: `linear-gradient(90deg, var(--nemesis-blue) 0%, var(--aurora-base) 100%)`, color `#0a0e27`
+- Border: 0, border-radius 10px, padding 10px 14px, font-weight 700
+
+**Guide-only extensions (NOT on the live site):** `.btn--aurora` (translucent teal) and `.btn--ghost`
+(translucent blue) exist for guide chrome and secondary actions. Prefer `.btn-glass` for live parity.
 
 **Button Rules:**
 - Identical radius system across all variants
-- Identical hover timing (180ms)
-- Identical transition curve: `cubic-bezier(0.16, 1, 0.3, 1)`
+- Live timing: 300ms buttons/links, 360ms cards — `cubic-bezier(0.4, 0, 0.2, 1)` (guide chrome uses 180ms `cubic-bezier(0.16, 1, 0.3, 1)`)
 - Identical spacing scale
 - Identical glass layering logic
 
-### Cards
+### Cards (live `.card` pattern)
 
-**Cards (`.component-card`, `.guide-card-sample`):**
-- Background: `var(--glass-bg)` (semi-transparent)
+**Cards (`.component-card`, `.guide-card-sample`, `.card-surface`):**
+- Background: `var(--glass-bg)` with `blur(10px)` (dark), `#fff` (light)
 - Border: 1px solid `var(--glass-border)`
-- Border-radius: 18px (cards), 16px (samples)
-- Shadow: `0 20px 40px rgba(4, 9, 24, 0.4)`
-- Padding: 20px internal
+- Border-radius: 20px
+- Shadow: `0 8px 30px rgba(2,6,23,0.36), 0 2px 8px rgba(0,0,0,0.12)` (dark), `0 4px 20px rgba(0,0,0,0.08)` (light)
+- Padding: 24px internal
 - Fixed vertical structure, flex-column layout
-- Button pinned to bottom using `margin-top: auto`
+- Links/actions pinned to bottom using `margin-top: auto` (`card-links`: flex-column, gap 10px, padding-top 18px, links width 95%)
+- Project images: 100% width, 170px height, `object-fit: cover`, radius 12px, `scale(1.03)` on card hover
+- Card hover: `translateY(-6px)` (up to `-8px` dark) + border brightens to `var(--accent-hover)` + accent glow
 
 ### Navigation (`.guide-nav`)
 - Height: 56px
@@ -184,9 +217,13 @@ All future UI must use shared primitives. Pages must not drift visually.
 - Box-shadow: `var(--nav-shadow)`
 - Nav Links: padding 6px 10px, border-radius 10px
 
-### Pills/Chips (`.pill`)
-- Padding: 6px 14px, border-radius: 999px
+### Pills/Chips (live `.pill-*`)
+
+- Base `.pill`: padding 6px 14px, border-radius 999px
 - Font-size: 0.82rem, font-weight: 600
+- Live project pills: `.pill-ai` (indigo `#818cf8`), `.pill-saas` (green `#4ade80`),
+  `.pill-tools` (yellow `#facc15`), `.pill-client` (pink `#f472b6`) — each 20% tint bg + 30% border
+- Guide-only: `.pill--accent` (solid) and `.pill--outline` (dashed) for guide chrome
 
 ### Style Toggles (`.style-toggle`)
 - Min-width: 190px, padding: 14px 18px
@@ -196,31 +233,23 @@ All future UI must use shared primitives. Pages must not drift visually.
 
 ## Iconography System
 
-NemesisNet uses a dual-layer icon system:
+The live site uses **minimal unicode glyphs** (☰ ✦ ⚙ ☀) for nav/toggles and inline imagery — no icon
+CDN, no external requests. This guide ships **dependency-free inline SVG outline icons** in the same
+spirit (2px stroke, round caps, `currentColor`/accent).
 
 | Layer | System | Role |
 |-------|--------|------|
-| **Primary** | Lucide Icons | Default UI identity |
-| **Secondary** | Font Awesome | Fallback utility only |
-
-### Primary — Lucide (Mandatory Default)
-
-All UI-facing icons default to Lucide. Stroke-based, consistent, modern — matches SaaS/infrastructure aesthetic and glassmorphism system.
-
-**Use Lucide for:** navigation, buttons, actions, feature cards, service sections, project metadata, status indicators, dashboards, marketing UI.
-
-**Visual standard:** Outline style only. Consistent stroke width. No mixed styles. No filled icons unless explicitly justified.
-
-### Secondary — Font Awesome (Utility Only)
-
-Allowed only for coverage gaps. Do NOT use for primary marketing or hero sections. Never mix Lucide + FA within a single component group.
+| **Primary** | Inline SVG outline + unicode glyphs | Default UI identity (live parity) |
+| **Optional** | Lucide (self-hosted/inlined only) | Only if a glyph is missing — inline the SVG, never add a CDN |
+| **Avoid** | Font Awesome / icon CDNs | External requests violate the no-external-URL rule |
 
 ### Icon Rules
 
 | Rule | Guideline |
 |------|-----------|
 | **Functional first** | Icons support meaning, not decoration |
-| **Consistency** | Same library, stroke, weight per component |
+| **Consistency** | Same stroke, weight, style per component |
+| **No CDN** | Inline SVG or unicode glyphs only — zero external icon requests |
 | **Visual weight** | Icons remain subtle, support typography |
 | **Size discipline** | Standard per component, no arbitrary scaling |
 | **Motion** | Subtle opacity/color shifts only. No rotation, bounce, morph |
@@ -258,11 +287,22 @@ Motion must feel: calm, intentional, controlled, expensive.
 
 NOT: playful, exaggerated, cinematic.
 
-### Global Transition
+### Global Transitions
+
+Live components (`nemesisnet.co.za`):
+
+```css
+transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* buttons, links */
+transition: transform 0.36s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.36s ease; /* cards */
+```
+
+Guide chrome (nav, toggles, TOC):
 
 ```css
 transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
 ```
+
+Use the live values for anything that must match production. Never invent a third curve.
 
 ### Allowed Motion
 
@@ -397,7 +437,7 @@ Before shipping any change:
 
 - [ ] Uses shared primitives (not one-off styles)
 - [ ] Spacing uses tokens (no hardcoded px)
-- [ ] Motion is 180ms cubic-bezier(0.16, 1, 0.3, 1)
+- [ ] Motion matches live (0.3s buttons / 0.36s cards, `cubic-bezier(0.4, 0, 0.2, 1)`; guide chrome 180ms `cubic-bezier(0.16, 1, 0.3, 1)`)
 - [ ] Glass uses hierarchy levels
 - [ ] Mobile tested at all breakpoints
 - [ ] Buttons have min 44px touch targets
@@ -472,7 +512,7 @@ Reduce repeated explanations. Prefer structured bullets over paragraphs. Less te
     <p class="lead">Modern, restrained design system for infrastructure platforms.</p>
     <div class="guide-cta">
       <a href="#colors" class="btn btn--primary">Explore Colors</a>
-      <a href="#components" class="btn btn--aurora">View Components</a>
+      <a href="#components" class="btn btn--dual">View Components</a>
     </div>
   </div>
 </header>

@@ -309,7 +309,7 @@ html[data-style="aurora"] section h2 {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
     color: inherit;
 }
 
@@ -837,6 +837,38 @@ header.guide-hero {
     color: var(--accent-color);
 }
 
+/* Live project pills (nemesisnet.co.za) */
+.pill--ai {
+    background: rgba(99, 102, 241, 0.2);
+    color: #818cf8;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.pill--saas {
+    background: rgba(34, 197, 94, 0.2);
+    color: #4ade80;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.pill--tools {
+    background: rgba(234, 179, 8, 0.2);
+    color: #facc15;
+    border: 1px solid rgba(234, 179, 8, 0.3);
+}
+
+.pill--client {
+    background: rgba(236, 72, 153, 0.2);
+    color: #f472b6;
+    border: 1px solid rgba(236, 72, 153, 0.3);
+}
+
+[data-theme="light"] .pill--ai,
+[data-theme="light"] .pill--saas,
+[data-theme="light"] .pill--tools,
+[data-theme="light"] .pill--client {
+    background: rgba(255, 255, 255, 0.96);
+}
+
 .guide-card-sample {
     padding: 16px;
     border-radius: 16px;
@@ -1049,24 +1081,52 @@ html[data-theme="light"][data-style="nemesis"] .style-toggle[aria-pressed="true"
 }
 
 .btn--primary {
-    background: rgba(41, 121, 255, 0.2);
-    border-color: rgba(41, 121, 255, 0.35);
-    color: #f4f8ff;
-    box-shadow: 0 18px 42px rgba(41, 121, 255, 0.28);
+    background: var(--nemesis-blue);
+    border-color: transparent;
+    color: #0a0e27;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-weight: 700;
+    box-shadow: none;
 }
 
 .btn--primary:hover,
 .btn--primary:focus-visible {
-    background: var(--accent-hover);
-    border-color: var(--accent-hover);
-    color: #041021;
+    background: #2979FF;
+    border-color: transparent;
+    color: #0a0e27;
+    box-shadow: 0 12px 36px rgba(41, 121, 255, 0.28);
+    transform: translateY(-2px) scale(1.01);
+}
+
+.btn--dual {
+    background: linear-gradient(90deg, var(--nemesis-blue) 0%, var(--aurora-base) 100%);
+    border-color: transparent;
+    color: #0a0e27;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-weight: 700;
+    box-shadow: none;
+}
+
+.btn--dual:hover,
+.btn--dual:focus-visible {
+    border-color: transparent;
+    color: #0a0e27;
+    box-shadow: 0 14px 48px rgba(41, 121, 255, 0.28), 0 8px 30px rgba(0, 194, 168, 0.22);
+    transform: translateY(-2px) scale(1.01);
 }
 
 [data-theme="light"] .btn--primary {
-    background: rgba(41, 121, 255, 0.9);
-    border-color: rgba(41, 121, 255, 0.9);
-    color: #ffffff;
-    box-shadow: 0 18px 42px rgba(41, 121, 255, 0.28);
+    background: var(--nemesis-blue);
+    border-color: transparent;
+    color: #0a0e27;
+    box-shadow: none;
+}
+
+[data-theme="light"] .btn--dual {
+    border-color: transparent;
+    color: #0a0e27;
 }
 
 .btn--aurora {
