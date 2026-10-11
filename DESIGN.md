@@ -159,14 +159,24 @@ dependency, except Nemesis mode which switches everything to `Courier New`
 monospace (+0.2px tracking) for its terminal character.
 
 Display type is gradient-filled text, not solid color: H1 runs white into
-accent (`135deg, #fff → accent`; light: `#1a237e → accent`), section H2 runs
-accent into secondary. Headings use tight negative tracking (-0.02em display,
+accent (`135deg, #fff → accent`) and **inverts per theme** — light mode swaps
+the start stop to navy (`135deg, #1a237e → accent`); section H2 runs
+accent into secondary. Gradient-clipped text must keep line-height ≥ 1.2 —
+`background-clip: text` bounds the paint box to the line box, so tighter
+values clip descenders (the `g` tail vanishes at 1.1). Headings use tight
+negative tracking (-0.02em display,
 -0.01em sections) while body and labels stay at zero (pills add +0.5px with
 uppercase). Line-height is generous for reading (1.8 lead, 1.6 card body, 1.7
-page) and tight for display (1.1 hero). Scroll behavior is explicitly `auto` —
+page) and 1.2 for display. Scroll behavior is explicitly `auto` —
 no smooth scrolling. Page rhythm: H1 3.5rem global (homepage hero scoped to
 2.4rem, sub-page headers 2rem, 2rem on mobile), H2 2.5rem with 40px bottom
 margin (2rem/32px mobile), card titles 1.3rem semibold accent-centered.
+
+Every glass surface must be **token-driven** so it inverts with the theme —
+never hardcode `rgba(255,255,255,…)` panel backgrounds; use `var(--glass-bg)`
+/ `var(--glass-border)` (dark: `rgba(255,255,255,0.03)` / `0.06`; light:
+`rgba(255,255,255,0.9)` / `rgba(41,121,255,0.08)`). A hardcoded dark value
+renders invisible on the light theme.
 
 ## Layout & Spacing
 

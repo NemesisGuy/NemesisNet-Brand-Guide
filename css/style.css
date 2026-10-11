@@ -39,8 +39,8 @@
 [data-theme="light"] {
     --text-color: var(--nemesis-black);
     --text-muted: rgba(26, 26, 26, 0.8);
-    --glass-bg: rgba(255, 255, 255, 0.92);
-    --glass-border: rgba(41, 121, 255, 0.18);
+    --glass-bg: rgba(255, 255, 255, 0.9);
+    --glass-border: rgba(41, 121, 255, 0.08);
     --accent-glow: rgba(41, 121, 255, 0.14);
     --surface-gradient: linear-gradient(180deg, rgba(248, 251, 255, 0.96) 0%, rgba(232, 240, 255, 0.9) 100%);
     --page-background: linear-gradient(135deg, var(--nemesis-white) 0%, #f0f6ff 50%, #eaf6ff 100%);
@@ -483,7 +483,8 @@ header.guide-hero {
     backdrop-filter: blur(14px) saturate(120%);
     -webkit-backdrop-filter: blur(14px) saturate(120%);
     border-bottom: 1px solid rgba(10, 14, 39, 0.04);
-    box-shadow: 0 6px 28px rgba(10, 14, 39, 0.04);
+    /* Live light nav: drop shadow + faint accent inset glow */
+    box-shadow: 0 6px 28px rgba(10, 14, 39, 0.04), inset 0 0 18px rgba(41, 121, 255, 0.016);
     color: var(--text-color);
 }
 
@@ -1612,19 +1613,29 @@ pre code {
 }
 
 .typo-sample {
-    background: rgba(255, 255, 255, 0.04);
+    /* Token-based so it inverts with theme (was hardcoded dark glass) */
+    background: var(--glass-bg);
     padding: 16px;
     border-radius: 12px;
     margin-top: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--glass-border);
 }
 
 .typo-heading {
     font-size: 3.5rem;
     font-weight: 800;
     letter-spacing: -0.02em;
-    line-height: 1.1;
+    /* 1.2 like live h1 — 1.1 clips descenders under background-clip:text */
+    line-height: 1.2;
     background: linear-gradient(135deg, #fff 0%, var(--accent-color) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Live [data-theme="light"] header h1: gradient inverts to navy start */
+[data-theme="light"] .typo-heading {
+    background: linear-gradient(135deg, #1a237e 0%, var(--accent-color) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;

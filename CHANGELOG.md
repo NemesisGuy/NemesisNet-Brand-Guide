@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-10-11] - Light-mode inversion fixes (nav, glass, gradient H1)
+
+### Fixed
+- `.typo-sample` hardcoded dark glass `rgba(255,255,255,0.04)` — invisible on
+  light theme. Now token-driven (`var(--glass-bg)`/`var(--glass-border)`) so it
+  inverts with the theme
+- `.typo-heading` gradient started `#fff` (white-on-white in light). Added
+  live's light override: `135deg, #1a237e → accent`
+- `.typo-heading` line-height 1.1 clipped descenders under
+  `background-clip: text` (the `g` tail vanished) — now 1.2 like live H1
+- Light glass tokens synced to live: `--glass-bg: rgba(255,255,255,0.9)`,
+  `--glass-border: rgba(41,121,255,0.08)` (were 0.92/0.18)
+- Light nav gained live's inset accent glow shadow
+
+### Docs
+- DESIGN.md: documented theme-inversion rule for gradient display type
+  (navy start in light), the ≥1.2 line-height requirement for
+  background-clip:text, and the "never hardcode glass panel colors" rule for
+  agent consumers
+
 ## [2026-10-11] - Nav stays glass on scroll (match live render, not dead CSS)
 
 ### Fixed
