@@ -142,6 +142,7 @@ Before pushing any change:
 - [ ] CSS follows design system rules
 - [ ] Mobile responsive (tested at 375px)
 - [ ] Accessibility maintained (contrast, focus rings, ARIA)
+- [ ] CSS/asset `?v=` query bumped when styles change (nginx caches CSS 7d immutable)
 - [ ] Documentation updated if needed
 
 ## Docker Notes

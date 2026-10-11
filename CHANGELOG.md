@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-10-11] - Stitch-standard DESIGN.md + source-truth pass
+
+`src/DESIGN.md` rewritten to the Google Stitch DESIGN.md open standard (YAML
+`name/colors/typography/rounded/spacing` + editorial sections), extracted from
+`NemesisGuy/nemesisnet` source (`main.css`, `aurora/nemesis-mode.css`,
+`AppHeader/PromoBanner/AppFooter`, `layouts/default.vue`, `pages/index.vue`).
+
+### Fixed
+- Nav: live glass base (no default shadow) + `.scrolled` solidify on scroll,
+  light gradient treatment, 28px/24px logo, theme glyphs ☾ dark / ☀ light
+- Promo banner documented + live-spec demo sample (was missing entirely)
+- Footer line: `© {Month} {Year} NemesisNet` + location segments + version
+- Pills base `.75rem`; card dark deepen (-8px, saturated glass, img filters);
+  aurora/nemesis overlays set to source values; mono always in nemesis
+- Mobile: section `40px 16px`, hero `80px 20px 40px`, avatar 80px, logo 24px
+- Service icons: live uses `lucide-vue-next` 24px in `<ClientOnly>` (static
+  consumers inline the SVG — no CDN)
+- Cache-bust `?v=` on every style change (nginx immutable 7d)
+
 ## [2026-10-11] - Visual Parity Pass (verified against live render)
 
 ### Fixed
