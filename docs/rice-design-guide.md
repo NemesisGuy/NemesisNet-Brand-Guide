@@ -5,7 +5,17 @@
 
 ---
 
-## Phase 4 — Live Parity Alignment (2026-10-10)
+## Phase 5 — Visual Parity Pass (2026-10-11)
+
+Verified with real browser screenshots + computed styles, not source fragments.
+
+- Theme init mirrored: default dark, manual toggle, `localStorage`, `data-theme="light"` (was: OS-sniffing → wrong default)
+- Hero: avatar ring, tags, compact CTAs; H1/H2 live gradients + sizes + scopes (global 3.5rem / home 2.4rem / page-header 2rem)
+- Pills uppercase `.7rem`; nav 68px/logo 28px/links `.9rem`; sections 1280px + `60px 20px`
+- Footer = live bar (grid + disclaimer + line), never a card
+- Cards/buttons/light-theme values confirmed against live computed styles 1:1
+
+---
 
 Source of truth: https://nemesisnet.co.za (verified 2026-10-10). All values below now match production 1:1.
 

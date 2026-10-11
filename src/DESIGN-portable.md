@@ -43,10 +43,10 @@ Clean, professional interface with glassmorphism effects. Balanced between moder
 
 **Primary Font (live, system — no webfont):** `'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif`
 
-- H1: 3.1rem, -0.02em letter-spacing
-- H2: 1.95rem
-- H3: 1.3rem
-- Body: 1.08rem (lead), 0.94rem
+- H1: 3.5rem/800 gradient (homepage 2.4rem, page-header 2rem; 2rem mobile), -0.02em letter-spacing
+- H2: 2.5rem/700 gradient centered mb 40px (2rem mobile)
+- H3: 1.3rem/600 accent centered
+- Body: 1.05rem lead muted lh 1.8, 0.9rem card body muted lh 1.6
 - Line-height: 1.7-1.85
 
 **Weights:** 500 (body), 600 (medium), 700 (headings)
@@ -69,18 +69,19 @@ Clean, professional interface with glassmorphism effects. Balanced between moder
 
 ### Pills (live)
 - `.pill-ai` `#818cf8`, `.pill-saas` `#4ade80`, `.pill-tools` `#facc15`, `.pill-client` `#f472b6`
-- Radius 999px, padding 6px 14px, 0.82rem/600
+- Radius 999px, padding 4px 12px, 0.7rem/600 uppercase ls 0.5px
+- `.pill-ai/saas/tools/client` project pills; hero tags glass 20px/8px-16px/0.85rem
 
 ### Navigation
-- Height: 56px
+- Height: 68px, logo 28px, links 10px 16px 0.9rem/500
 - Fixed top, backdrop-filter: blur(18px)
 - Border-bottom: 1px solid
-- Links: 6px 10px padding, 10px border-radius
+- Links: 44px min-height, 10px border-radius
 
 ### Pills
 - Border-radius: 999px
-- Padding: 6px 14px
-- Font-size: 0.82rem, weight 600
+- Padding: 4px 12px
+- Font-size: 0.7rem uppercase ls 0.5px, weight 600
 
 ## 5. Spacing
 

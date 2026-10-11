@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-10-11] - Visual Parity Pass (verified against live render)
+
+### Fixed
+- Theme init: default **dark**, no OS sniffing (guide was rendering light on light-OS browsers; live always defaults dark)
+- Hero: avatar ring mark + tags row + compact centered CTAs (was oversized 2-col grid buttons)
+- H1 3.5rem/800 gradient `#fff→accent` (light `#1a237e→accent`); H2 2.5rem/700 gradient `accent→secondary` centered mb 40px; documented homepage-2.4rem + page-header-2rem scopes
+- Pills `.7rem` uppercase ls `.5px`; hero tags glass 20px/8px-16px/0.85rem
+- Nav 68px, logo 28px, links 10px-16px/0.9rem/500; skip-link live pattern
+- Sections `max-width: 1280px`, `60px 20px` (mobile `32px 16px`); footer rebuilt as live full-bleed bar (link grid + disclaimer + line)
+- Cards: live shadows/hover, titles 1.3rem/600 centered, body 0.9rem; light cards `#fff`
+- Buttons base = live glass (12px/12px-28px/500/1.1rem)
+
 ## [2026-10-10] - Live Parity Alignment
 
 Source of truth: https://nemesisnet.co.za (verified 2026-10-10).

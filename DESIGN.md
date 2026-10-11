@@ -79,14 +79,14 @@ Dual theme support: light and dark modes with carefully tuned contrast ratios.
 'Courier New', Courier, monospace (Nemesis theme only)
 ```
 
-**Heading Styles:**
-- H1: 3.1rem, -0.02em letter-spacing, gradient text fill
-- H2: 1.95rem, -0.01em letter-spacing
-- H3: 1.3rem
+**Heading Styles (live):**
+- H1: 3.5rem global (homepage hero 2.4rem, sub-page header 2rem; 2rem mobile), 800, -0.02em letter-spacing, gradient text `linear-gradient(135deg, #fff 0%, accent 100%)` (light: `#1a237e → accent`), lh 1.1
+- H2: 2.5rem (2rem mobile), 700, -0.01em, gradient `accent → secondary`, centered, mb 40px
+- H3: 1.3rem, 600, accent, centered (cards)
 
-**Body Text:**
-- Size: 1.08rem (lead), 0.94rem (body)
-- Line-height: 1.85 (lead), 1.7 (body)
+**Body Text (live):**
+- Size: 1.05rem (lead/hero-intro, muted, lh 1.8), 0.9rem (card body, muted, lh 1.6)
+- Line-height: 1.7 (page)
 
 **Font Weights:**
 - Bold/Headings: 700
@@ -101,8 +101,9 @@ Dual theme support: light and dark modes with carefully tuned contrast ratios.
 **Glass (`.btn-glass` — primary live pattern):**
 - Background: `var(--glass-bg)` with `blur(10px)`
 - Border: 1px solid `var(--glass-border)`
-- Border-radius: 12px, padding: 12px 28px, font-weight 500
-- Hover: `var(--accent-hover)` bg, `#0a0e27` text, `translateY(-2px)`
+- Border-radius: 12px, padding: 12px 28px (cards: 10px 16px, 0.85rem/600, width 100%)
+- Font-weight 500, font-size 1.1rem, min-width 180px, centered
+- Hover: `var(--accent-hover)` bg, `#0a0e27` text, `translateY(-2px)`, `0 8px 24px accent-glow`
 
 **Primary Button (`.btn--primary` — solid):**
 - Background: `var(--nemesis-blue)`, color `#0a0e27`
@@ -137,25 +138,27 @@ Dual theme support: light and dark modes with carefully tuned contrast ratios.
 - Background: transparent (styled via parent)
 - Border-radius: 12px (theme toggle buttons)
 
-### Navigation (`.guide-nav`)
+### Navigation (live)
 
-- Height: 56px
+- Height: 68px; container `max-width: 1280px`
+- Logo mark 28px + accent drop-shadow; wordmark 1.05rem/700
 - Background: `var(--nav-surface)` with blur(18px)
 - Border-bottom: 1px solid `var(--nav-border)`
 - Box-shadow: `var(--nav-shadow)`
 
 **Nav Links:**
-- Padding: 6px 10px
+- `min-height: 44px`, padding 10px 16px, 0.9rem/500
 - Border-radius: 10px
 - Border: 1px solid transparent → `var(--nav-link-hover-border)` on hover
-- Transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1)
+- Active link: solid accent bg + `#0a0e27` text
+- Transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1)
 
 ### Pills/Chips (live `.pill-*`)
 
-- Padding: 6px 14px
+- `inline-block`, padding 4px 12px
 - Border-radius: 999px (fully rounded)
-- Font-size: 0.82rem
-- Font-weight: 600
+- Font-size: 0.7rem, uppercase, letter-spacing 0.5px
+- Font-weight: 600, margin-bottom 8px
 - Live project pills: `.pill-ai` `#818cf8`, `.pill-saas` `#4ade80`, `.pill-tools` `#facc15`, `.pill-client` `#f472b6` (20% tint bg + 30% border each)
 
 ### Style Toggles (`.style-toggle`)
@@ -186,8 +189,9 @@ Dual theme support: light and dark modes with carefully tuned contrast ratios.
 
 ### Container Widths
 
-- Nav width: `min(1280px, calc(100vw - 32px))`
-- Content width: `min(1120px, calc(100vw - 48px))`
+- Nav width: `min(1280px, calc(100vw - 32px))`, height 68px
+- Content/sections: `max-width: 1280px`, padding `60px 20px` (mobile `32px 16px`)
+- H1 3.5rem/800 gradient, H2 2.5rem/700 gradient centered mb 40px
 - Border radius base: 20px
 
 ### Grid Layouts

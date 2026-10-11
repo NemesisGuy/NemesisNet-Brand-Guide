@@ -143,19 +143,20 @@ All variants support light and dark modes with measured contrast ratios.
 
 **Rule:** All page spacing must use spacing tokens. No manual random spacing.
 
-### Typography
+### Typography (live)
 
 | Level | Size | Letter-spacing | Weight | Use |
 |-------|------|---------------|--------|-----|
-| H1 | 3.1rem | -0.02em | 700 | Page titles only |
-| H2 | 1.95rem | -0.01em | 700 | Section headers |
-| H3 | 1.3rem | 0 | 700 | Sub-section headers |
-| Lead | 1.08rem | 0 | 500 | Intros |
-| Body | 0.94rem | 0 | 500 | Content |
-| Small | 0.82rem | 0 | 600 | Labels, chips |
+| H1 | 3.5rem global (homepage hero scoped 2.4rem, sub-page `.page-header` 2rem; 2rem mobile) | -0.02em | 800 | Page titles only — gradient `linear-gradient(135deg, #fff 0%, var(--accent-color) 100%)`, lh 1.1, mb 8px (light: `#1a237e → accent`) |
+| H2 | 2.5rem (2rem mobile) | -0.01em | 700 | Section headers — gradient `linear-gradient(135deg, accent 0%, secondary 100%)`, centered, mb 40px |
+| H3 | 1.3rem | 0 | 600 | Card titles — accent color, centered, mb 10px |
+| Lead | 1.05rem | 0 | 400 | Hero intros — muted, lh 1.8 |
+| Body | 0.9rem | 0 | 400 | Card/content text — muted, lh 1.6, mb 14px |
+| Small | 0.7rem | 0.5px | 600 | Pills — uppercase |
 
-- Line-height: 1.85 (lead), 1.7 (body)
+- Line-height: 1.8 (lead), 1.6 (body), 1.7 (page)
 - Font: live system stack (`'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif`) — no webfont dependency
+- Scroll: `scroll-behavior: auto` (no smooth scroll on live)
 - Typography should feel: operational, technical, modern, readable
 - NOT: marketing-heavy, oversized, overly dramatic
 
@@ -169,13 +170,14 @@ All future UI must use shared primitives. Pages must not drift visually.
 
 ### Buttons (live patterns — `nemesisnet.co.za`)
 
-**Glass (`.btn-glass` — the primary live pattern, incl. hero "See Our Work" / "Scope Your Project"):**
+**Glass (`.btn-glass` / `.btn` base / hero + card links — the primary live pattern):**
 - Background: `var(--glass-bg)` with `blur(10px)`
 - Border: 1px solid `var(--glass-border)`
 - Border-radius: 12px
-- Padding: 12px 28px, font-weight 500, min-width 180px
+- Padding: 12px 28px (hero/page), 10px 16px at 0.85rem/600 inside cards (`card-links a`: block, width 100%)
+- Font-weight 500, font-size 1.1rem, min-width 180px, centered
 - Hover: `var(--accent-hover)` bg, `#0a0e27` text, `translateY(-2px)`, `0 8px 24px var(--accent-glow)`
-- Transition: `all 0.3s cubic-bezier(0.4, 0, 0.2, 1)`
+- Transition: `all 0.3s cubic-bezier(0.4, 0, 0.2, 1)` (card links: `all 0.3s ease`)
 
 **Primary (`.btn--primary` — solid):**
 - Background: `var(--nemesis-blue)`, color `#0a0e27`
@@ -201,29 +203,50 @@ All future UI must use shared primitives. Pages must not drift visually.
 
 **Cards (`.component-card`, `.guide-card-sample`, `.card-surface`):**
 - Background: `var(--glass-bg)` with `blur(10px)` (dark), `#fff` (light)
-- Border: 1px solid `var(--glass-border)`
-- Border-radius: 20px
-- Shadow: `0 8px 30px rgba(2,6,23,0.36), 0 2px 8px rgba(0,0,0,0.12)` (dark), `0 4px 20px rgba(0,0,0,0.08)` (light)
-- Padding: 24px internal
+- Border: 1px solid `var(--glass-border)` (light: `rgba(0,0,0,0.08)`)
+- Border-radius: 20px (lab/testimonial tiles 16px)
+- Shadow: `0 8px 30px rgba(2,6,23,0.36), 0 2px 8px rgba(0,0,0,0.12)` (light: `0 4px 20px rgba(0,0,0,0.08)`)
+- Padding: 24px internal, `text-align: left`, `line-height: 1.7`
+- Titles: 1.3rem/600/accent/centered/mb 10px (light: accent); body 0.9rem/muted/lh 1.6/mb 14px (light: `rgba(26,26,26,0.75)`)
+- Images: 100% × 170px, `object-fit: cover`, radius 12px, mb 16px, `scale(1.03)` on hover
 - Fixed vertical structure, flex-column layout
-- Links/actions pinned to bottom using `margin-top: auto` (`card-links`: flex-column, gap 10px, padding-top 18px, links width 95%)
-- Project images: 100% width, 170px height, `object-fit: cover`, radius 12px, `scale(1.03)` on card hover
-- Card hover: `translateY(-6px)` (up to `-8px` dark) + border brightens to `var(--accent-hover)` + accent glow
+- Links/actions pinned to bottom using `margin-top: auto` (`card-links`: flex-column, gap 10px, padding-top 18px, links width 100%)
+- Card hover: `translateY(-6px)` + border → `var(--accent-hover)` + `0 20px 70px rgba(2,6,23,0.55), 0 8px 30px rgba(0,0,0,0.4), 0 0 60px accent-glow`
+- Light `.btn-glass` in cards: `rgba(0,0,0,0.04)` bg, `#1a1a1a` text, hover accent bg + white text
 
-### Navigation (`.guide-nav`)
-- Height: 56px
-- Background: `var(--nav-surface)` with blur(18px)
-- Border-bottom: 1px solid `var(--nav-border)`
-- Box-shadow: `var(--nav-shadow)`
-- Nav Links: padding 6px 10px, border-radius 10px
+### Navigation (live `#navbar` pattern)
+- Height: 68px (promo banner sits `fixed` at `top: 68px`)
+- Container: `max-width: 1280px`, logo mark 28px + `drop-shadow(0 0 8px accent-glow)`, wordmark 1.05rem/700
+- Links: `min-height: 44px`, padding 10px 16px, radius 10px, 0.9rem/500; hover glass bg + accent text; active = solid accent + `#0a0e27` text
+- Toggles (✦ ⚙ ☀): padding 8px 16px, 1.1rem glyphs; mobile drawer 44px toggle, dropdown panel glass radius 12px
+- Skip link: absolute, `top: -48px` → `12px` on focus, radius 8px, white outline
+
+### Hero (live `header` pattern)
+- `60px 20px 50px`, centered flex, `blur(20px)` wash + radial accent-glow `::before` at 30% opacity
+- Avatar mark: 350px circle (live) — guide hero mark 160px ring, 3px border, `0 8px 30px #0006 + 0 0 40px accent-glow`, 12px padding
+- H1 + tags (`glass`, radius 20px, 8px 16px, 0.85rem muted) + links (12px 28px glass, `min-width: 180px`)
+
+### Sections (live)
+- `max-width: 1280px`, padding `60px 20px` (mobile `32px 16px`), centered flex column, `text-align: center`
+- H2 gradient, `margin-bottom: 40px` (mobile 32px)
+
+### Footer (live `.site-footer` — full-bleed bar, never a card)
+- `padding: 32px 20px`, `rgba(8,12,28,0.78)` + `blur(10px)`, top border `rgba(255,255,255,0.16)` (light: `#ffffffeb`, border `#0a0e271f`)
+- Link grid: 4 cols → 1 col mobile, `max-width: 1000px`, gap 24px; headings accent/0.875rem/0.14em uppercase
+- Links `#a8d4ff` (light `#1a4da6`), 0.9rem/550, `min-height: 44px`, underline-grow hover
+- Disclaimer 0.72rem; line 0.85rem, links `#a8d4ff → #c7e3ff` on hover
 
 ### Pills/Chips (live `.pill-*`)
 
-- Base `.pill`: padding 6px 14px, border-radius 999px
-- Font-size: 0.82rem, font-weight: 600
+- Base `.pill`: `inline-block`, padding 4px 12px, border-radius 999px
+- Font-size: 0.7rem, font-weight: 600, uppercase, letter-spacing 0.5px, margin-bottom 8px
+- Hero tags: glass bg/border, radius 20px, padding 8px 16px, 0.85rem, muted (not uppercase)
 - Live project pills: `.pill-ai` (indigo `#818cf8`), `.pill-saas` (green `#4ade80`),
   `.pill-tools` (yellow `#facc15`), `.pill-client` (pink `#f472b6`) — each 20% tint bg + 30% border
 - Guide-only: `.pill--accent` (solid) and `.pill--outline` (dashed) for guide chrome
+
+### Theme init (live behavior)
+- Default is **dark**. No OS/`prefers-color-scheme` sniffing — the toggle is manual-only, persisted to `localStorage` (`light`/`dark`), applied as `data-theme="light"` on `<html>`.
 
 ### Style Toggles (`.style-toggle`)
 - Min-width: 190px, padding: 14px 18px
@@ -343,9 +366,10 @@ Use the live values for anything that must match production. Never invent a thir
 ## 6. Layout Principles
 
 ### Container Widths
-- Nav: `min(1280px, calc(100vw - 32px))`
-- Content: `min(1120px, calc(100vw - 48px))`
-- Border radius base: 20px
+- Nav: `min(1280px, calc(100vw - 32px))`, 68px tall
+- Content/sections: `max-width: 1280px`, padding `60px 20px` (mobile `32px 16px`)
+- Border radius base: 20px (cards), 12px (buttons glass), 10px (buttons solid/nav)
+- `html`: live gradient + `background-attachment: fixed`; `body` transition `background/color 0.4s`
 
 ### Grid Layouts
 - Component grid: `repeat(auto-fit, minmax(260px, 1fr))`
