@@ -207,9 +207,10 @@ same action, same radius, every page.
 
 ### Navbar (`AppHeader.vue`)
 
-Fixed glass bar (`blur(20px)`, no shadow until scrolled, then near-opaque
-`rgba(10,14,39,0.95)` + drop shadow; light: white gradient + faint accent
-rim). 68px tall, 1280px container, 28px glowing logo mark + 1.05rem bold
+Fixed glass bar (`blur(20px)`, `rgba(255,255,255,0.03)` — stays glass at every
+scroll position; `main.css` contains a `.scrolled` solidify rule but
+`AppHeader.vue` never adds the class, so it is dead code on production. Light:
+white gradient + faint accent rim). 68px tall, 1280px container, 28px glowing logo mark + 1.05rem bold
 wordmark. Links (Services, Projects, About, Testimonials, Contact, external
 Blog) are 44px-tall, `10px 16px`, 0.9rem medium, radius 10 — glass on hover,
 solid accent with dark text when active. Three glyph toggles follow: Aurora

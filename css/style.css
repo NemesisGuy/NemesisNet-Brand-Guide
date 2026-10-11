@@ -451,6 +451,9 @@ header.guide-hero {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* NOTE: these `.scrolled` rules exist verbatim in live main.css but are DEAD
+   CODE on production — AppHeader.vue never adds the class. The rendered nav
+   stays glass at every scroll position. Kept for source parity; do not wire up. */
 .guide-nav.scrolled {
     background: rgba(10, 14, 39, 0.95);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);

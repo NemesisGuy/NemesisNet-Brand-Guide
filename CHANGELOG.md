@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-10-11] - Nav stays glass on scroll (match live render, not dead CSS)
+
+### Fixed
+- Guide JS was toggling `.scrolled` on scroll, solidifying the nav — but live
+  never applies that class (`AppHeader.vue` has no scroll handler), so the
+  rendered nav is glass `rgba(255,255,255,0.03)` + `blur(20px)` at every
+  scroll position. Toggle removed; the `.scrolled` rules are kept as annotated
+  source parity (dead code on production too)
+- DESIGN.md navbar section corrected to describe the rendered behavior
+
 ## [2026-10-11] - Nav + dark transparency fixes (measured against live render)
 
 ### Fixed
