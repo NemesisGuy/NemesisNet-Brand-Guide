@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-10-11] - Nav + dark transparency fixes (measured against live render)
+
+### Fixed
+- Root cause of "wrong transparency": `body::before`/`body::after` washes used
+  `z-index: -1`, which paints *behind* the body background — all washes were
+  invisible. Now `z-index: 0/1` like production (aurora veil `0`, nemesis
+  grain `1`); nemesis grain now unconditional like production
+- Hero mirrors live homepage scope: 320px avatar ring, 2.4rem H1
+- Long-page render compensation: viewport-locked `--page-glow` wash so the
+  14k-tall guide page renders the same brightness as production's 5k page
+  (token *values* unchanged and byte-identical to production)
+
 ## [2026-10-11] - Stitch-standard DESIGN.md + source-truth pass
 
 `src/DESIGN.md` rewritten to the Google Stitch DESIGN.md open standard (YAML

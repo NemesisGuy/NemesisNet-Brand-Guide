@@ -231,10 +231,12 @@ via ResizeObserver so page offset stays exact, and the layout compacts under
 
 Full-viewport centered flex (`60px 20px 50px`, `blur(20px)` wash, 30% accent
 radial glow). Circular avatar mark (350px base, 320px homepage, 80px mobile)
-with luminous rim and accent halo that intensifies on hover. Gradient H1,
-muted 1.3rem subtitle, left-aligned 1.05rem intro, wrapping glass tags,
-then glass CTAs (`min-width: 180px`, primary in solid accent) and a scroll
-chevron. Mobile stacks everything full-width at reduced scale without blur.
+with luminous rim and accent halo that intensifies on hover. Gradient H1
+(3.5rem global, 2.4rem homepage scope), muted 1.3rem subtitle, left-aligned
+1.05rem intro, wrapping glass tags, then glass CTAs (`min-width: 180px`,
+primary in solid accent) and a scroll chevron. This guide's hero mirrors the
+homepage scope (320px mark, 2.4rem H1). Mobile stacks everything full-width
+at reduced scale without blur.
 
 ### Buttons
 
@@ -328,10 +330,14 @@ This guide is static (no build step), so three deliberate deltas exist and
 are labelled where they appear: display modes preview through `data-style`
 instead of the production `data-aurora/data-nemesis` flags; icons ship as
 inlined outline SVG (production renders `lucide-vue-next` client-side);
-page footers carry a static version stamp instead of the build id. Everything
-else — tokens, metrics, states, motion (`0.3s`/`cubic-bezier(0.4,0,0.2,1)`
-buttons, `0.36s` cards), breakpoints (1100/900/768/600/520/375), radii,
-and copy patterns — mirrors production exactly.
+page footers carry a static version stamp instead of the build id. The
+guide-only `--page-glow` token is a viewport-locked wash (explicit px radii)
+that reproduces production's render brightness on this guide's much longer
+page — the token *values* in `--page-background`/`--bg-gradient` stay
+byte-identical to production. Everything else — tokens, metrics, states,
+motion (`0.3s`/`cubic-bezier(0.4,0,0.2,1)` buttons, `0.36s` cards),
+breakpoints (1100/900/768/600/520/375), radii, and copy patterns — mirrors
+production exactly.
 
 Accessibility contract: 4.5:1 body contrast, visible focus everywhere,
 44px touch targets, sequential headings, descriptive alt text, full keyboard
