@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-11-17] - Responsive parity sweep (mobile mirrors live)
+
+### Fixed
+- Mobile hero was over-shrunk vs live: avatar mark now stays 320px and hero
+  H1 stays 2.4rem at every width (live keeps both); section H2 steps to 2rem,
+  hero subtitle to 1rem (live values)
+- Mobile CTA buttons now follow live's `.hero-links` pattern: full-width of a
+  10px-inset container, `min-width: unset`, 0.9rem font, `14px 28px` padding
+- **Page-wide horizontal blowout**: `body`/`main.guide-content`/
+  `.guide-section` are flex containers and flex items default to
+  `min-width: auto` — long unbroken `<pre>` lines forced the whole chain to
+  ~1176px on a 375px screen (clipped by `overflow-x: hidden`, rendering blank
+  areas). Fixed with `min-width: 0` on the flex chain and by replacing
+  `main`'s auto horizontal margins (auto cross-margins switch a flex item to
+  fit-content sizing, letting intrinsic min-content win) with stretch-fill
+- Footer link grid no longer overflows (was 1000px track at 375)
+
+### Verified
+- 375/600/768/1100/1440 × dark/light: zero horizontal overflow, main fills
+  viewport exactly, mobile menu + theme toggle + footer render correctly
+
+### Docs
+- DESIGN.md: "Mobile mirrors live, it does not shrink the hero" rule, the
+  flex-chain shrink rule with the fit-content/auto-margin trap, and the
+  overflow verification snippet for agents
+
 ## [2026-10-11] - Light-mode inversion fixes (nav, glass, gradient H1)
 
 ### Fixed

@@ -189,9 +189,23 @@ The fixed 68px navbar is cleared by `#main { padding-top: 76px }`, extended by
 the measured banner height when promotions show
 (`calc(76px + var(--banner-h, 43px))`). Base spacing runs 6/12/20/32/48 with a
 4px unit. Responsive behavior is desktop-first collapsing: 4→2→1 column grids,
-full-width buttons under 640px, 44px minimum touch targets, reduced blur on
-small screens, and `content-visibility: auto` on sections for render
-performance.
+buttons full-width of their container under 640px
+(`.guide-cta` gains `10px` side padding like live's `.hero-links`), 44px
+minimum touch targets, reduced blur on small screens, and
+`content-visibility: auto` on sections for render performance.
+
+**Mobile mirrors live, it does not shrink the hero.** The hero avatar mark
+stays 320px and the hero H1 stays 2.4rem at every width; section H2 steps down
+to 2rem, hero subtitle to 1rem, buttons to 0.9rem font / `14px 28px` padding.
+
+**Flex-chain shrink rule (critical for responsiveness).** `body`,
+`main.guide-content`, and `.guide-section` are flex containers; flex items
+default to `min-width: auto`, so one unbroken `<pre>` line widens the whole
+page. Every flex item in the page chain carries `min-width: 0`, and
+`main.guide-content` must not use auto horizontal margins (auto cross-margins
+switch a flex item to fit-content sizing and let intrinsic min-content win) —
+stretch-fill instead. Verify with
+`document.documentElement.scrollWidth - innerWidth` at 375/600/768.
 
 ## Elevation & Depth
 
@@ -241,13 +255,13 @@ via ResizeObserver so page offset stays exact, and the layout compacts under
 ### Hero
 
 Full-viewport centered flex (`60px 20px 50px`, `blur(20px)` wash, 30% accent
-radial glow). Circular avatar mark (350px base, 320px homepage, 80px mobile)
-with luminous rim and accent halo that intensifies on hover. Gradient H1
-(3.5rem global, 2.4rem homepage scope), muted 1.3rem subtitle, left-aligned
-1.05rem intro, wrapping glass tags, then glass CTAs (`min-width: 180px`,
-primary in solid accent) and a scroll chevron. This guide's hero mirrors the
-homepage scope (320px mark, 2.4rem H1). Mobile stacks everything full-width
-at reduced scale without blur.
+radial glow). Circular avatar mark (350px base, 320px homepage — unchanged on
+mobile) with luminous rim and accent halo that intensifies on hover. Gradient
+H1 (3.5rem global, 2.4rem homepage scope — unchanged on mobile), muted 1.3rem
+subtitle (1rem mobile), left-aligned 1.05rem intro, wrapping glass tags, then
+glass CTAs (`min-width: 180px`, primary in solid accent) and a scroll chevron.
+This guide's hero mirrors the homepage scope (320px mark, 2.4rem H1). Mobile
+stacks the CTA column within a 10px inset, full-width of that container.
 
 ### Buttons
 

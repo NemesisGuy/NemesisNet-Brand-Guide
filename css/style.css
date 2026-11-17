@@ -1444,7 +1444,10 @@ html[data-theme="light"][data-style="aurora"] .btn--ghost:focus-visible {
 
 main.guide-content {
     max-width: none;
-    margin: 0 auto 0;
+    /* No auto margins: auto cross-margins switch the flex item to
+       fit-content sizing, letting long <pre> min-content force the page
+       wider than the viewport on mobile. Stretch-fill instead. */
+    margin: 0;
     padding: 0 0 80px;
     display: flex;
     flex-direction: column;
@@ -1452,6 +1455,7 @@ main.guide-content {
     position: relative;
     z-index: 2;
     flex: 1 0 auto;
+    min-width: 0;
 }
 
 .guide-section {
@@ -1472,6 +1476,8 @@ main.guide-content {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    /* Allow shrink inside the flex section — same min-width:auto trap */
+    min-width: 0;
 }
 
 .guide-section h2 {
@@ -1660,10 +1666,11 @@ pre code {
 }
 
 @media (max-width: 768px) {
+    /* Live keeps the 320px avatar mark on mobile — no shrink */
     .guide-avatar-wrap {
-        width: 80px;
-        height: 80px;
-        padding: 8px;
+        width: min(320px, calc(100vw - 40px));
+        height: min(320px, calc(100vw - 40px));
+        padding: 12px;
         margin-bottom: 16px;
     }
 
@@ -2204,9 +2211,7 @@ table th {
         padding: 32px 16px 44px;
     }
 
-    .guide-hero-content h1 {
-        font-size: 2rem;
-    }
+    /* Hero H1 stays 2.4rem on mobile like live */
 
     .guide-section h2 {
         font-size: 2rem;
@@ -2257,27 +2262,27 @@ table th {
         padding: 0;
     }
 
-    .guide-hero-content h1 {
-        font-size: 2rem;
-    }
-
+    /* Live mobile: hero-links column, 10px side padding, buttons
+       full-width of container, 0.9rem font */
     .lead {
         max-width: 100%;
-        font-size: 0.95rem;
-    }
-
-    .guide-cta {
-        flex-direction: column;
-        align-items: stretch;
+        font-size: 1rem;
     }
 
     .guide-hero .guide-cta {
         display: flex;
+        flex-direction: column;
+        align-items: stretch;
         width: 100%;
+        padding: 0 10px;
+        gap: 10px;
     }
 
     .guide-cta .btn {
         width: 100%;
+        min-width: unset;
+        font-size: 0.9rem;
+        padding: 14px 28px;
     }
 
     .logo-preview {
@@ -2314,6 +2319,7 @@ table th {
 
     .btn-row {
         flex-direction: column;
+        align-items: stretch;
     }
 
     .btn-row .btn {
@@ -2327,9 +2333,7 @@ table th {
         padding: 28px 12px 36px;
     }
 
-    .guide-hero-content h1 {
-        font-size: 1.75rem;
-    }
+    /* Hero H1 stays 2.4rem like live */
 
     .guide-eyebrow {
         font-size: 0.65rem;
@@ -2337,15 +2341,11 @@ table th {
     }
 
     .lead {
-        font-size: 0.88rem;
-    }
-
-    .btn {
-        width: 100%;
+        font-size: 1rem;
     }
 
     .guide-cta {
-        justify-content: stretch;
+        justify-content: center;
     }
 
     .style-toggle {
@@ -2356,8 +2356,9 @@ table th {
         padding: 20px 16px;
     }
 
+    /* Live mobile section H2 is 2rem */
     .guide-section h2 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     main.guide-content {
@@ -2387,9 +2388,7 @@ table th {
 
 /* Very small devices (iPhone SE, older Android) */
 @media (max-width:375px) {
-    .guide-hero-content h1 {
-        font-size: 1.5rem;
-    }
+    /* Hero H1 stays 2.4rem like live */
 
     .guide-nav-container {
         padding: 10px 12px;
@@ -2404,9 +2403,7 @@ table th {
         height: 24px;
     }
 
-    .guide-section h2 {
-        font-size: 1.35rem;
-    }
+    /* Section H2 stays 2rem like live mobile */
 
     .guide-toc-inner {
         padding: 12px 14px;
@@ -2726,7 +2723,7 @@ html[data-style="aurora"][data-theme="light"] .style-toggle[aria-pressed="true"]
         grid-template-columns: 1fr !important;
     }
 
-    /* Full-width buttons */
+    /* Buttons full-width of container like live mobile hero-links */
     .guide-cta .btn {
         width: 100%;
     }
@@ -2873,7 +2870,7 @@ html[data-style="aurora"][data-theme="light"] .style-toggle[aria-pressed="true"]
         word-break: break-word;
     }
 
-    /* Buttons full-width but not stretched-looking */
+    /* Buttons full-width of container like live mobile hero-links */
     .guide-cta .btn,
     .cta-section .btn,
     .demo-buttons .btn {
